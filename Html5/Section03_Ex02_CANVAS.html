@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Html5 Tutorials : CANVAS</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+
+    <style>
+      #myCanvasLinha {
+        background: url(imagens/background_grafico.png) no-repeat;
+      }
+    </style>
+
+    <script>
+      function desenharLinha() {
+        var canvas = document.querySelector('#myCanvasLinha')
+        if (canvas.getContext) {
+          var linha = canvas.getContext('2d')
+          linha.lineWidth = 5
+          linha.strokeStyle = 'blue'
+          linha.moveTo(100, 200)
+          linha.lineTo(170, 100)
+          linha.lineTo(240, 150)
+          linha.lineTo(310, 120)
+          linha.stroke()
+        }
+      }
+
+      function desenharRectangulo() {
+        var canvas = document.querySelector('#myCanvasRectangulo')
+        if (canvas.getContext) {
+          var rectangulo = canvas.getContext('2d')
+          rectangulo.fillStyle = 'blue'
+          //.fillRect(x, y, largura, altura)
+          rectangulo.fillRect(50, 50, 500, 50)
+        }
+      }
+
+      // window.onload = desenharRectangulo
+
+      window.onload = function () {
+        desenharLinha()
+        desenharRectangulo()
+        desenharAnimacao()
+      }
+    </script>
+
+    <script src="js/cake.js"></script>
+    <script>
+      function desenharAnimacao() {
+        var canvas = new Canvas(document.body, 600, 400)
+
+        var circulo = new Circle(100, {
+          id: 'circulo',
+          x: canvas.width / 2,
+          y: canvas.height / 2,
+          stroke: 'red',
+          strokeWidth: 10,
+          endAngle: Math.PI * 2
+        })
+        canvas.append(circulo)
+
+        circulo.addFrameListener(function (t, dt) {
+          this.scale = Math.sin(t / 200)
+        })
+      }
+    </script>
+  </head>
+
+  <body>
+    <a href="index.html">
+      <div class="DivLink" style="background-color: lightgrey">Return to Index Page</div>
+    </a>
+    <h2>Web Html5 Tutorials : CANVAS</h2>
+    <hr />
+    <canvas id="myCanvasRectangulo" height="200" width="700"></canvas>
+    <hr />
+    <canvas id="myCanvasLinha" height="400" width="500"></canvas>
+  </body>
+</html>

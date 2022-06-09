@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Web Html5 Tutorials : Audio</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  
+  <script>
+    var audio
+    function inicial() {
+       audio = document.querySelector("#player")
+    }
+    function play() {
+      audio.play()
+    }
+    function pause() {
+      audio.pause()      
+    }
+    function stop() {
+      audio.pause()
+      audio.currentTime = 0
+    }
+    window.onload= inicial
+  </script>
+  
+  </head>
+
+  <body>
+    <a href="index.html">
+      <div class="DivLink" style="background-color: lightgrey">Return to Index Page</div>
+    </a>
+    <h2>Web Html5 Tutorials : Audio</h2>
+    <h4>Audio Sample Symphony No.6 (1st movement)</h4>
+    
+    <hr/>
+    <h3>&lt;audio controls&gt;</audio></h3>
+    <div style="text-align: center">
+      <audio controls>
+        <source src="audio/Symphony No.6 (1st movement).mp3" type="audio/mpeg" />
+        <source src="audio/Symphony No.6 (1st movement).m4a" type="audio/mpeg" />
+        <source src="audio/Symphony No.6 (1st movement).ogg" type="audio/ogg" />
+      </audio>
+    </div>
+<hr/>
+    <h3>&lt;audio id="player"&gt;</audio></h3>
+    <div style="text-align: center">
+      <audio id="player">
+        <source src="audio/Symphony No.6 (1st movement).mp3" type="audio/mpeg" />
+        <source src="audio/Symphony No.6 (1st movement).m4a" type="audio/mpeg" />
+        <source src="audio/Symphony No.6 (1st movement).ogg" type="audio/ogg" />
+      </audio>
+
+      <form style="padding: 20px;">
+        <input type="button" value="Play" onclick="play()">
+        <input type="button" value="Pause" onclick="pause()">
+        <input type="button" value="Stop" onclick="stop()">
+      </form>
+
+    </div>
+    <hr/>
+    <a class="ext" href="https://filesamples.com/formats/mp3"> filesamples.com - format MP3 </a>
+    <a class="ext" href="https://filesamples.com/formats/m4a"> filesamples.com - format M4A </a>
+    <a class="ext" href="https://filesamples.com/formats/ogg"> filesamples.com - format OGG </a>
+  </body>
+</html>

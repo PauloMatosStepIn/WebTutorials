@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Html5 Tutorials : SVG</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+
+    <style>
+      body {
+        margin: 0;
+      }
+      svg {
+        background-color: #ddd;
+        /* width: 500px;
+        height: 500px; */
+      }
+
+      .grafico {
+				width:500px;margin:0 auto
+			}
+			
+			.grafico svg {
+				background-image:url(imagens/background_grafico.png);
+				background-repeat:no-repeat;
+			}	
+
+    </style>
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet">
+
+  </head>
+
+  <!--
+    Triangulo
+    173,182 319,182 246,38 
+
+    Losango
+    200,200 300,350 400,200 300,50
+
+    Hexagono
+    90,15 150,15 190,75 150,135 90,135 50,75
+
+    Estrela
+    38,166 16,236 76,188 5,188 60,236
+
+       Polilinha
+    20,20 50,130 50,20 140,140 230,80
+    -->
+
+    
+
+  <body>
+
+    <a href="index.html">
+      <div class="DivLink" style="background-color: lightgrey;">Return to Index Page</div>
+    </a>
+    <h2>Web Html5 Tutorials : SVG</h2>
+
+    <svg width="200" height="200" class="center">
+      <circle cx="60" cy="60" r="50" fill="#f00" stroke="#000" stroke-width="5"></circle>
+    </svg>
+<hr/>
+    <svg width="300" height="500" class="center">
+      <rect x="60" y="60" width="100" height="100" fill="red" rx="10" stroke="white" stroke-width="5"></rect>
+      <rect x="80" y="80" width="100" height="100" fill="black" fill-opacity="0.5" rx="10" stroke="gray" stroke-width="5"></rect>
+    </svg>
+    <hr/>
+    <svg width="300" height="450" class="center">
+      <ellipse cx="100" cy="200" rx="60" ry="120" fill="red"></ellipse>
+    </svg>
+    <hr/>
+    <svg width="400" height="450" class="center">
+      <polygon points="173,182 319,182 246,38" fill="yellow"></polygon points="">
+      <polygon points="200,200 300,350 400,200 300,50" fill="green" fill-opacity="0.5"></polygon points="">
+      <polygon points="90,15 150,15 190,75 150,135 90,135 50,75" fill="red" fill-opacity="0.4"></polygon points="">
+      <polygon points="38,166 16,236 76,188 5,188 60,236" fill="blue" fill-opacity="0.5"></polygon points="">
+    </svg>
+    <hr/>
+    <svg width="300" height="450" class="center">
+        <line x1="100" y1="200" x2="60" y2="120" stroke="magenta" stroke-width="3"></line>
+        <polyline 
+        fill="none"
+        stroke="red"
+        stroke-width="3"
+        points="110,210 70,130"
+        ></polyline>
+
+        <polyline 
+        fill="none"
+        stroke="blue"
+        stroke-width="3"
+        points="20,20 50,130 50,20 140,140 230,80"
+        ></polyline>
+
+        
+
+      </svg>
+
+      <hr/>
+      <div class="grafico">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="490" height="370" >
+            <line x1="91" y1="323" x2="91" y2="150" style="stroke:red;stroke-width:50"></line>
+            <line x1="170" y1="323" x2="170" y2="110" style="stroke:blue;stroke-width:50"></line>
+            <line x1="250" y1="323" x2="250" y2="80" style="stroke:green;stroke-width:50"></line>
+        </svg>
+    </div>
+<hr/>
+    
+  </body>
+</html>

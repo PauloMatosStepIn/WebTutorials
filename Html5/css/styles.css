@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  font-family: Nunito;
+}
+a {
+  font-size: 18px;
+  padding: 2px;
+  display: block;
+  width: 400px;
+  margin: auto;
+  text-decoration: none;
+}
+a.ext {
+  text-decoration: underline;
+}
+h1,
+h2,
+h3,
+h4,
+a,
+p {
+  text-align: center;
+}
+.DivLink {
+  width: 100%;
+  height: 100%;
+  background-color: tomato;
+  color: white;
+  border-radius: 5px;
+}
+p {
+  text-align: justify;
+  width: 400px;
+  display: block;
+  margin: auto;
+}
+.center {
+  text-align: center;
+  width: 10 0%;
+  display: block;
+  margin: auto;
+}
