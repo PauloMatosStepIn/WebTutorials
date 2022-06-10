@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Web CSS3 Tutorials : Slide Show</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: #a0b0b6;
+      }
+      .slider {
+        width: 800px;
+        height: 400px;
+        background: url('fotos/1.JPG');
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 10px auto;
+        animation: slide 20s infinite;
+        background-position: center center;
+      }
+      @keyframes slide {
+        10% {
+          background: url('fotos/11.JPG');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+        }
+        20% {
+          background: url('fotos/2.JPG');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+        }
+        30% {
+          background: url('fotos/3.JPG');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+        }
+        40% {
+          background: url('fotos/4.JPG');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+        }
+        50% {
+          background: url('fotos/5.JPG');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+        }
+        60% {
+          background: url('fotos/6.JPG');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+        }
+        70% {
+          background: url('fotos/7.JPG');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+        }
+        80% {
+          background: url('fotos/8.JPG');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+        }
+        90% {
+          background: url('fotos/9.JPG');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+        }
+        100% {
+          background: url('fotos/10.JPG');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a style="padding: 20px" href="index.html">
+      <div class="DivLink">Return to Index Page</div>
+    </a>
+    <h2 style="color: white">Web CSS3 Tutorials : Slide Show</h2>
+
+    <div class="slider"></div>
+  </body>
+</html>
