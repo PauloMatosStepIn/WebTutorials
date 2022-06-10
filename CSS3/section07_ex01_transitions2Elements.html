@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="ISO-8859-2" />
+    <title>Web CSS3 Tutorials : Transitions c/2 Elementos</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+
+    <style type="text/css">
+      article,
+      aside,
+      section,
+      header,
+      footer,
+      nav {
+        display: block;
+      }
+
+      main {
+        position: relative;
+        width: 760px;
+        height: 500px;
+        margin: 10px auto;
+        box-shadow: 0 0 10px #999999;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+      }
+
+      main:after {
+        clear: both;
+      }
+
+      header {
+        width: 760px;
+        height: 110px;
+        background-image: url(_img/topo.jpg);
+        background-repeat: no-repeat;
+        margin-bottom: 40px;
+      }
+
+      div#janela1,
+      div#janela2 {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        top: 130px;
+      }
+
+      div#janela1 {
+        left: 10px;
+        /* background-color: rgb(0, 102, 204); */
+        background-image: url('imagens/Blanquette_de_veau.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        cursor: pointer;
+        transform-origin: top left;
+      }
+
+      div#janela2 {
+        left: 180px;
+        /* background-color: rgb(255, 0, 0); */
+        background-image: url('imagens/caviar.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+
+      div#janela1:hover + div#janela2 {
+        transition: all 2s ease-in-out;
+        transform: rotate(90deg) scale(0);
+        left: 580px;
+      }
+
+      div#janela1:hover {
+        transition: all 2s ease-in-out;
+        transform: scale(1.5);
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="index.html">
+      <div class="DivLink" style="background-color: lightgrey">Return to Index Page</div>
+    </a>
+    <h2>Web CSS3 Tutorials : Transitions c/2 Elementos</h2>
+
+    <h4>:hover primeiro elemento</h4>
+
+    <main>
+      <header></header>
+      <div id="janela1"></div>
+      <div id="janela2"></div>
+    </main>
+  </body>
+</html>

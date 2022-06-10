@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Web CSS3 Tutorials : Transitions</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+
+    <style>
+      article,
+      aside,
+      section,
+      header,
+      footer,
+      nav {
+        display: block;
+      }
+
+      main {
+        width: 760px;
+        margin: 10px auto;
+        box-shadow: 0 0 10px #999999;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+      }
+
+      main:after {
+        clear: both;
+      }
+
+      header {
+        width: 760px;
+        height: 110px;
+        background-image: url(_img/topo.jpg);
+        background-repeat: no-repeat;
+        margin-bottom: 40px;
+      }
+
+      section {
+        display: inline;
+        margin: 5px 25px;
+      }
+
+      footer {
+        width: 100%;
+        height: 30px;
+        background-color: rgb(236, 236, 236);
+        margin-top: 40px;
+      }
+
+      section.thumb {
+        display: inline-block;
+        cursor: pointer;
+        /* transform-origin: bottom center; */
+        transform-origin: center center;
+        /* transform-origin: top center; */
+
+        /* transition-property: transform;
+        transition-duration: 1s; */
+
+        /* transition: all 1s ease-in; */
+        /* transition: all 1s ease-in-out; */
+        transition: all 1s ease-out;
+      }
+
+      section.thumb:hover {
+        /* transform: scale(1.3); */
+        /* transform: rotate(45deg); */
+        /* transform: translate(10px, 10px); */
+        /* transform: translateY(-10px); */
+        /* transform: skew(2deg); */
+        transform: scale(1.5);
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="index.html">
+      <div class="DivLink" style="background-color: lightgrey">Return to Index Page</div>
+    </a>
+    <h2>Web CSS3 Tutorials : Transitions</h2>
+    <h4>:hover em qualquer dos 4 elementos</h4>
+    <main>
+      <header></header>
+      <section class="thumb"><img src="imagens/Blanquette_de_veau.jpg" width="120" height="120" /></section>
+      <section class="thumb"><img src="imagens/caviar.jpg" width="120" height="120" /></section>
+      <section class="thumb"><img src="imagens/creme_brule.jpg" width="120" height="120" /></section>
+      <section class="thumb"><img src="imagens/pato_laranja2.jpg" width="120" height="120" /></section>
+      <footer></footer>
+    </main>
+  </body>
+</html>
