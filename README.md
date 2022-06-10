@@ -18,3 +18,4 @@ Código completo disponível no GitHub
 4. Transitions
 5. keyframes
 6. Landing Page
+7. Slide Show
