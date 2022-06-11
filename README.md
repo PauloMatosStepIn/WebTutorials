@@ -19,3 +19,4 @@ Código completo disponível no GitHub
 5. keyframes
 6. Landing Page
 7. Slide Show
+8. Media Type
