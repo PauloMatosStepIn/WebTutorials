@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>CWeb CSS3 Tutorials : Media Types</title>
+
+    <!-- 
+        By using the viewport meta tag we can control layout for web pages on mobile browsers
+
+        a largura da janela é igual à largura do device
+        e o utilizador não pode alterar a escala (aumentar ou diminuir) -->
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+
+    <!-- (media="screen") determines that the following line 
+        is used when this paged is accessed from a SCREEN -->
+    <link href="css/desktop.css" rel="stylesheet" media="screen" />
+
+    <!-- Em tamanhos tipo Tablet (com um maximo de 768px vamos aplicar tablet.css
+        que vai passar a secção lateral para baixo em duas colunas) -->
+    <link href="css/tablet.css" rel="stylesheet" media="screen and (max-width:768px)" />
+
+    <!-- (media="print") determines that the following line 
+        is used when this paged is accessed from Printing   Mode -->
+    <link href="css/print.css" rel="stylesheet" media="print" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+    <style>
+      .DivLink {
+        width: 100%;
+        height: 100%;
+        background-color: tomato;
+        color: white;
+        border-radius: 5px;
+      }
+      SiteHeader h1,
+      SiteHeader h2,
+      SiteHeader h3,
+      SiteHeader h4,
+      SiteHeader a,
+      SiteHeader p {
+        text-align: center;
+      }
+      SiteHeader p {
+        width: 600px;
+        margin: auto;
+        text-align: justify;
+      }
+
+      SiteHeader a {
+        font-size: 18px;
+        padding: 2px;
+        display: block;
+        width: 400px;
+        margin: auto;
+        text-decoration: none;
+      }
+
+      SiteHeader {
+        font-family: Nunito;
+      }
+    </style>
+  </head>
+
+  <body>
+    <SiteHeader>
+      <a style="padding: 20px" href="../index.html">
+        <div class="DivLink">Return to Index Page</div>
+      </a>
+      <h2>Web CSS3 Tutorials : Media Types (screen/print)</h2>
+      <p><b>PRINT this page to see the diference between media="screen" and media="print"</b></p>
+      <p>No media="print" é suprimida a secção lateral, Os títulos passam a preto, o texto dos artigos passa a "justificado" ocupando toda a largura, e as imagens não são apresentadas. A Imagem do Topo é substituida por texto.</p>
+    </SiteHeader>
+    <main>
+      <header>
+        <h3>Cafe Fonteneblau</h3>
+        <h5>Cuisine Française</h5>
+        <!-- <img src="imagens/topo.jpg" /> -->
+      </header>
+      <article>
+        <h1>Come dine with us tonight</h1>
+        <p><img src="imagens/romantic_dining.jpg" />Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga sunt commodi neque quidem amet assumenda, optio consequuntur laboriosam. Cupiditate architecto exercitationem vel veritatis! Aspernatur sit magnam accusamus distinctio pariatur? Saepe similique non cumque qui modi tempora aliquid laudantium hic nulla corrupti aut quos, harum iusto ut. Ex cumque expedita alias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quae id neque molestias voluptatum excepturi possimus maxime quam assumenda esse! Veniam, ea ipsa. Dolores illo quas nesciunt cum aperiam asperiores ad earum? Nemo, officiis non fuga inventore ipsum beatae quaerat assumenda minima unde autem sapiente ullam reiciendis aliquam vitae, praesentium nisi, hic iure id pariatur laborum? Libero culpa repellendus consequatur quibusdam eos quidem, omnis a dignissimos cum temporibus recusandae inventore dolores voluptatum sed dolorem reiciendis vel facilis incidunt nulla laudantium? Molestias alias sequi, aliquam saepe aut, fugit delectus deserunt praesentium blanditiis similique unde nisi necessitatibus voluptas error. Quaerat, repudiandae aut!</p>
+        <h2>Special Events</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eos aspernatur modi molestiae nihil, officiis tenetur non quidem omnis animi ex dolor possimus facilis qui excepturi earum molestias magni unde ab dolores aliquam architecto facere. Maiores dicta corrupti distinctio tenetur corporis praesentium sit animi eaque, quas repudiandae ipsum eligendi recusandae!</p>
+      </article>
+      <aside>
+        <img src="imagens/mapa_como_chegar.png" />
+        <img src="imagens/fotos.jpg" />
+        <!-- As imagens não têm a mesma altura, para a sua arrumação correcta teriam de ter a mesma altura ou teriam de ser incluidas noutro elemento -->
+        <!-- <img src="imagens/vinhos.jpg" /> -->
+      </aside>
+      <footer></footer>
+    </main>
+  </body>
+</html>

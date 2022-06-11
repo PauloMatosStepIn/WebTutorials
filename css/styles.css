@@ -10,9 +10,7 @@ a {
   margin: auto;
   text-decoration: none;
 }
-a.ext {
-  text-decoration: underline;
-}
+
 h1,
 h2,
 h3,
@@ -20,6 +18,17 @@ h4,
 a,
 p {
   text-align: center;
+}
+a.ext {
+  text-decoration: underline;
+}
+a.InText {
+  text-decoration: underline;
+  text-align: unset;
+  padding: unset;
+  display: unset;
+  width: unset;
+  margin: unset;
 }
 .DivLink {
   width: 100%;
