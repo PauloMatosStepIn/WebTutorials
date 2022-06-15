@@ -1,8 +1,8 @@
-body {
+SiteHeader {
   margin: 0;
   font-family: Nunito;
 }
-a {
+SiteHeader a {
   font-size: 18px;
   padding: 2px;
   display: block;
@@ -11,18 +11,18 @@ a {
   text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-a,
-p {
+SiteHeader h1,
+SiteHeader h2,
+SiteHeader h3,
+SiteHeader h4,
+SiteHeader a,
+SiteHeader p {
   text-align: center;
 }
-a.ext {
+SiteHeader a.ext {
   text-decoration: underline;
 }
-a.InText {
+SiteHeader a.InText {
   text-decoration: underline;
   text-align: unset;
   padding: unset;
@@ -30,20 +30,20 @@ a.InText {
   width: unset;
   margin: unset;
 }
-.DivLink {
+SiteHeader .DivLink {
   width: 100%;
   height: 100%;
   background-color: tomato;
   color: white;
   border-radius: 5px;
 }
-p {
+SiteHeader p {
   text-align: justify;
   width: 400px;
   display: block;
   margin: auto;
 }
-.center {
+SiteHeader .center {
   text-align: center;
   width: 10 0%;
   display: block;

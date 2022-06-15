@@ -14,6 +14,8 @@ header {
   height: 110px;
   background-image: url(../imagens/topo.jpg);
   background-repeat: no-repeat;
+  /* keep height, resize width */
+  background-size: auto 100%;
 }
 
 /* exclude Text headers from Screen Mode */
@@ -50,6 +52,7 @@ article h2 {
 article img {
   float: left;
   margin-right: 10px;
+  border-radius: 5px;
 }
 
 article p {
@@ -74,4 +77,44 @@ footer {
   height: 30px;
   background-color: rgb(239, 239, 239);
   clear: both;
+}
+
+nav#menu_mobile {
+  display: none;
+}
+
+/* mostrar menu do desktop */
+nav#menu_desktop {
+  display: block;
+  float: left;
+  width: 100%;
+  /* min-width: 610px; */
+  margin-bottom: 20px;
+  background-color: rgb(79, 22, 23);
+
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 13px;
+}
+
+nav#menu_desktop ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav#menu_desktop li {
+  float: left;
+}
+
+nav#menu_desktop li a {
+  display: inline-block;
+  background-color: rgb(79, 22, 23);
+  padding: 10px 25px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+nav#menu_desktop li a:hover {
+  background-color: rgb(153, 0, 0);
 }

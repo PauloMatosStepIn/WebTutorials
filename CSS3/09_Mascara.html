@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/transitions.css">
+  <title>Web CSS3 Tutorials : Máscara</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+
+</head>
+<body>  
+  <a href="index.html">
+    <div class="DivLink" >Return to Index Page</div>
+  </a>
+  <h2 style="color:white">Web CSS3 Tutorials : Máscara / Sombra</h2>
+
+
+  <style>
+    body {
+        background-color:rgb(51,51,51);
+    }
+
+    #foto {
+        margin:50px auto 0;
+        width:200px;
+        height:200px;			
+        background: url(imagens/personagem1.jpg) no-repeat; 
+        /* border radius  Mascara = Circulo */
+        border-radius: 50%;
+        /* Moldura Circular / Border */
+        border: 5px solid rgb(129, 87, 3);
+        /* Sombra Interior & Sombra Exterior */
+        box-shadow: inset 10px 10px 10px rgb(177, 133, 1), 
+        inset -10px -10px 30px rgb(113, 51, 0), 
+        -5px -5px 10px rgb(82, 82, 82),
+        5px 5px 10px rgb(13, 13, 13);
+    }
+</style>
+
+      <div id="foto"></div>
+</body>
+  
+</body>
+</html>

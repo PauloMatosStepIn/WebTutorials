@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Web CSS3 Tutorials : Object Fit</title>
+    <link rel="stylesheet" type="text/css" href="../../css/SiteHeader.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+
+    <style>
+      body {
+        margin: 0;
+        background-color: white;
+      }
+
+      header {
+        width: 100%;
+        height: 600px;
+        margin: 0 auto;
+      }
+
+      header img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+      }
+
+      @media only screen and (max-width: 769px) {
+        header {
+          height: 320px;
+        }
+      }
+
+      @media only screen and (orientation: landscape) and (max-height: 414px) {
+        header {
+          height: 160px;
+        }
+      }
+
+      @media only screen and (max-width: 414px) {
+        header {
+          height: 160px;
+        }
+      }
+
+      div.janela {
+        width: 80%;
+        height: 400px;
+        margin: 10px auto;
+        border: 1px solid #000;
+      }
+
+      div.janela img {
+        width: 100%;
+        height: 100%;
+        object-fit: none;
+      }
+
+      #j2 img {
+        object-position: top left;
+      }
+      #j3 img {
+        object-fit: fill;
+      }
+      #j4 img {
+        object-fit: contain;
+      }
+
+      #j5 img {
+        object-fit: scale-down;
+        object-position: top center;
+      }
+
+      #j6 img {
+        object-fit: cover;
+        object-position: top center;
+      }
+
+      #j6 {
+        border: 10px solid rgb(161, 124, 2);
+      }
+
+      SiteHeader p:first-child {
+        padding-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="imagens/GirlOnPc1200x628.jpg" />
+    </header>
+
+    <SiteHeader>
+      <a href="../index.html">
+        <div class="DivLink">Return to Index Page</div>
+      </a>
+      <h2>Web CSS3 Tutorials : Object Fit</h2>
+    </SiteHeader>
+
+    <SiteHeader>
+      <p>object-fit: none;</p>
+    </SiteHeader>
+    <div class="janela">
+      <img src="imagens/GirlOnPc600x314.jpg" />
+    </div>
+    <SiteHeader>
+      <p>object-fit: none;</p>
+      <p>object-position: top left;</p>
+    </SiteHeader>
+    <div id="j2" class="janela">
+      <img src="imagens/GirlOnPc600x314.jpg" />
+    </div>
+    <SiteHeader>
+      <p>object-fit: fill;</p>
+    </SiteHeader>
+    <div id="j3" class="janela">
+      <img src="imagens/GirlOnPc600x314.jpg" />
+    </div>
+
+    <SiteHeader>
+      <p>object-fit: contain;</p>
+    </SiteHeader>
+    <div id="j4" class="janela">
+      <img src="imagens/GirlOnPc600x314.jpg" />
+    </div>
+
+    <SiteHeader>
+      <p>object-fit: scale-down;</p>
+      <p>object-position: top center;</p>
+    </SiteHeader>
+    <div id="j5" class="janela">
+      <img src="imagens/GirlOnPc600x314.jpg" />
+    </div>
+
+    <SiteHeader>
+      <p>object-fit: cover;</p>
+      <p>object-position: top center;</p>
+    </SiteHeader>
+    <div id="j6" class="janela">
+      <img src="imagens/GirlOnPc600x314.jpg" />
+    </div>
+  </body>
+</html>

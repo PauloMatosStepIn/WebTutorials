@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/transitions.css">
+  <title>Web CSS3 Tutorials : Sombras</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+
+    <style>
+      #janela1, #janela2, #janela3, #janela4, #janela4a, #janela4b, #janela4c, #janela4d, #janela4e, #janela5, #janela5a, #janela5b {
+          margin:10px auto 50px;
+          width:700px;
+          height:250px;
+          background-color:#FFF;
+      }
+      #janela2{
+        box-shadow: 5px 5px 10px #999;
+      }
+      #janela3{
+        box-shadow: 0 10px 5px -5px #999;
+      }
+      #janela4, #janela4a, #janela4b, #janela4c, #janela4d, #janela4e, #janela5, #janela5a, #janela5b {
+        position: relative;
+      }
+      #janela4:before, #janela4a:before, #janela4b:before , #janela4c:before , #janela4d:before, #janela4c:after , #janela4d:after, #janela4e:before, #janela4e:after  {
+        position: absolute;
+        left: 7px;
+        top: 50%;
+        bottom: 15px;
+        width: 50%;
+        background: #999;
+        transform: rotate(-3deg); 
+        /* needed to display */
+        content: ""
+      }
+      
+      #janela4a:before, #janela4b:before, #janela4d:before, #janela4d:before, #janela4d:after, #janela4e:before, #janela4e:after {
+        box-shadow: 0 18px 10px 0 #999;
+      }
+            
+      #janela4b:before, #janela4e:before, #janela4e:after {
+        z-index: -1;
+      }
+
+      #janela4c:after , #janela4d:after, #janela4e:after {
+        left: auto;
+        right: 10px;  
+        transform: rotate(3deg); 
+      }
+
+      #janela5:before, #janela5a:before, #janela5b:before {
+        position: absolute;
+        /* needed to display */
+        content: "";
+        box-shadow: 0px 10px 10px 0px #777;
+        /* top ao centro */
+        top: 50%;
+        /* encostado ao fundo */
+        bottom: 0;
+        right: 10px;
+        left: 10px;
+        /* importante para a curvatura ficar mais alongada na horizontal */
+        border-radius: 130px/15px;
+      }
+      
+      #janela5a:before,#janela5b:before {
+        z-index: -1;
+      }
+
+
+      #janela5b{
+        border-radius: 15px/500px;
+      }
+
+
+  </style>
+
+</head>
+<body style="background: #F0F0F0;  ">  
+  <a href="index.html">
+    <div class="DivLink" >Return to Index Page</div>
+  </a>
+  <h2 style="padding: 0px;">Web CSS3 Tutorials : Sombras</h2>
+  <h3 style="padding: 0px;">Sem Sombra:</h3>
+  <div style="padding: 0px;" id="janela1">janela1</div>
+<hr/>
+<h3 style="padding: 0px;">Sombra Papel:</h3>
+<div style="padding: 0px;" id="janela2">janela2</div>
+<hr/>
+<h3 style="padding: 0px;">Sombra em Baixo:</h3>
+<div style="padding: 0px;" id="janela3">janela3</div>
+<hr/>
+<h3 style="padding: 0px;">Canto levantado:</h3>
+<p style="padding: 0px;">(sem <b>box-shadow</b> e <b>z-index</b>)</p>
+<div style="padding: 0px;" id="janela4">janela4</div>
+
+<p style="padding: 0px;">(já com <b>box-shadow</b>)</p>
+<div style="padding: 0px;" id="janela4a">janela4a</div>
+
+<p style="padding: 0px;">(já com <b>z-index: -1</b>)</p>
+<div style="padding: 0px;" id="janela4b">janela4b</div>
+<hr>
+<h3 style="padding: 0px;">Dois Cantos levantados</h3>
+<p style="padding: 0px;">(sem <b>box-shadow</b> e <b>z-index</b>)</p>
+<div style="padding: 0px;" id="janela4c">janela4c</div>
+<p style="padding: 0px;">(já com <b>box-shadow</b>)</p>
+<div style="padding: 0px;" id="janela4d">janela4d</div>
+<p style="padding: 0px;">(já com <b>z-index</b>)</p>
+
+<style>
+  article h1 {
+font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  text-shadow: 5px 5px 5px  #999;
+  color: rgb(92, 92, 92);
+  margin: 3px 0;
+
+font-size: 36px;
+
+padding-top: 40px;
+line-height: 180%;
+}
+
+</style>
+<div style="padding: 0px;" id="janela4e">janela4e
+ 
+  <article>
+    <h1>Come dine with us tonight</h1>
+  </article>
+
+</div>
+<hr/>
+<h3 style="padding: 0px;">Sombra em baixo ao centro:</h3>
+<p style="padding: 0px;">(sem <b>z-index</b>)</p>
+<div style="padding: 0px;" id="janela5">janela5 </div>
+<p style="padding: 0px;">(já com <b>z-index</b>)</p>
+<div style="padding: 0px;" id="janela5a">janela5a </div>
+<p style="padding: 0px;">(curvatura lateral na janela)</p>
+<div style="padding: 0px;" id="janela5b">janela5b 
+
+  <article>
+    <h1>Come dine with us tonight</h1>
+  </article>
+</div>
+
+</body>
+  
+</body>
+</html>

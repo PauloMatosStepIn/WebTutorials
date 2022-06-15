@@ -6,16 +6,33 @@ main,
 article,
 aside {
   width: 90%;
+  /* for test purpose
+  background-color: gray; */
 }
 aside {
-  float: left;
+  float: none;
+  margin: 0 auto;
 }
 
 aside img:nth-child(odd) {
   float: left;
-  width: 45%;
+  /* width: 45%; */
 }
 aside img:nth-child(even) {
   float: right;
-  width: 45%;
+  /* width: 45%; */
+}
+
+@media (max-width: 713px) {
+  aside {
+    text-align: center;
+    /* for test purpose
+    background-color: brown; */
+  }
+
+  /* Overwrite base properties */
+  aside img:nth-child(odd),
+  aside img:nth-child(even) {
+    float: none;
+  }
 }

@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>CWeb CSS3 Tutorials : Media Types</title>
+    <title>CWeb CSS3 Tutorials : Menu Responsivo</title>
 
     <!-- 
         By using the viewport meta tag we can control layout for web pages on mobile browsers
@@ -35,6 +35,7 @@
         height: 100%;
         background-color: tomato;
         color: white;
+        /* arredondamento de cantos */
         border-radius: 5px;
       }
       SiteHeader h1,
@@ -71,10 +72,8 @@
       <a style="padding: 20px" href="../index.html">
         <div class="DivLink">Return to Index Page</div>
       </a>
-      <h2>Web CSS3 Tutorials : Media Types (screen/print)</h2>
-      <p><b>PRINT this page to see the diference between media="screen" and media="print"</b></p>
-      <p>No media="print" é suprimida a secção lateral, Os títulos passam a preto, o texto dos artigos passa a "justificado" ocupando toda a largura, e as imagens não são apresentadas. A Imagem do Topo é substituida por texto.</p>
-      <p>No media indicado para "mobile"(min-width:320px/max-width:430px) a apresentação passa a uma coluna, imagens centradas, texto justificado e ampliado. Adaptada a apresentação do cabeçalho.</p>
+      <h2>Web CSS3 Tutorials : Menu Responsivo</h2>
+      <p>Utilização de 2 Menus: "menu_desktop" e "menu_mobile" com styles associados respectivamente em "desktop.css" e "mobile.css".</p>
     </SiteHeader>
     <main>
       <header>
@@ -82,6 +81,14 @@
         <h5>Cuisine Française</h5>
         <!-- <img src="imagens/topo.jpg" /> -->
       </header>
+      <!-- Definição de estilos: nav#menu_desktop em "desktop.css" -->
+      <nav id="menu_desktop">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Special Events</a></li>
+          <li><a href="#">Reservation</a></li>
+        </ul>
+      </nav>
       <article>
         <h1>Come dine with us tonight</h1>
         <p><img src="imagens/romantic_dining.jpg" />Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga sunt commodi neque quidem amet assumenda, optio consequuntur laboriosam. Cupiditate architecto exercitationem vel veritatis! Aspernatur sit magnam accusamus distinctio pariatur? Saepe similique non cumque qui modi tempora aliquid laudantium hic nulla corrupti aut quos, harum iusto ut. Ex cumque expedita alias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quae id neque molestias voluptatum excepturi possimus maxime quam assumenda esse! Veniam, ea ipsa. Dolores illo quas nesciunt cum aperiam asperiores ad earum? Nemo, officiis non fuga inventore ipsum beatae quaerat assumenda minima unde autem sapiente ullam reiciendis aliquam vitae, praesentium nisi, hic iure id pariatur laborum? Libero culpa repellendus consequatur quibusdam eos quidem, omnis a dignissimos cum temporibus recusandae inventore dolores voluptatum sed dolorem reiciendis vel facilis incidunt nulla laudantium? Molestias alias sequi, aliquam saepe aut, fugit delectus deserunt praesentium blanditiis similique unde nisi necessitatibus voluptas error. Quaerat, repudiandae aut!</p>
@@ -94,6 +101,13 @@
         <!-- As imagens não têm a mesma altura, para a sua arrumação correcta teriam de ter a mesma altura ou teriam de ser incluidas noutro elemento -->
         <!-- <img src="imagens/vinhos.jpg" /> -->
       </aside>
+      <nav id="menu_mobile">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Special Events</a></li>
+          <li><a href="#">Reservation</a></li>
+        </ul>
+      </nav>
       <footer></footer>
     </main>
   </body>
