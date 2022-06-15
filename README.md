@@ -20,3 +20,9 @@ Código completo disponível no GitHub
 6. Landing Page
 7. Slide Show
 8. Media Type
+9. Máscara / Sombra
+10. Sombras
+11. Colunas
+12. Background Responsivo
+13. Object Fit
+14. Object Fit : thumbnails
