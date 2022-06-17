@@ -25,5 +25,5 @@ Código completo disponível no GitHub
 11. Colunas
 12. Background Responsivo
 13. Object Fit
-14. Object Fit : thumbnails
-15. Menu Responsivo
+13a. Object Fit : thumbnails
+14. Menu Responsivo
