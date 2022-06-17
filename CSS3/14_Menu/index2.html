@@ -1,0 +1,213 @@
+<html>
+  <head>
+    <title>Web CSS3 Tutorials : Menu Responsivo (Step 2)</title>
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" type="text/css" href="../../css/SiteHeader.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+
+    <style>
+      body {
+        margin: 0;
+      }
+
+      nav {
+        position: fixed;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+
+      nav img {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        z-index: -1;
+      }
+
+      nav ul#menu-desktop {
+        margin: 0;
+        padding: 0;
+        text-align: right;
+      }
+      nav ul#menu-mobile,
+      nav div#menu-btn {
+        display: none;
+      }
+      nav ul#menu-desktop li {
+        list-style-type: none;
+        display: inline;
+      }
+
+      nav ul#menu-desktop li a {
+        padding: 30px 40px;
+        text-decoration: none;
+
+        color: #fff;
+        display: inline-block;
+        margin-right: -3px;
+        font-family: Roboto, sans-serif;
+        font-size: 80%;
+        letter-spacing: 0.6;
+      }
+
+      nav ul#menu-desktop li a:hover {
+        background-color: rgba(213, 26, 44, 1);
+        transition: all 0.5s ease-out;
+        transform: scale(1.1);
+      }
+
+      header {
+        width: 100%;
+        height: 600px;
+        margin: 0 auto;
+      }
+
+      header img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: top center;
+      }
+
+      header h1 {
+        position: absolute;
+        font-family: roboto, sans-serif;
+        font-size: 400%;
+        color: white;
+        width: 100%;
+        text-align: center;
+        padding-top: 5%;
+        text-shadow: 0 0 7px black;
+        z-index: 2;
+      }
+
+      @media only screen and (max-width: 700px) {
+        header {
+          height: 320px;
+          margin-top: 70px;
+        }
+        nav {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 70px;
+          background-color: #333;
+        }
+        nav img {
+          width: 70px;
+          left: 50%;
+          margin-left: -35px;
+        }
+
+        nav div#menu-btn {
+          position: absolute;
+          display: block;
+          top: 20px;
+          right: 20px;
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+        }
+        nav ul#menu-desktop {
+          display: none;
+        }
+
+        nav ul#menu-mobile {
+          /* display: block; */
+          margin-top: 70px;
+          padding: 0;
+        }
+
+        nav ul#menu-mobile li {
+          display: block;
+          width: 100%;
+          list-style-type: none;
+        }
+        nav ul#menu-mobile li a {
+          display: block;
+          text-decoration: none;
+          color: white;
+          text-align: center;
+          background-color: maroon;
+          padding: 20px;
+          border-bottom: 1px solid #333;
+          font-family: Roboto, sans-serif;
+          font-size: 80%;
+          letter-spacing: 0.6;
+        }
+
+        nav ul#menu-mobile li a:hover {
+          background-color: rgba(213, 26, 44, 1);
+          transition: all 0.5s ease-out;
+          transform: scale(1.1);
+        }
+
+        header h1 {
+          font-size: 200%;
+          padding-top: 300px;
+          color: black;
+          text-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <img src="imagens/logo-pizzaria-grande.png" />
+      <ul id="menu-desktop">
+        <li><a href="">PIZZAS</a></li>
+        <li><a href="">MEUS PEDIDOS</a></li>
+        <li><a href="">CONTACTO</a></li>
+        <li><a href="">LOGIN</a></li>
+      </ul>
+      <ul id="menu-mobile">
+        <li><a href="">PIZZAS</a></li>
+        <li><a href="">MEUS PEDIDOS</a></li>
+        <li><a href="">CONTATO</a></li>
+        <li><a href="">LOGIN</a></li>
+      </ul>
+      <div id="menu-btn">
+        <svg width="30" height="30">
+          <path d="M0,5 30,5" stroke="#fff" stroke-width="4" />
+          <path d="M0,15 30,15" stroke="#fff" stroke-width="4" />
+          <path d="M0,25 30,25" stroke="#fff" stroke-width="4" />
+        </svg>
+      </div>
+    </nav>
+
+    <header>
+      <h1>A Melhor Pizza da Cidade</h1>
+      <img src="imagens/foto-capa-pizza.jpg" />
+    </header>
+
+    <SiteHeader>
+      <a style="padding-top: 50px;" href="../index.html">
+        <div class="DivLink" style="background-color: lightgrey">Return to Index Page</div>
+      </a>
+      <a href="index1.html">
+        <div class="DivLink">Go to Menu Responsivo (Step 2)</div>
+      </a>
+      <h2>Web CSS3 Tutorials : Menu Responsivo (Step 3)</h2>
+      <p>Menu preparado para Desktop e Phone.</p>
+    </SiteHeader>
+
+    <script src="js/jquery.js"></script>
+    <script>
+      $(function () {
+        $('#menu-btn').click(function (e) {
+          $('nav ul#menu-mobile').toggle()
+        })
+
+        $(window).resize(function (e) {
+          var largura = $(window).width()
+          if (largura >= 701) {
+            $('nav ul#menu-mobile').hide()
+          }
+        })
+      })
+    </script>
+  </body>
+</html>

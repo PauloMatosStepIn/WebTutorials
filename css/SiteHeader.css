@@ -31,8 +31,8 @@ SiteHeader a.InText {
   margin: unset;
 }
 SiteHeader .DivLink {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   background-color: tomato;
   color: white;
   border-radius: 5px;
