@@ -1,0 +1,12 @@
+.code {
+  border-radius: 5px;
+  margin-left: 5%;
+  width: 95%;
+  color: white;
+  background-color: black;
+  overflow-x: auto;
+}
+
+div.code pre {
+  padding-top: 10px;
+}

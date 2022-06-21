@@ -1,0 +1,130 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Javascript Tutorials : Get/Set Elements</title>
+  <link rel="stylesheet" type="text/css" href="../css/SiteHeader.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap"
+    rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../css/code.css">
+</head>
+
+<body style="font-family: 'Nunito', sans-serif; margin: 50px;">
+
+  <body>
+    <SiteHeader>
+      <a href="index.html">
+        <div class="DivLink">Return to Index Page</div>
+      </a>
+      <h2>Web Javascript Tutorials : Get/Set Elements</h2>
+      <h3>Nota:</h3>
+      <p>Na página do browser -> click no botão do lado direito do mouse<br />
+        escolher opção: INSPECT -> Console<br />
+        para ver resultado de JavaScript
+      </p>
+      
+    </SiteHeader>
+
+
+
+    <h1>Menu Pizzas</h1>
+    <ul id="opcoesPizza">
+      <li class="em_promocao">Calabresa</li>
+      <li>Portuguesa</li>
+      <li>Mussarela</li>
+      <li>Margueritta</li>
+      <li class="em_promocao">Brasileira</li>
+    </ul>
+    <img src="imagens/pizza.jpg"/>
+
+    <h3>Métodos JS de acesso a elementos DOM / HTML usados nesta página<br> 
+      getElement (<a href="js/js1_getElement.js">js/js1_getElement.js</a>)</h3>
+    <p>getElementById<br>
+      firstElementChild<br />
+      getElementsByTagName<br/>
+      getElementsByClassName<br/>
+      <h3>querySelector (<a href="js/js2_querySelector.js">js/js2_querySelector.js</a>)</h3>
+      querySelector<br/>
+      querySelectorAll<br/>
+      <h3>Métodos JS de criação de elemento DOM / HTML usados nesta página<br/> 
+        createElement / appendChild (<a href="js/js3_AdicionarElemento.js">js/js3_AdicionarElemento.js</a>)</h3>
+
+        <div class="code">
+          <pre>
+            var novaPizza = document.createElement('li')
+            elemento.appendChild(novaPizza)
+            novaPizza.innerHTML = 'Nova Pizza'
+          </pre>
+        </div>
+        <p>or (sem definir <i>novaPizza</i>):</p>
+        <div class="code">
+          <pre>
+            elemento.appendChild(document.createElement('li')).innerHTML = 'Mais uma Pizza'
+          </pre>
+        </div>
+        <p>or (sem definir <i>elemento</i> ):</p>
+        <div class="code">
+          <pre>
+            document.querySelector('#opcoesPizza').appendChild(document.createElement('li')).innerHTML = 'Outra Pizza'
+          </pre>
+        </div>
+        <h3>Métodos Set/Get p/Atributos de elemento DOM / HTML usados nesta página<br/> 
+          setAttribute / getAttribute (<a href="js/js4_SetGetAttributes.js">js/js4_SetGetAttributes.js</a>)</h3>
+  
+
+          <div class="code">
+            <pre>
+              var imagem = document.querySelector('img')
+
+              imagem.setAttribute('src', 'imagens/outra_pizza.jpg')
+              imagem.setAttribute('width', '300px')
+              imagem.setAttribute('alt', 'Foto de Outra Pizza')
+              
+              console.log(imagem.getAttribute('alt'))
+        </pre>
+          </div>
+          <h3>Métodos Atribuição por <b>id</b> de elemento DOM / HTML usados nesta página<br/> 
+            (<a href="js/js5_AttribuicaoID.js">js/js5_AttribuicaoID.js</a>)</h3>
+            <p>Output:</p>
+            <div class="code" style="padding-left: 20px; background-color: gray;">
+              <h1>Menu Pizzas</h1>
+              <ul id="opcoesPizza">
+                <li id="pizza1"></li>
+                <li id="pizza2"></li>
+                <li id="pizza3"></li>
+              </ul>
+            </div>
+            <p>Html:</p>
+            <div class="code">
+            <pre>
+              &lt;h1&gt;Menu Pizzas&lt;/h1&gt;
+              &lt;ul id="opcoesPizza"&gt;
+                &lt;li id="pizza1"&gt;&lt;/li&gt;
+                &lt;li id="pizza2"&gt;&lt;/li&gt;
+                &lt;li id="pizza3"&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            </pre>
+            </div>
+            <p>JavaScript:</p>
+            <div class="code">
+              <pre>
+                /* Atribuicao após querySelector */
+                var p1 = document.querySelector('#pizza1')
+                p1.innerHTML = 'Primeira Pizza'
+
+                /* Atribuicao Directa */
+                pizza2.innerHTML = 'Segunda Pizza'
+                pizza3.innerHTML = 'Last Pizza'
+              </pre>
+              </div>      
+    </p>
+    <script src="js/js1_getElement.js"></script>
+    <script src="js/js2_querySelector.js"></script>
+    <script src="js/js3_AdicionarElemento.js"></script>
+    <script src="js/js4_SetGetAttributes.js"></script>
+    <script src="js/js5_AttribuicaoID.js"></script>
+  </body>
+
+</html>

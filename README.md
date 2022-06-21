@@ -26,3 +26,8 @@ Código completo disponível no GitHub
 12. Background Responsivo
 13. Object Fit & thumbnails
 14. Menu Responsivo
+
+## Web JavaScript Tutorials
+
+1. Get / Set Elements
+2. Events
