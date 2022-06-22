@@ -1,7 +1,49 @@
 body {
+  background: #f0f0f0;
   margin: 0;
   font-family: Nunito;
 }
+
+main {
+  margin: 0 auto;
+  width: 800px;
+}
+
+main h1 {
+  top: 0;
+  left: 0;
+  margin: -20px -20px 20px -20px;
+  background-color: darkgrey;
+  color: white;
+  text-shadow: 0 0 3px rgb(24, 12, 0);
+}
+
+.artigo {
+  box-shadow: 0 0 5px #999;
+  background: #fff;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.code {
+  border-radius: 5px;
+  margin-left: 5%;
+  margin-top: 10px;
+  width: 95%;
+  color: white;
+  background-color: black;
+  overflow-x: auto;
+}
+
+div.code pre {
+  padding-top: 0px;
+}
+
+div.code div {
+  left: 0px;
+  padding: 5px;
+}
+
 a {
   font-size: 18px;
   padding: 2px;

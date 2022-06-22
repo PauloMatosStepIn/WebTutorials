@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../css/landing.css" />
 
     <title>Web CSS3 Tutorials : Landing Page</title>
     <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/landing.css" />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
   </head>
   <body>
@@ -17,9 +17,106 @@
     <div id="content" class="container">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus iusto voluptatibus illum a impedit at fuga aliquam, in fugiat! Iste tempora similique sint, fugiat amet quam odio repellat dolore mollitia praesentium soluta, perspiciatis enim repudiandae doloribus quis. Eaque porro vitae, quaerat dolor nihil eveniet illum impedit libero sit, tempore ab.</div>
     <a href="#" class="btn">Read More</a>
 
-    <a style="padding: 20px" href="index.html">
-      <div class="DivLink" >Return to Index Page</div>
+    <a style="padding: 20px" href="../index.html#css3_06_landingPage">
+      <div class="DivLink">Return to Web CSS3 Tutorials</div>
     </a>
     <h2>Web CSS3 Tutorials : Landing Page</h2>
+    <main style="text-align: left">
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+          &lt;div id="content" class="container"&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus iusto voluptatibus illum a impedit at fuga aliquam, in fugiat! Iste tempora similique sint, fugiat amet quam odio repellat dolore mollitia praesentium soluta, perspiciatis enim repudiandae doloribus quis. Eaque porro vitae, quaerat dolor nihil eveniet illum impedit libero sit, tempore ab.&lt;/div&gt;
+          &lt;a href="#" class="btn"&gt;Read More&lt;/a&gt;
+        </pre>
+      </div>
+
+      <div class="code">
+        <div>CSS</div>
+        <pre>
+      &lt;style&gt;
+      * {
+        margin:0;
+        padding:0;
+      }
+      
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #12475f;
+        color: #fff;
+        line-height: 1.6;
+        text-align: center;
+      }
+      
+      .container {
+        max-width: 960px;
+        margin: auto;
+        padding: 0 30px;
+      }
+      
+      #showcase {
+        height: 300px;
+      }
+      
+      #showcase h1 {
+        font-size: 50px;
+        line-height: 1.3;
+        position: relative;
+        animation: heading;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+      }
+      
+      @keyframes heading {
+        0%   {top: -50px;}
+        100% {top: 200px;}
+      }
+      
+      #content {
+        position: relative;
+        animation-name: content;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+      }
+      
+      @keyframes content {
+        0%   {left: -1000px;}
+        100% {left: 0;}
+      }
+      
+      .btn{
+        display: inline-block;
+        color: #fff;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        border: #fff 1px solid;
+        margin-top:40px;
+        opacity: 0;
+        animation-name: btn;
+        animation-duration: 3s;
+        animation-delay: 3s;
+        animation-fill-mode: forwards;
+      
+        transition-property: transform;
+        transition-duration: 1s;
+      }
+      
+      .btn:hover {
+        transform: rotateY(180deg);
+      }
+      
+      @keyframes btn {
+        0%   {opacity:0}
+        100% {opacity: 1}
+      }
+      &lt;/style&gt;
+      </pre
+        >
+      </div>
+      <hr />
+      <div style="padding: 50px">
+        <p>Código completo disponível no GitHub:</p>
+        <a style="color: white;" href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
+      </div>
+    </main>
   </body>
 </html>

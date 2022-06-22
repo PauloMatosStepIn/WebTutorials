@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
 
     <style type="text/css">
+      apresentacao,
       article,
       aside,
       section,
@@ -16,17 +17,17 @@
         display: block;
       }
 
-      main {
+      apresentacao {
         position: relative;
         width: 760px;
         height: 500px;
-        margin: 10px auto;
+        margin: 10px 40px;
         box-shadow: 0 0 10px #999999;
         background-color: rgb(255, 255, 255);
         text-align: center;
       }
 
-      main:after {
+      apresentacao:after {
         clear: both;
       }
 
@@ -78,17 +79,114 @@
   </head>
 
   <body>
-    <a href="index.html">
-      <div class="DivLink" style="background-color: lightgrey">Return to Index Page</div>
-    </a>
-    <h2>Web CSS3 Tutorials : Transitions c/2 Elementos</h2>
-
-    <h4>:hover primeiro elemento</h4>
-
     <main>
-      <header></header>
-      <div id="janela1"></div>
-      <div id="janela2"></div>
+      <a href="../index.html#css3_02_transitions2Elements">
+        <div class="DivLink" style="background-color: lightgrey">Return to Web Tutorials</div>
+      </a>
+      <h2>Web CSS3 Tutorials : Transitions c/2 Elementos</h2>
+
+      <h4>:hover primeiro elemento</h4>
+
+      <apresentacao>
+        <header></header>
+        <div id="janela1"></div>
+        <div id="janela2"></div>
+      </apresentacao>
+
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+        &lt;apresentacao&gt;
+          &lt;header&gt;&lt;/header&gt;
+          &lt;div id="janela1"&gt;&lt;/div&gt;
+          &lt;div id="janela2"&gt;&lt;/div&gt;
+        &lt;/apresentacao&gt;
+      </pre
+        >
+      </div>
+
+      <div class="code">
+        <div>CSS</div>
+        <pre>
+            &lt;style&gt;
+            apresentacao,
+            article,
+            aside,
+            section,
+            header,
+            footer,
+            nav {
+              display: block;
+            }
+      
+            apresentacao {
+              position: relative;
+              width: 760px;
+              height: 500px;
+              margin: 10px 40px;
+              box-shadow: 0 0 10px #999999;
+              background-color: rgb(255, 255, 255);
+              text-align: center;
+            }
+      
+            apresentacao:after {
+              clear: both;
+            }
+      
+            header {
+              width: 760px;
+              height: 110px;
+              background-image: url(imagens/topo.jpg);
+              background-repeat: no-repeat;
+              margin-bottom: 40px;
+            }
+      
+            div#janela1,
+            div#janela2 {
+              position: absolute;
+              width: 150px;
+              height: 150px;
+              top: 130px;
+            }
+      
+            div#janela1 {
+              left: 10px;
+              /* background-color: rgb(0, 102, 204); */
+              background-image: url('imagens/Blanquette_de_veau.jpg');
+              background-repeat: no-repeat;
+              background-size: 100% 100%;
+              cursor: pointer;
+              transform-origin: top left;
+            }
+      
+            div#janela2 {
+              left: 180px;
+              /* background-color: rgb(255, 0, 0); */
+              background-image: url('imagens/caviar.jpg');
+              background-repeat: no-repeat;
+              background-size: 100% 100%;
+            }
+      
+            div#janela1:hover + div#janela2 {
+              transition: all 2s ease-in-out;
+              transform: rotate(90deg) scale(0);
+              left: 580px;
+            }
+      
+            div#janela1:hover {
+              transition: all 2s ease-in-out;
+              transform: scale(1.5);
+            }
+            &lt;/style&gt;
+            </pre
+        >
+      </div>
+
+      <hr />
+      <div style="padding: 50px">
+        <p>Código completo disponível no GitHub:</p>
+        <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
+      </div>
     </main>
   </body>
 </html>

@@ -3,7 +3,32 @@
   <head>
     <meta charset="utf-8" />
     <title>CWeb CSS3 Tutorials : Menu Responsivo</title>
+    <link rel="stylesheet" type="text/css" href="../../css/styles.css" />
 
+    <style>
+      apresentacao,
+      article,
+      aside,
+      section,
+      header,
+      footer,
+      nav {
+        display: block;
+      }
+
+      apresentacao {
+        position: relative;
+        width: 760px;
+        margin: 10px 40px;
+        box-shadow: 0 0 10px #999999;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+      }
+
+      apresentacao:after {
+        clear: both;
+      }
+    </style>
     <!-- 
         By using the viewport meta tag we can control layout for web pages on mobile browsers
 
@@ -29,53 +54,17 @@
     <link href="css/print.css" rel="stylesheet" media="print" />
 
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
-    <style>
-      .DivLink {
-        width: 100%;
-        height: 100%;
-        background-color: tomato;
-        color: white;
-        /* arredondamento de cantos */
-        border-radius: 5px;
-      }
-      SiteHeader h1,
-      SiteHeader h2,
-      SiteHeader h3,
-      SiteHeader h4,
-      SiteHeader a,
-      SiteHeader p {
-        text-align: center;
-      }
-      SiteHeader p {
-        width: 600px;
-        margin: auto;
-        text-align: justify;
-      }
-
-      SiteHeader a {
-        font-size: 18px;
-        padding: 2px;
-        display: block;
-        width: 400px;
-        margin: auto;
-        text-decoration: none;
-      }
-
-      SiteHeader {
-        font-family: Nunito;
-      }
-    </style>
   </head>
 
   <body>
     <SiteHeader>
-      <a style="padding: 20px" href="../index.html">
-        <div class="DivLink">Return to Index Page</div>
+      <a style="padding: 20px" href="../../index.html#css3_08_MediaTypes_IndexNav">
+        <div class="DivLink">Return to Web CSS3 Tutorials</div>
       </a>
       <h2>Web CSS3 Tutorials : Menu Responsivo</h2>
       <p>Utilização de 2 Menus: "menu_desktop" e "menu_mobile" com styles associados respectivamente em "desktop.css" e "mobile.css".</p>
     </SiteHeader>
-    <main>
+    <apresentacao>
       <header>
         <h3>Cafe Fonteneblau</h3>
         <h5>Cuisine Française</h5>
@@ -109,6 +98,13 @@
         </ul>
       </nav>
       <footer></footer>
+    </apresentacao>
+    <main>
+      <hr/>
+      <div style="padding: 50px">
+       <p>Código completo disponível no GitHub:</p>
+      <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
+      </div>
     </main>
   </body>
 </html>

@@ -1,8 +1,4 @@
-body {
-  background-color: rgb(243, 243, 243);
-}
-
-main {
+apresentacao {
   width: 960px;
   margin: 5px auto 15px;
   background-color: rgb(255, 255, 255);
@@ -88,7 +84,6 @@ nav#menu_desktop {
   display: block;
   float: left;
   width: 100%;
-  /* min-width: 610px; */
   margin-bottom: 20px;
   background-color: rgb(79, 22, 23);
 
@@ -110,9 +105,10 @@ nav#menu_desktop li {
 nav#menu_desktop li a {
   display: inline-block;
   background-color: rgb(79, 22, 23);
-  padding: 10px 25px;
+  padding: 10px;
   text-decoration: none;
   color: rgb(255, 255, 255);
+  width: auto;
 }
 
 nav#menu_desktop li a:hover {

@@ -1,0 +1,132 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Javascript Tutorials : Change Style w/JS</title>
+  <link rel="stylesheet" type="text/css" href="../css/SiteHeader.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../css/code.css">
+</head>
+
+<body style="font-family: 'Nunito', sans-serif; margin: 50px;">
+
+  <body>
+    <SiteHeader>
+      <a href="index.html">
+        <div class="DivLink">Return to Index Page</div>
+      </a>
+      <h2>Web Javascript Tutorials : Change Style w/JS</h2>
+
+    </SiteHeader>
+
+    <style>
+      main {
+        margin: 50px auto;
+        width: 670px;
+        line-height: 200%;
+        padding: 15px;
+      }
+
+      div#janela {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #333;
+        margin-bottom: 10px;
+      }
+
+      input {
+        display: inline-block;
+      }
+    </style>
+
+<p>Css:</p>
+<div class="code">
+  <pre>
+  &lt;style&gt;
+    .azul {
+      background-color: blue;
+    }
+  &lt;/style&gt;
+</pre>
+</div>
+
+<p>JavaScript:</p>
+<div class="code">
+  <pre>
+  &lt;script&gt;
+    function PreencheCor(cor) {
+      janela.style.backgroundColor = cor
+    }
+
+    function AdicionaClass(classe) {
+      janela.className = classe
+    }
+
+    function iniciar() {
+      btnAmarelo.addEventListener("click", () => {
+        PreencheCor("yellow")
+      })
+      btnVermelho.addEventListener("click", () => {
+        PreencheCor("red")
+      })
+      
+      AdicionaClass("azul")
+    }
+
+    window.onload = iniciar
+  &lt;/script&gt;
+</pre>
+</div>
+
+    <style>
+      .azul {
+        background-color: blue;
+      }
+
+    </style>
+
+    <script>
+      function PreencheCor(cor) {
+        janela.style.backgroundColor = cor
+      }
+
+      function AdicionaClass(classe) {
+        janela.className = classe
+      }
+
+
+      function iniciar() {
+        btnAmarelo.addEventListener("click", () => {
+          PreencheCor("yellow")
+        })
+        btnVermelho.addEventListener("click", () => {
+          PreencheCor("red")
+        })
+      
+        AdicionaClass("azul")
+      }
+      window.onload = iniciar
+    </script>
+
+<p>Html:</p>
+<div class="code">
+  <pre>
+  &lt;main&gt;
+    &lt;div id="janela">&lt;/div&gt
+    &lt;input type="button" id="btnAmarelo" value="Preenche Amarelo"&gt
+    &lt;input type="button" id="btnVermelho" value="Preenche Vermelho"&gt
+  &lt;/main&gt;
+</pre>
+</div>
+
+    <main>
+      <div id="janela"></div>
+      <input type="button" id="btnAmarelo" value="Preenche Amarelo">
+      <input type="button" id="btnVermelho" value="Preenche Vermelho">
+    </main>
+  </body>
+
+</html>

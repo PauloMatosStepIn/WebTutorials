@@ -37,45 +37,201 @@
         }
       }
 
-      // window.onload = desenharRectangulo
-
       window.onload = function () {
         desenharLinha()
         desenharRectangulo()
-        desenharAnimacao()
+
+        var canvas = document.querySelector('#animacao')
+        var ctx = canvas.getContext('2d')
+        // posicao inicial
+        let x = canvas.width / 2
+        let y = canvas.height / 2
+        // velocidade
+        let dx = 5
+        let dy = 2
+
+        let sentidoX = 1
+        let sentidoY = 1
+        //raio do circulo
+        let raio = 50
+
+        function drawBall() {
+          ctx.beginPath()
+          ctx.arc(x, y, raio, 0, Math.PI * 2, false)
+          ctx.fillStyle = 'red'
+          ctx.fill()
+          ctx.closePath()
+        }
+        function draw() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height)
+          drawBall()
+
+          if (x > canvas.width - raio) sentidoX = -1
+          if (x < 0 + raio) sentidoX = 1
+
+          if (y > canvas.height - raio) sentidoY = -1
+          if (y < 0 + raio) sentidoY = 1
+
+          x += dx * sentidoX
+          y += dy * sentidoY
+          // for debug : console.log(x + ' / ' + y)
+        }
+        //corre de 10 em 10 milisegundos
+        setInterval(draw, 10)
       }
     </script>
 
-    <script src="js/cake.js"></script>
-    <script>
-      function desenharAnimacao() {
-        var canvas = new Canvas(document.body, 600, 400)
-
-        var circulo = new Circle(100, {
-          id: 'circulo',
-          x: canvas.width / 2,
-          y: canvas.height / 2,
-          stroke: 'red',
-          strokeWidth: 10,
-          endAngle: Math.PI * 2
-        })
-        canvas.append(circulo)
-
-        circulo.addFrameListener(function (t, dt) {
-          this.scale = Math.sin(t / 200)
-        })
-      }
-    </script>
+    <!-- <script src="js/cake.js"></script> -->
   </head>
 
   <body>
-    <a href="index.html">
-      <div class="DivLink" style="background-color: lightgrey">Return to Index Page</div>
-    </a>
-    <h2>Web Html5 Tutorials : CANVAS</h2>
-    <hr />
-    <canvas id="myCanvasRectangulo" height="200" width="700"></canvas>
-    <hr />
-    <canvas id="myCanvasLinha" height="400" width="500"></canvas>
+    <main>
+      <a href="../index.html#html5_02_CANVAS">
+        <div class="DivLink" style="background-color: lightgrey">Return to Web Tutorials</div>
+      </a>
+      <h2>Web Html5 Tutorials : CANVAS</h2>
+      <hr />
+      <div class="artigo">
+        <p>Desenhar Retângulo</p>
+        <canvas id="myCanvasRectangulo" height="200" width="700"></canvas>
+      </div>
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+          &lt;canvas id="myCanvasRectangulo" height="200" width="700"&gt;&lt;/canvas&gt;
+        </pre>
+      </div>
+
+      <div class="code">
+        <div>JAVASCRIPT</div>
+        <pre>
+          &lt;script&gt;
+          window.onload = function () {
+            var canvas = document.querySelector('#myCanvasRectangulo')
+            if (canvas.getContext) {
+              var rectangulo = canvas.getContext('2d')
+              rectangulo.fillStyle = 'blue'
+              //.fillRect(x, y, largura, altura)
+              rectangulo.fillRect(50, 50, 500, 50)
+            } 
+          }
+          &lt;/script&gt;
+        </pre>
+      </div>
+
+      <hr />
+      <div class="artigo">
+        <p>Desenhar linha quebrada sobre fundo.</p>
+        <canvas id="myCanvasLinha" height="400" width="500"></canvas>
+      </div>
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+          &lt;canvas id="myCanvasLinha" height="400" width="500"&gt;&lt;/canvas&gt;
+        </pre>
+      </div>
+      <div class="code">
+        <div>JAVASCRIPT</div>
+        <pre>
+          &lt;script&gt;
+          window.onload = function () {
+            var canvas = document.querySelector('#myCanvasLinha')
+            if (canvas.getContext) {
+              var linha = canvas.getContext('2d')
+              linha.lineWidth = 5
+              linha.strokeStyle = 'blue'
+              linha.moveTo(100, 200)
+              linha.lineTo(170, 100)
+              linha.lineTo(240, 150)
+              linha.lineTo(310, 120)
+              linha.stroke()
+            }
+          }
+          &lt;/script&gt;
+        </pre>
+      </div>
+
+      <div class="code">
+        <div>CSS</div>
+        <pre>
+          &lt;style&gt;
+          #myCanvasLinha {
+            background: url(imagens/background_grafico.png) no-repeat;
+          }
+          &lt;/style&gt;
+        </pre>
+      </div>
+
+      <hr />
+
+      <div id="placeholder_animacao" class="artigo">
+        <p>Animação, Desenho do Circulo com cálculo da posição seguinte, limpeza do fundo e re-desenho do circulo, com intervalo de 10 milisegundos.</p>
+        <canvas id="animacao" width="750" height="600"></canvas>
+      </div>
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+          &lt;canvas id="animacao" width="750" height="600"&gt;&lt;/canvas&gt;
+        </pre>
+      </div>
+      <div class="code">
+        <div>JAVASCRIPT</div>
+        <pre>
+          &lt;script&gt;
+          window.onload = function () {
+
+            var canvas = document.querySelector('#animacao')
+            var ctx = canvas.getContext('2d')
+
+            // posicao inicial
+            let x = canvas.width / 2
+            let y = canvas.height / 2
+
+            // velocidade
+            let dx = 5
+            let dy = 2
+    
+            let sentidoX = 1
+            let sentidoY = 1
+
+            //raio do circulo
+            let raio = 50
+    
+            function drawBall() {
+              ctx.beginPath()
+              ctx.arc(x, y, raio, 0, Math.PI * 2, false)
+              ctx.fillStyle = 'red'
+              ctx.fill()
+              ctx.closePath()
+            }
+            function draw() {
+              ctx.clearRect(0, 0, canvas.width, canvas.height)
+              drawBall()
+    
+              if (x &gt; canvas.width - raio) sentidoX = -1
+              if (x &lt; 0 + raio) sentidoX = 1
+    
+              if (y &gt; canvas.height - raio) sentidoY = -1
+              if (y &lt; 0 + raio) sentidoY = 1
+    
+              x += dx * sentidoX
+              y += dy * sentidoY
+              // for debug : console.log(x + ' / ' + y)
+            }
+            //corre de 10 em 10 milisegundos
+            setInterval(draw, 10)
+          }
+    
+          &lt;/script&gt;
+        </pre>
+      </div>
+      <a href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it" class="ext">Create the Canvas and draw on it (developer.mozilla.org)</a>
+
+      <hr />
+      <div style="padding: 50px">
+        <p>Código completo disponível no GitHub:</p>
+        <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
+      </div>
+    </main>
   </body>
 </html>

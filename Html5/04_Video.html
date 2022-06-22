@@ -32,38 +32,95 @@
     <script src="js/videosub.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="../css/styles.css" />
-
-    <style>
-      body {
-        background-color: #d4d4d4;
-      }
-    </style>
   </head>
 
   <body>
-    <a href="index.html">
-      <div class="DivLink" style="background-color: grey">Return to Index Page</div>
-    </a>
-    <h2>Web Html5 Tutorials : Video</h2>
-    <h3>Video from local host w/Tag video</h3>
-    <section id="video">
-      <video poster="imagens/sintel.jpg" controls width="483" height="272">
-        <source src="video/sintel.mp4" type="video/mp4" />
-        <!-- <track src="subtitles/sintel_pt.srt" srclang="pt-br" kind="subtitles" label="PORTUGUESE" /> -->
-      </video>
-    </section>
-    <h3>Video from YouTube</h3>
-    <section id="videoFromYouTube">
-      <iframe width="508" height="216" src="https://www.youtube.com/embed/eRsGyueVLvQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </section>
-
-    <footer>
-      Video criado por Sintel.org - Creative Commons Atributtes 3.0
-      <div style="padding: 10px">
-        <a href="https://durian.blender.org/"> SINTEL.ORG<br />(https://durian.blender.org/)</a>
+    <main>
+      <a href="../index.html#html5_04_Video">
+        <div class="DivLink" style="background-color: grey">Return to Web Tutorials</div>
+      </a>
+      <h2>Web Html5 Tutorials : Video</h2>
+      <div class="artigo">
+        <h3>Video from local host w/Tag video</h3>
+        <section id="video">
+          <video poster="imagens/sintel.jpg" controls width="483" height="272">
+            <source src="video/sintel.mp4" type="video/mp4" />
+            <!-- <track src="subtitles/sintel_pt.srt" srclang="pt-br" kind="subtitles" label="PORTUGUESE" /> -->
+          </video>
+        </section>
       </div>
-    </footer>
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+          &lt;section id="video"&gt;
+            &lt;video poster="imagens/sintel.jpg" controls width="483" height="272"&gt;
+              &lt;source src="video/sintel.mp4" type="video/mp4" /&gt;
+              &lt;!-- &lt;track src="subtitles/sintel_pt.srt" srclang="pt-br" kind="subtitles" label="PORTUGUESE" /&gt; --&gt;
+            &lt;/video&gt;
+          </section>
+      </pre>
+      </div>
 
-    <p style="padding: 20px">“Sintel” is an independently produced short film, initiated by the Blender Foundation as a means to further improve andvalidate the free/open source 3D creation suite Blender. With initial funding provided by 1000s of donations via the internet community, it has again proven to be a viable development model for both open 3D technology as for independent animation film.</p>
+      <div class="code">
+        <div>CSS</div>
+        <pre>
+          &lt;style&gt;
+          #video {
+            width: 483px;
+            height: 272px;
+            margin: 0 auto 50px;
+            box-shadow: 0 0 8px #666;
+          }
+          &lt;/style&gt;
+        </pre>
+      </div>
+      <hr/>
+
+    <div class="artigo">
+      <h3>Video from YouTube</h3>
+      <section id="videoFromYouTube">
+        <iframe width="508" height="216" src="https://www.youtube.com/embed/eRsGyueVLvQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </section>
+    </div>
+
+    <div class="code">
+      <div>HTML</div>
+      <pre>
+        &lt;section id="videoFromYouTube"&gt;
+          &lt;iframe width="508" height="216" src="https://www.youtube.com/embed/eRsGyueVLvQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+        &lt;/section&gt;
+      </pre>
+    </div>
+
+    <div class="code">
+      <div>CSS</div>
+      <pre>
+        &lt;style&gt;
+        #videoFromYouTube {
+          width: 508px;
+          height: 216px;
+          margin: 0 auto 50px;
+          box-shadow: 0 0 8px #666;
+        }
+        &lt;/style&gt;
+      </pre>
+    </div>
+    <hr/>
+
+    <footer style="margin-top:10px;">
+        Video criado por Sintel.org - Creative Commons Atributtes 3.0
+        <div style="padding: 10px">
+          <a href="https://durian.blender.org/"> SINTEL.ORG<br />(https://durian.blender.org/)</a>
+        </div>
+      </footer>
+
+      <p style="padding: 20px">“Sintel” is an independently produced short film, initiated by the Blender Foundation as a means to further improve andvalidate the free/open source 3D creation suite Blender. With initial funding provided by 1000s of donations via the internet community, it has again proven to be a viable development model for both open 3D technology as for independent animation film.</p>
+
+      <hr />
+      <div style="padding: 50px">
+        <p>Código completo disponível no GitHub:</p>
+        <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
+      </div>
+    </main>
   </body>
 </html>

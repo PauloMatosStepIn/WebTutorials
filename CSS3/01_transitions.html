@@ -7,8 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
 
     <style>
-      article,
-      aside,
+      apresentacao,
       section,
       header,
       footer,
@@ -16,15 +15,15 @@
         display: block;
       }
 
-      main {
+      apresentacao {
         width: 760px;
-        margin: 10px auto;
+        margin: 10px 40px;
         box-shadow: 0 0 10px #999999;
         background-color: rgb(255, 255, 255);
         text-align: center;
       }
 
-      main:after {
+      apresentacao:after {
         clear: both;
       }
 
@@ -75,18 +74,110 @@
   </head>
 
   <body>
-    <a href="index.html">
-      <div class="DivLink" style="background-color: lightgrey">Return to Index Page</div>
-    </a>
-    <h2>Web CSS3 Tutorials : Transitions</h2>
-    <h4>:hover em qualquer dos 4 elementos</h4>
     <main>
-      <header></header>
-      <section class="thumb"><img src="imagens/Blanquette_de_veau.jpg" width="120" height="120" /></section>
-      <section class="thumb"><img src="imagens/caviar.jpg" width="120" height="120" /></section>
-      <section class="thumb"><img src="imagens/creme_brule.jpg" width="120" height="120" /></section>
-      <section class="thumb"><img src="imagens/pato_laranja2.jpg" width="120" height="120" /></section>
-      <footer></footer>
+      <a href="../index.html#css3_01_transitions">
+        <div class="DivLink" style="background-color: lightgrey">Return to Web Tutorials</div>
+      </a>
+      <h2>Web CSS3 Tutorials : Transitions</h2>
+      <h4>:hover em qualquer dos 4 elementos</h4>
+      <apresentacao>
+        <header></header>
+        <section class="thumb"><img src="imagens/Blanquette_de_veau.jpg" width="120" height="120" /></section>
+        <section class="thumb"><img src="imagens/caviar.jpg" width="120" height="120" /></section>
+        <section class="thumb"><img src="imagens/creme_brule.jpg" width="120" height="120" /></section>
+        <section class="thumb"><img src="imagens/pato_laranja2.jpg" width="120" height="120" /></section>
+        <footer></footer>
+      </apresentacao>
+
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+          &lt;apresentacao&gt;
+            &lt;header&gt;&lt;/header&gt;
+            &lt;section class="thumb"&gt;&lt;img src="imagens/Blanquette_de_veau.jpg" width="120" height="120" /&gt;&lt;/section&gt;
+            &lt;section class="thumb"&gt;&lt;img src="imagens/caviar.jpg" width="120" height="120" /&gt;&lt;/section&gt;
+            &lt;section class="thumb"&gt;&lt;img src="imagens/creme_brule.jpg" width="120" height="120" /&gt;&lt;/section&gt;
+            &lt;section class="thumb"&gt;&lt;img src="imagens/pato_laranja2.jpg" width="120" height="120" /&gt;&lt;/section&gt;
+            &lt;footer&gt;&lt;/footer&gt;
+          &lt;/apresentacao&gt;
+        </pre>
+      </div>
+
+      <div class="code">
+        <div>CSS</div>
+        <pre>
+          &lt;style&gt;
+          apresentacao,
+          section,
+          header,
+          footer,
+          nav {
+            display: block;
+          }
+    
+          apresentacao {
+            width: 760px;
+            margin: 10px 40px;
+            box-shadow: 0 0 10px #999999;
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+          }
+    
+          apresentacao:after {
+            clear: both;
+          }
+    
+          header {
+            width: 760px;
+            height: 110px;
+            background-image: url(imagens/topo.jpg);
+            background-repeat: no-repeat;
+            margin-bottom: 40px;
+          }
+    
+          section {
+            display: inline;
+            margin: 5px 25px;
+          }
+    
+          footer {
+            width: 100%;
+            height: 30px;
+            background-color: rgb(236, 236, 236);
+            margin-top: 40px;
+          }
+    
+          section.thumb {
+            display: inline-block;
+            cursor: pointer;
+            /* transform-origin: bottom center; */
+            transform-origin: center center;
+            /* transform-origin: top center; */
+    
+            /* transition-property: transform;
+            transition-duration: 1s; */
+    
+            /* transition: all 1s ease-in; */
+            /* transition: all 1s ease-in-out; */
+            transition: all 1s ease-out;
+          }
+    
+          section.thumb:hover {
+            /* transform: scale(1.3); */
+            /* transform: rotate(45deg); */
+            /* transform: translate(10px, 10px); */
+            /* transform: translateY(-10px); */
+            /* transform: skew(2deg); */
+            transform: scale(1.5);
+          }
+          &lt;/style&gt;
+        </pre>
+      </div>
+      <hr />
+      <div style="padding: 50px">
+        <p>Código completo disponível no GitHub:</p>
+        <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
+      </div>
     </main>
   </body>
 </html>

@@ -1,0 +1,317 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Javascript Tutorials : Eventos</title>
+  <link rel="stylesheet" type="text/css" href="../css/SiteHeader.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../css/code.css">
+</head>
+
+<body style="font-family: 'Nunito', sans-serif; margin: 50px;">
+
+  <body>
+    <SiteHeader>
+      <a href="index.html">
+        <div class="DivLink">Return to Index Page</div>
+      </a>
+      <h2>Web Javascript Tutorials : Eventos</h2>
+
+    </SiteHeader>
+    <h2>Eventos de Browser</h2>
+    <h3>Load</h3>
+    <p>Quando os recursos da página são carregados</p>
+    <h3>Error</h3>
+    <p>Quando ocorre erro no carregamento</p>
+    <h3>Resize</h3>
+    <p>Quando o Viewport é redimensionado</p>
+    <h3>Scroll</h3>
+    <p>Quando a barra de Scroll é movida </p>
+    <h2>Eventos de DOM (Document Object Model)</h2>
+    <h3>Focus</h3>
+    <p>Quando um elemento recebe o Focus</p>
+    <h3>Blur</h3>
+    <p>Quando um elemento perde o Focus</p>
+    <h3>Submit</h3>
+    <p>Quando um Form é submetido</p>
+    <h3>Mouse Event</h3>
+    <p>Quando ocorre um click, mouseover, drag, drop</p>
+    <h3>Media Events</h3>
+    <p>Controle de Video e Audio</p>
+    <h3>CSS Transition Event</h3>
+    <p>Quando uma transação inicializa, termina ou está em execução</p>
+    <h3>Progress Event</h3>
+    <p>Quando o carregamento de um recurso é despoletado</p>
+    <hr />
+    <h1 style="text-align: center;">onClick e onLoad Event</h1>
+
+    <style>
+      #janela {
+        float: left;
+        width: 100%;
+        line-height: 200%;
+        border: 1pz solid gray;
+        text-align: justify;
+      }
+
+      img {
+        float: left;
+        margin: 15px 15px 1px 0px;
+      }
+    </style>
+
+    <div class="code">
+      <pre>
+    &lt;script&gt;
+      /* apos carregamento da pagina */
+      window.onload = function(){
+          var foto = document.querySelector('#fotocoliseu')
+          foto.onclick = function (){
+            Alert("Clicou na foto")
+          }
+      }
+    &lt;/script&gt;
+  </pre>
+    </div>
+    <p>Ao clicar na imagem é apresentado o Alerta</p>
+
+    <div id="janela">
+      <h3>Special Tour</h3>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, tempora distinctio. Odio asperiores ea maiores
+      aperiam ab ex quis quos molestias quasi officia earum voluptates cupiditate recusandae saepe magnam nemo, eum
+      molestiae quam sed! Quae consequuntur cupiditate dolor voluptas? Qui eius harum necessitatibus? Ab esse enim sint
+      atque explicabo similique sunt doloribus temporibus nihil. Perspiciatis obcaecati doloremque enim cum fugit, dicta
+      vero alias, labore corrupti, pariatur maxime non soluta hic quisquam laboriosam vitae facere voluptatibus!
+      Cupiditate ad tempora eveniet maxime molestiae officia reiciendis! Numquam assumenda obcaecati, corporis enim
+      voluptatibus esse est recusandae tempora dolorem consequuntur similique placeat. Iure, labore quidem.
+
+      <img src="imagens/coliseu.jpg" width="360" height="360" id="fotocoliseu" alt="foto" />
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia deserunt commodi inventore quis! Magni
+      perferendis voluptas aliquid, totam praesentium architecto nesciunt magnam cupiditate molestiae laudantium eveniet
+      qui inventore harum est blanditiis iste quisquam consequatur provident. Porro similique expedita obcaecati
+      tempora, aliquam beatae, quam officia a rerum laudantium distinctio natus ad repellat ipsam, quisquam ratione ex
+      commodi voluptas incidunt. Magni quis recusandae accusantium iste cum veniam quibusdam! Quidem reprehenderit earum
+      provident unde dolor et omnis blanditiis quisquam, ea minus accusantium expedita animi nesciunt consequatur sit
+      repudiandae obcaecati vel fugit minima aliquid nobis ducimus! Omnis eligendi explicabo architecto nobis dolore
+      praesentium blanditiis?
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet in dolores odio excepturi necessitatibus
+      consectetur nobis dolore eaque perspiciatis fugit ducimus molestias animi recusandae fugiat culpa numquam est
+      perferendis quia ad quod voluptates, cupiditate quasi accusantium. Minima laborum assumenda adipisci labore
+      tenetur sit iusto laudantium sint sapiente ducimus, quia cum eum facere architecto, nesciunt quae quas repellendus
+      necessitatibus. Dolorum exercitationem, eius illo suscipit quas similique molestias amet adipisci sit voluptas,
+      quae perferendis, placeat nulla eum sunt fuga saepe eaque ratione architecto earum? Optio sapiente, quaerat libero
+      saepe, quidem ut laborum consequatur incidunt, aperiam distinctio quae culpa blanditiis in quos architecto
+      officiis aliquam nam sit? Odit mollitia laudantium vitae ab optio ut cumque accusamus atque. Dolores, obcaecati.
+      Ipsa, consectetur explicabo? Blanditiis omnis est, exercitationem laboriosam provident fugiat sunt accusantium
+      culpa molestias velit ea autem maxime quasi, tempore quaerat? Odio, quisquam! Culpa porro ipsa nihil dolore
+      architecto cupiditate eum iure, dignissimos obcaecati est! Obcaecati molestiae aspernatur nisi, fuga sint eligendi
+      rem reiciendis recusandae nesciunt, a ab veritatis ducimus? Enim repellendus inventore amet dolore voluptas esse
+      expedita. Iste commodi expedita modi rem quidem tenetur cum est veniam excepturi, enim magnam a doloremque.
+      Distinctio aliquid omnis corrupti excepturi deserunt commodi debitis repudiandae. Exercitationem, dignissimos.
+
+    </div>
+
+    <script>
+
+      function SetText(texto) {
+        nomeEL.value = texto
+      }
+
+      window.onload = function () {
+        var foto = document.querySelector('#fotocoliseu')
+        foto.onclick = function () {
+          alert("Clicou na foto")
+        }
+
+        var campo = document.querySelector('input#nome')
+        campo.onfocus = function () {
+          console.log("on focus no campo nome...")
+        }
+        campo.onblur = function () {
+          console.log("on blur no campo nome")
+        }
+        var sexo = document.querySelector('#genero')
+        sexo.onchange = function () {
+          console.log(sexo.value)
+        }
+
+        botaoPreenche.addEventListener("click", () => { SetText("texto from js!") })
+        botaoLimpa.addEventListener("click", () => { SetText(null) })
+
+        registo.onsubmit = (e)=>{
+          e.preventDefault()
+          alert("Form Submited")
+        }
+
+      }
+    </script>
+
+    <hr/>
+
+    <style>
+      main {
+        margin: 50px auto;
+        width: 670px;
+        line-height: 200%;
+        padding: 15px;
+      }
+
+      input {
+        display: block;
+      }
+
+      input,
+      select {
+        font-size: 1.3em;
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: #f0f0f0;
+        border: 1px solid #999;
+        border-radius: 5px;
+        width: 300px;
+        color: #111;
+      }
+
+      input:hover,
+      input:focus {
+        border: 1px solid #ccc;
+        color: #000;
+        outline: none;
+      }
+
+      input.caixatexto:focus {
+        border: 1px solid #ccc;
+        outline: none;
+      }
+    </style>
+
+    <h1 style="text-align: center;">onFocus, onBlur Event e onChange</h1>
+
+    <p>Html:</p>
+    <div class="code">
+      <pre>
+      &lt;main&gt;
+        &lt;h2&gt;Faça a seu Registo&lt;/h2&gt;
+        &lt;form action="02_Eventos.html" method="post"&gt;
+            &lt;input type="text"  id="nome"   name="nome"     placeholder="Nome"  /&gt;	
+            &lt;input type="email" id="email"  name="email"    placeholder="Email" /&gt;	
+            &lt;input type="submit" value="Confirmar Registo"/&gt;  
+            &lt;select id="genero"&gt;
+              &lt;option&gt;Indicar género&lt;/option&gt;
+              &lt;option value="male"&gt;Masculino&lt;/option&gt;
+              &lt;option value="female"&gt;Feminino&lt;/option&gt;
+            &lt;/select&gt;	           
+        &lt;/form&gt;
+      &lt;/main&gt;
+    </pre>
+    </div>
+
+
+    <p>JavaScript:</p>
+    <div class="code">
+      <pre>
+      &lt;script&gt;
+      window.onload = function () {
+        var campo = document.querySelector('input#nome')
+        campo.onfocus = function(){
+          console.log("on focus no campo nome")
+        }
+        campo.onblur = function(){
+          console.log("on blur no campo nome")
+        }
+        var sexo = document.querySelector('#genero')
+        sexo.onchange = function(){
+          console.log(sexo.value)
+        }
+      }    
+      &lt;/script&gt;
+    </pre>
+    </div>
+
+    <SiteHeader>
+      <h3>Nota:</h3>
+      <p>Na página do browser -> click no botão do lado direito do mouse<br />
+        escolher opção: INSPECT -> Console<br />
+        para ver resultado de JavaScript
+      </p>
+
+    </SiteHeader>
+
+    <main>
+      <h2>Faça a seu Registo</h2>
+      <form id="registo" name="registo" action="02_Eventos.html" method="post">
+        <input type="text" id="nome" name="nome" placeholder="Nome" />
+        <input type="email" id="email" name="email" placeholder="Email" />
+        <select id="genero">
+          <option>Indicar género</option>
+          <option value="male">Masculino</option>
+          <option value="female">Feminino</option>
+        </select>
+        <input type="submit" value="Confirmar Registo" />
+      </form>
+    </main>
+    <hr />
+    <h1 style="text-align: center;">Event Listener</h1>
+
+    <p>JavaScript (opção sem parametros):</p>
+    <div class="code">
+      <pre>
+      &lt;script&gt;
+        function FillText(){
+          nomeEL.value = "texto from js!"
+        }
+        function ResetText(){
+          FilleEL.value = null
+        }
+        function iniciar(){
+          botaoPreenche.addEventListener("click",FillText)
+          botaoLimpa.addEventListener("click",ResetText)
+        }
+        window.onload = iniciar
+      &lt;/scFillt&gt;
+    </pre>
+    </div>
+
+    <p>JavaScript (opção com parametros):</p>
+    <div class="code">
+      <pre>
+      &lt;script&gt;
+        function SetText(texto){
+          nomeEL.value = texto
+        }
+        function iniciar(){
+          botaoPreenche.addEventListener("click",()=>{SetText("texto from js!") })
+          botaoLimpa.addEventListener("click",()=>{SetText(null) })
+        }
+        window.onload = iniciar
+      &lt;/scFillt&gt;
+    </pre>
+    </div>
+
+    <p>Html:</p>
+    <div class="code">
+      <pre>
+      &lt;main&gt;
+        &lt;label&gt;texto:&lt;/label&gt;
+        &lt;input type="text" id="nomeEL"&gt;
+        &lt;input type="button" id="botaoPreenche" value="Preencher texto"&gt;
+        &lt;input type="button" id="botaoLimpa" value=" Apaga texto"&gt;
+      &lt;/main&gt;
+    </pre>
+    </div>
+
+
+
+    <main>
+      <label>texto:</label>
+      <input type="text" id="nomeEL">
+      <input type="button" id="botaoPreenche" value="Preencher texto">
+      <input type="button" id="botaoLimpa" value=" Apaga texto">
+    </main>
+
+  </body>
+
+</html>

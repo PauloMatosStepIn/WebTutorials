@@ -27,13 +27,15 @@
   </head>
 
   <body>
-    <a href="index.html">
-      <div class="DivLink" style="background-color: lightgrey">Return to Index Page</div>
+    <main>
+    <a href="../index.html#html5_05_Audio">
+      <div class="DivLink" style="background-color: lightgrey">Return to Web Tutorials</div>
     </a>
     <h2>Web Html5 Tutorials : Audio</h2>
     <h4>Audio Sample Symphony No.6 (1st movement)</h4>
     
-    <hr/>
+    
+  <div class="artigo">
     <h3>&lt;audio controls&gt;</audio></h3>
     <div style="text-align: center">
       <audio controls>
@@ -42,7 +44,21 @@
         <source src="audio/Symphony No.6 (1st movement).ogg" type="audio/ogg" />
       </audio>
     </div>
-<hr/>
+  </div>
+  <div class="code">
+    <div>HTML</div>
+    <pre>
+      &lt;audio controls&gt;
+        &lt;source src="audio/Symphony No.6 (1st movement).mp3" type="audio/mpeg" /&gt;
+        &lt;source src="audio/Symphony No.6 (1st movement).m4a" type="audio/mpeg" /&gt;
+        &lt;source src="audio/Symphony No.6 (1st movement).ogg" type="audio/ogg" /&gt;
+      &lt;/audio&gt;
+    </pre>
+  </div>
+
+    <hr/>
+
+<div class="artigo">
     <h3>&lt;audio id="player"&gt;</audio></h3>
     <div style="text-align: center">
       <audio id="player">
@@ -56,11 +72,60 @@
         <input type="button" value="Pause" onclick="pause()">
         <input type="button" value="Stop" onclick="stop()">
       </form>
-
     </div>
+  </div>
+  <div class="code">
+    <div>HTML</div>
+    <pre>
+      &lt;div style="text-align: center"&gt;
+        &lt;audio id="player"&gt;
+          &lt;source src="audio/Symphony No.6 (1st movement).mp3" type="audio/mpeg" /&gt;
+          &lt;source src="audio/Symphony No.6 (1st movement).m4a" type="audio/mpeg" /&gt;
+          &lt;source src="audio/Symphony No.6 (1st movement).ogg" type="audio/ogg" /&gt;
+        &lt;/audio&gt;
+  
+        &lt;form style="padding: 20px;"&gt;
+          &lt;input type="button" value="Play" onclick="play()"&gt;
+          &lt;input type="button" value="Pause" onclick="pause()"&gt;
+          &lt;input type="button" value="Stop" onclick="stop()"&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+    </pre>
+  </div>
+
+  <div class="code">
+    <div>JAVASCRIPT</div>
+    <pre>
+      &lt;script&gt;
+      var audio
+      function inicial() {
+         audio = document.querySelector("#player")
+      }
+      function play() {
+        audio.play()
+      }
+      function pause() {
+        audio.pause()      
+      }
+      function stop() {
+        audio.pause()
+        audio.currentTime = 0
+      }
+      window.onload= inicial  
+      &lt;/script&gt;
+    </pre>
+  </div>
+  
+
     <hr/>
     <a class="ext" href="https://filesamples.com/formats/mp3"> filesamples.com - format MP3 </a>
     <a class="ext" href="https://filesamples.com/formats/m4a"> filesamples.com - format M4A </a>
     <a class="ext" href="https://filesamples.com/formats/ogg"> filesamples.com - format OGG </a>
+    <hr />
+    <div style="padding: 50px">
+      <p>Código completo disponível no GitHub:</p>
+      <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
+    </div>
+  </main>
   </body>
 </html>

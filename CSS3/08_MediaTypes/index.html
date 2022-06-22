@@ -4,6 +4,34 @@
     <meta charset="utf-8" />
     <title>CWeb CSS3 Tutorials : Media Types</title>
 
+    <link rel="stylesheet" type="text/css" href="../../css/styles.css" />
+
+    <style>
+      apresentacao,
+      article,
+      aside,
+      section,
+      header,
+      footer,
+      nav {
+        display: block;
+      }
+
+      apresentacao {
+        position: relative;
+        width: 760px;
+        /* height: 500px; */
+        margin: 10px 40px;
+        box-shadow: 0 0 10px #999999;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+      }
+
+      apresentacao:after {
+        clear: both;
+      }
+    </style>
+
     <!-- 
         By using the viewport meta tag we can control layout for web pages on mobile browsers
 
@@ -29,54 +57,19 @@
     <link href="css/print.css" rel="stylesheet" media="print" />
 
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
-    <style>
-      .DivLink {
-        width: 100%;
-        height: 100%;
-        background-color: tomato;
-        color: white;
-        border-radius: 5px;
-      }
-      SiteHeader h1,
-      SiteHeader h2,
-      SiteHeader h3,
-      SiteHeader h4,
-      SiteHeader a,
-      SiteHeader p {
-        text-align: center;
-      }
-      SiteHeader p {
-        width: 600px;
-        margin: auto;
-        text-align: justify;
-      }
-
-      SiteHeader a {
-        font-size: 18px;
-        padding: 2px;
-        display: block;
-        width: 400px;
-        margin: auto;
-        text-decoration: none;
-      }
-
-      SiteHeader {
-        font-family: Nunito;
-      }
-    </style>
   </head>
 
   <body>
     <SiteHeader>
-      <a style="padding: 20px" href="../index.html">
-        <div class="DivLink">Return to Index Page</div>
+      <a style="padding: 20px" href="../../index.html#css3_08_MediaTypes">
+        <div class="DivLink">Return to Web Tutorials</div>
       </a>
       <h2>Web CSS3 Tutorials : Media Types (screen/print)</h2>
       <p><b>PRINT this page to see the diference between media="screen" and media="print"</b></p>
       <p>No media="print" é suprimida a secção lateral, Os títulos passam a preto, o texto dos artigos passa a "justificado" ocupando toda a largura, e as imagens não são apresentadas. A Imagem do Topo é substituida por texto.</p>
       <p>No media indicado para "mobile"(min-width:320px/max-width:430px) a apresentação passa a uma coluna, imagens centradas, texto justificado e ampliado. Adaptada a apresentação do cabeçalho.</p>
     </SiteHeader>
-    <main>
+    <apresentacao>
       <header>
         <h3>Cafe Fonteneblau</h3>
         <h5>Cuisine Française</h5>
@@ -95,6 +88,6 @@
         <!-- <img src="imagens/vinhos.jpg" /> -->
       </aside>
       <footer></footer>
-    </main>
+    </apresentacao>
   </body>
 </html>

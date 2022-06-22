@@ -1,0 +1,20 @@
+@charset "ISO-8859-2";
+/* CSS Document */
+
+body {
+	margin:20;
+	padding:0;
+	font-size: 12px;
+}
+
+#janela {
+	padding:10px;
+	background-color:#FFFFFF;
+	width:auto;
+}
+
+img {
+    display: block;
+    float: left;
+	margin:10px 10px 10px 0;
+}

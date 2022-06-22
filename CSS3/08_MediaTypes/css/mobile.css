@@ -9,7 +9,7 @@ SiteHeader a {
   width: 50%;
 }
 
-main,
+apresentacao,
 article,
 aside {
   width: 90%;
@@ -17,7 +17,7 @@ aside {
   background-color: blueviolet; */
 }
 
-main {
+apresentacao {
   width: 90%;
   text-align: center;
   box-shadow: none;

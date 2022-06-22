@@ -1,0 +1,308 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Javascript Tutorials : Detect Values w/JavaScript</title>
+    <link rel="stylesheet" type="text/css" href="../css/SiteHeader.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../css/code.css" />
+  </head>
+
+  <body style="font-family: 'Nunito', sans-serif">
+    <SiteHeader>
+      <a href="index.html">
+        <div class="DivLink">Return to Index Page</div>
+      </a>
+      <h2>Web Javascript Tutorials : Forms w/JavaScript</h2>
+      <p style="padding-bottom: 10px"><b>onsubmit</b>, se nome não preenchido mostra mensagem de erro na base do form.</p>
+      <p style="padding-bottom: 10px">Quando <b>onfocus</b> no nome limpa mensagem de erro na base do form.</p>
+      <p style="padding-bottom: 10px"><b>onclick</b> "EscolherCidade" se selected, mostra conjunto de CheckBoxes de cidades</p>
+      <p style="padding-bottom: 10px"><b>onclick</b> "EscolherCidade" se unselected, escode conjunto de CheckBoxes de cidades, e faz o Unselect de todas as cidades. (usa <b>querySelectorAll</b>)</p>
+      <p style="padding-bottom: 10px">Só permite a selecção de uma CheckBox de Cidade.</p>
+    </SiteHeader>
+
+    <style>
+      body {
+        background: #f0f0f0;
+        margin: 0;
+      }
+
+      main {
+        margin: 0 auto;
+        width: 800px;
+      }
+
+      .artigo {
+        box-shadow: 0 0 5px #999;
+        background: #fff;
+        padding: 100px;
+      }
+
+      #mensagem {
+        width: 500px;
+        margin-left: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: #f00;
+        margin-top: 20px;
+      }
+
+      h1 {
+        color: #666666;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style: italic;
+      }
+
+      form {
+        width: 500px;
+        margin: 0 auto;
+      }
+
+      input[type='text'] {
+        display: block;
+        padding: 15px;
+        border: 1px solid #999;
+        border-radius: 5px;
+        width: 300px;
+        background-color: #ffffff;
+        margin-bottom: 30px;
+      }
+
+      input[type='submit'] {
+        display: block;
+        font-weight: bold;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        background-color: forestgreen;
+        padding: 10px 30px;
+        cursor: pointer;
+      }
+
+      #cidade {
+        display: block;
+        width: 250px;
+        margin-bottom: 20px;
+      }
+
+      #cidade .itemCidade {
+        display: inline-flex;
+        width: 80px;
+        margin-bottom: 20px;
+      }
+    </style>
+
+    <script>
+      function validaForm(e) {
+        // para evitar chamada ao POST
+        e.preventDefault()
+        var _nome = nome.value
+        if (_nome == '') {
+          mensagem.innerHTML = 'Nome Obrigatório'
+        }
+      }
+
+      // Limpa Mensagem de Erro, resultante de "validaForm"
+      function limpaMensagem() {
+        mensagem.innerHTML = ''
+      }
+
+      function unselectAllCities() {
+        // Get an Array of all checkBoxes of the cities
+        var elements = document.querySelectorAll('.itemCidade input')
+        for (i = 0; i < elements.length; i++) {
+          elements[i].checked = false
+        }
+      }
+
+      window.onload = () => {
+        formRegisto.onsubmit = validaForm
+        nome.onfocus = limpaMensagem
+
+        escolhercidade.checked = false
+        cidade.style.display = 'none'
+
+        // Mostra Cidades caso  "escolhercidade" seleccionado
+        // Não mostra Cidades, e faz o UnCheck da Cidade escolhida caso "escolhercidade" não seleccionado
+        escolhercidade.onclick = () => {
+          if (escolhercidade.checked) {
+            cidade.style.display = 'block'
+          } else {
+            cidade.style.display = 'none'
+            unselectAllCities()
+          }
+        }
+      }
+
+      // só permite a escolha de uma cidade
+      function checkOnly(stayChecked) {
+        // Get an Array of all checkBoxes of the cities
+        var elements = document.querySelectorAll('.itemCidade input')
+
+        // for debug: console.log(elements)
+
+        for (i = 0; i < elements.length; i++) {
+          if (elements[i].checked == true && elements[i].name != stayChecked.name) {
+            elements[i].checked = false
+          }
+        }
+      }
+    </script>
+
+    <main>
+      <form class="artigo" id="formRegisto" name="formRegisto" method="post" action="sucesso.html">
+        <h1>Formulário de Registo</h1>
+        <input type="text" id="nome" name="nome" placeholder="Nome de Utilizador" />
+        <input type="text" id="telefone" name="telefone" placeholder="Telefone" />
+        <input type="text" id="email" name="email" placeholder="Email" />
+
+        <span style="display: block; margin-bottom: 20px">
+          <input type="checkbox" name="escolhercidade" id="escolhercidade" value="escolher" />
+          <label for="escolhercidade" class="labelCheckBox">Escolher a cidade mais próxima.</label>
+        </span>
+
+        <div id="cidade">
+          <div class="itemCidade">
+            <input type="checkbox" name="cb1" id="cb1" value="porto" onclick="checkOnly(this)" />
+            <label for="Porto" class="labelCheckBox">Porto</label>
+          </div>
+          <div class="itemCidade">
+            <input type="checkbox" name="cb2" id="cb2" value="coimbra" onclick="checkOnly(this)" />
+            <label for="Coimbra" class="labelCheckBox">Coimbra</label>
+          </div>
+          <div class="itemCidade">
+            <input type="checkbox" name="cb3" id="cb3" value="lisboa" onclick="checkOnly(this)" />
+            <label for="Lisboa" class="labelCheckBox">Lisboa</label>
+          </div>
+          <div class="itemCidade">
+            <input type="checkbox" name="cb4" id="cb4" value="setubal" onclick="checkOnly(this)" />
+            <label for="Setubal">Setubal</label>
+          </div>
+          <div class="itemCidade">
+            <input type="checkbox" name="cb5" id="cb5" value="beja" onclick="checkOnly(this)" />
+            <label for="Beja">Beja</label>
+          </div>
+          <div class="itemCidade">
+            <input type="checkbox" name="cb6" id="cb6" value="faro" onclick="checkOnly(this)" />
+            <label for="Faro" class="labelCheckBox">Faro</label>
+          </div>
+        </div>
+
+        <input type="submit" value="Efectuar Registo" />
+        <div id="mensagem"></div>
+      </form>
+
+      <p>JavaScript:</p>
+      <div class="code">
+        <pre>
+          &lt;script&gt;
+          function validaForm(e) {
+            // para evitar chamada ao POST
+            e.preventDefault()
+            var _nome = nome.value
+            if (_nome == '') {
+              mensagem.innerHTML = 'Nome Obrigatório'
+            }
+          }
+    
+          // Limpa Mensagem de Erro, resultante de "validaForm"
+          function limpaMensagem() {
+            mensagem.innerHTML = ''
+          }
+    
+          function unselectAllCities() {
+            // Get an Array of all checkBoxes of the cities
+            var elements = document.querySelectorAll('.itemCidade input')
+            for (i = 0; i < elements.length; i++) {
+              elements[i].checked = false
+            }
+          }
+    
+          window.onload = () => {
+            formRegisto.onsubmit = validaForm
+            nome.onfocus = limpaMensagem
+    
+            escolhercidade.checked = false
+            cidade.style.display = 'none'
+    
+            // Mostra Cidades caso  "escolhercidade" seleccionado
+            // Não mostra Cidades, e faz o UnCheck da Cidade escolhida caso "escolhercidade" não seleccionado
+            escolhercidade.onclick = () => {
+              if (escolhercidade.checked) {
+                cidade.style.display = 'block'
+              } else {
+                cidade.style.display = 'none'
+                unselectAllCities()
+              }
+            }
+          }
+    
+          // só permite a escolha de uma cidade
+          function checkOnly(stayChecked) {
+            // Get an Array of all checkBoxes of the cities
+            var elements = document.querySelectorAll('.itemCidade input')
+    
+            // for debug: console.log(elements)
+    
+            for (i = 0; i < elements.length; i++) {
+              if (elements[i].checked == true && elements[i].name != stayChecked.name) {
+                elements[i].checked = false
+              }
+            }
+          } 
+          &lt;/script&gt;
+        </pre>
+      </div>
+
+      <p>Html:</p>
+      <div class="code">
+        <pre>
+      
+        &lt;form id="formRegisto" name="formRegisto" method="post" action="sucesso.html"&gt;
+          &lt;h1&gt;Formulário de Registo&lt;/h1&gt;
+          &lt;input type="text" id="nome" name="nome" placeholder="Nome de Utilizador" /&gt;
+          &lt;input type="text" id="telefone" name="telefone" placeholder="Telefone" /&gt;
+          &lt;input type="text" id="email" name="email" placeholder="Email" /&gt;
+      
+          &lt;span style="display: block; margin-bottom: 20px"&gt;
+            &lt;input type="checkbox" name="escolhercidade" id="escolhercidade" value="escolher" /&gt;
+            &lt;label for="escolhercidade" class="labelCheckBox"&gt;Escolher a cidade mais próxima.&lt;/label&gt;
+          &lt;/span&gt;
+      
+          &lt;div id="cidade"&gt;
+            &lt;div class="itemCidade"&gt;
+              &lt;input type="checkbox" name="cb1" id="cb1" value="porto" onclick="checkOnly(this)" /&gt;
+              &lt;label for="Porto" class="labelCheckBox"&gt;Porto&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class="itemCidade"&gt;
+              &lt;input type="checkbox" name="cb2" id="cb2" value="coimbra" onclick="checkOnly(this)" /&gt;
+              &lt;label for="Coimbra" class="labelCheckBox"&gt;Coimbra&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class="itemCidade"&gt;
+              &lt;input type="checkbox" name="cb3" id="cb3" value="lisboa" onclick="checkOnly(this)" /&gt;
+              &lt;label for="Lisboa" class="labelCheckBox"&gt;Lisboa&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class="itemCidade"&gt;
+              &lt;input type="checkbox" name="cb4" id="cb4" value="setubal" onclick="checkOnly(this)" /&gt;
+              &lt;label for="Setubal"&gt;Setubal&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class="itemCidade"&gt;
+              &lt;input type="checkbox" name="cb5" id="cb5" value="beja" onclick="checkOnly(this)" /&gt;
+              &lt;label for="Beja"&gt;Beja&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class="itemCidade"&gt;
+              &lt;input type="checkbox" name="cb6" id="cb6" value="faro" onclick="checkOnly(this)" /&gt;
+              &lt;label for="Faro" class="labelCheckBox"&gt;Faro&lt;/label&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+      
+          &lt;input type="submit" value="Efectuar Registo" /&gt;
+          &lt;div id="mensagem"&gt;&lt;/div&gt;
+        &lt;/form&gt;
+    </pre>
+      </div>
+      
+    </main>
+  </body>
+</html>
