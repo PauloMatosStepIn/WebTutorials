@@ -6,23 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Web CSS3 Tutorials : Background Responsivo</title>
     <link rel="stylesheet" type="text/css" href="../../css/SiteHeader.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/main.css" />
 
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
 
     <style>
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      p {
-        font-family: sans-serif;
-      }
-
       body {
+        font-family:Nunito, sans-serif;
         margin: 0;
-        text-align: center;
       }
 
       header {
@@ -44,13 +35,14 @@
         }
       }
 
-      main {
+      apresentacao {
         width: 80%;
         margin: 30px auto;
         text-align: center;
       }
 
-      main p {
+      apresentacao p {
+        padding: 0 20px;
         text-align: justify;
       }
     </style>
@@ -58,23 +50,112 @@
 
   <body style="background-color: white">
     <header></header>
-    <main>
+    <apresentacao>
       <h1>Quasi autem odit accusamus praesentium!</h1>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni repellat necessitatibus ullam repudiandae sit dignissimos provident dolore earum at! Facere explicabo voluptatibus voluptatum ratione exercitationem quas accusantium totam, eveniet error expedita itaque harum iure voluptas saepe libero odit assumenda ab amet vel impedit. Rerum voluptatum quia aliquam nulla iste numquam, aliquid laboriosam atque ipsa sit pariatur libero enim inventore dolores. Quo, voluptas facilis. Eligendi ab at repudiandae voluptatum voluptas pariatur esse dolores magni dolorum debitis ea, qui libero numquam ipsum odit iste? Maxime aliquam quos molestias provident explicabo voluptatum, iure, iste temporibus nostrum odit blanditiis magni ea itaque culpa doloribus.</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Magni repellat necessitatibus ullam repudiandae sit dignissimos 
+        provident dolore earum at! Facere explicabo voluptatibus 
+        voluptatum ratione exercitationem quas accusantium totam, 
+        eveniet error expedita itaque harum iure voluptas saepe 
+        libero odit assumenda ab amet vel impedit. Rerum voluptatum 
+        quia aliquam nulla iste numquam, aliquid laboriosam atque ipsa 
+        sit pariatur libero enim inventore dolores. Quo, voluptas facilis. 
+        Eligendi ab at repudiandae voluptatum voluptas pariatur esse 
+        dolores magni dolorum debitis ea, qui libero numquam ipsum odit iste? 
+        Maxime aliquam quos molestias provident explicabo voluptatum, 
+        iure, iste temporibus nostrum odit blanditiis magni ea itaque culpa doloribus.</p>
       <h2>Where´s Wally ???</h2>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-    </main>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
+        doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
+        veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+        sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, 
+        adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore 
+        et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, 
+        quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+        nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit 
+        qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+        vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+    </apresentacao>
 
     <SiteHeader
-      ><p style="text-align: center">THIS PAGE:</p>
+      >
+      <a  href="../../index.html#css3_12_BackgroundResponsivo">
+        <div class="DivLink">Return to Web Tutorials</div>
+      </a>
+      <p style="text-align: center">THIS PAGE:</p>
       <h2>Web CSS3 Tutorials : Background Responsivo</h2>
       <p style="text-align: center">Página preparada para Desktop</p>
       <p style="text-align: center">Phone Portrait</p>
       <p style="text-align: center">Phone Landscape</p>
-      <br />
-      <a href="../../index.html#css3_12_BackgroundResponsivo">
-        <div class="DivLink">Return to Web Tutorials</div>
-      </a>
     </SiteHeader>
+    <main>
+    <div class="code">
+      <div>HTML</div>
+      <pre>
+        &lt;header&gt;&lt;/header&gt;
+        &lt;apresentacao&gt;
+          &lt;h1&gt;Quasi autem odit accusamus praesentium!&lt;/h1&gt;
+          &lt;p&gt;Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+            ... 
+            iure, iste temporibus nostrum odit blanditiis magni ea itaque culpa doloribus.&lt;/p&gt;
+          &lt;h2&gt;Where´s Wally ???&lt;/h2&gt;
+          &lt;p&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
+            ... 
+            vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?&lt;/p&gt;
+        &lt;/apresentacao&gt;
+    
+      </pre>
+    </div>
+    <div class="code">
+      <div>CSS</div>
+      <pre>
+      &lt;style&gt;
+      body {
+        font-family:Nunito, sans-serif;
+        margin: 0;
+      }
+
+      header {
+        width: 100%;
+        height: 628px;
+        background-image: url(imagens/GirlOnPc1200x628.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+      }
+      
+      @media only screen and (max-width: 414px) and (orientation: portrait) {
+        header {
+          height: 320px;
+        }
+      }
+      
+      @media only screen and (max-height: 414px) and (orientation: landscape) {
+        header {
+          height: 160px;
+        }
+      }
+
+      apresentacao {
+        width: 80%;
+        margin: 30px auto;
+        text-align: center;
+      }
+
+      apresentacao p {
+        padding: 0 20px;
+        text-align: justify;
+      }
+      &lt;/style&gt;
+      </pre>
+    </div>
+    <hr/>
+    <div style="padding: 50px">
+     <p>Código completo disponível no GitHub:</p>
+    <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
+    </div>
+    </main>
   </body>
 </html>

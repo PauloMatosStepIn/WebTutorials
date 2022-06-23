@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/transitions.css" />
     <title>Web CSS3 Tutorials : Colunas</title>
     <link rel="stylesheet" type="text/css" href="../css/SiteHeader.css" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
 
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
 
@@ -16,8 +17,12 @@
         font-size: 13px;
       }
 
+      SiteHeader p:first-child {
+        padding-top: 20px;
+      }
+
       .janela {
-        margin: 0px auto 50px;
+        margin: 0px auto 0px;
         width: 750px;
         background-color: rgb(232, 232, 232);
         border: 1px dotted #333333;
@@ -68,7 +73,6 @@
         float: right;
         margin: 15px 0px 1px 15px;
       }
-
       /* No caso de estar em Orientação "Portrait" apresenta só uma coluna 
     Necessária inclusão no "head" de :    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -101,24 +105,160 @@
     </SiteHeader>
 
     <div class="janela justificado">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia neque eaque omnis asperiores harum tempore. Voluptatem eaque in illum distinctio ex doloremque et repudiandae voluptate consequuntur exercitationem vero cum incidunt, aut odit eveniet, unde porro optio delectus. Sed, esse at reprehenderit modi voluptatem quibusdam eaque vitae ea sint nisi officia porro vel doloribus assumenda vero, fugiat iusto officiis ex corporis, voluptatibus impedit laudantium. Temporibus fugiat ea ducimus vero error quam, eaque laudantium eius expedita dolores officia sed iste. Iusto, consectetur aut mollitia, provident commodi eaque illo voluptatem dolore veritatis sint ipsum alias repellendus! Suscipit minima sequi saepe similique quam dolores distinctio, nobis molestias, quis illo voluptatem voluptate consequatur tenetur quaerat? Non dolores quaerat alias assumenda ipsum consequatur provident. Blanditiis, minima quam? Eius optio autem aspernatur necessitatibus nihil inventore impedit laudantium nesciunt tempora nam fuga dolor dolores eligendi illum dicta quis vitae expedita nemo praesentium possimus, consequatur molestias iusto et? Dolorum ipsum quaerat id maiores praesentium eius, quam hic dolores cumque reprehenderit distinctio odio nobis, excepturi aliquam ipsam vel iste? In excepturi impedit officia eaque asperiores, accusamus fugit ea, saepe facilis corporis, eligendi iste beatae natus illum atque non amet minima? Tempora consequatur ut suscipit dignissimos accusamus, amet exercitationem rem autem.<br /></p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia neque eaque omnis asperiores harum tempore. Voluptatem eaque in illum distinctio ex doloremque et repudiandae voluptate consequuntur exercitationem vero cum incidunt, aut odit eveniet, unde porro optio delectus. Sed, esse at reprehenderit modi voluptatem quibusdam eaque vitae ea sint nisi officia porro vel doloribus assumenda vero, fugiat iusto officiis ex corporis, voluptatibus impedit laudantium. Temporibus fugiat ea ducimus vero error quam, eaque laudantium eius expedita dolores officia sed iste. Iusto, consectetur aut mollitia, provident commodi eaque illo voluptatem dolore veritatis sint ipsum alias repellendus! Suscipit minima sequi saepe similique quam dolores distinctio, nobis molestias, quis illo voluptatem voluptate consequatur tenetur quaerat? Non dolores quaerat alias assumenda ipsum consequatur provident. Blanditiis, minima quam? Eius optio autem aspernatur necessitatibus nihil inventore impedit laudantium nesciunt tempora nam fuga dolor dolores eligendi illum dicta quis vitae expedita nemo praesentium possimus, consequatur molestias iusto et? Dolorum ipsum quaerat id maiores praesentium eius, quam hic dolores cumque reprehenderit distinctio odio nobis, excepturi aliquam ipsam vel iste? In excepturi impedit officia eaque asperiores, accusamus fugit ea, saepe facilis corporis, eligendi iste beatae natus illum atque non amet minima? Tempora consequatur ut suscipit dignissimos accusamus, amet exercitationem rem autem.</p>
     </div>
+    <main>
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+        &lt;div class="janela justificado"&gt;
+          &lt;p&gt;*** Usar o Snippet do VsCode Lorem100 para preencher esta área!!! ***&lt;/p&gt;
+        &lt;/div&gt;
+      </pre
+        >
+      </div>
 
+      <div class="code">
+        <div>CSS</div>
+        <pre>
+          &lt;style&gt;
+          .janela {
+            margin: 0px auto 0px;
+            width: 750px;
+            background-color: rgb(232, 232, 232);
+            border: 1px dotted #333333;
+            padding: 10px;
+          }
+    
+          .justificado {
+            text-align: justify;
+          }
+    
+          .janela p {
+            margin-top: 0px;
+            margin-bottom: 0px;
+          }
+          
+          &lt;/style&gt;
+          </pre
+        >
+      </div>
+      <hr />
+    </main>
     <SiteHeader>
       <p>2 Colunas (com <b>column-count</b>)</p>
     </SiteHeader>
 
     <div class="janela DuasColunas">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia neque eaque omnis asperiores harum tempore. Voluptatem eaque in illum distinctio ex doloremque et repudiandae voluptate consequuntur exercitationem vero cum incidunt, aut odit eveniet, unde porro optio delectus. Sed, esse at reprehenderit modi voluptatem quibusdam eaque vitae ea sint nisi officia porro vel doloribus assumenda vero, fugiat iusto officiis ex corporis, voluptatibus impedit laudantium. Temporibus fugiat ea ducimus vero error quam, eaque laudantium eius expedita dolores officia sed iste. Iusto, consectetur aut mollitia, provident commodi eaque illo voluptatem dolore veritatis sint ipsum alias repellendus! Suscipit minima sequi saepe similique quam dolores distinctio, nobis molestias, quis illo voluptatem voluptate consequatur tenetur quaerat? Non dolores quaerat alias assumenda ipsum consequatur provident. Blanditiis, minima quam? Eius optio autem aspernatur necessitatibus nihil inventore impedit laudantium nesciunt tempora nam fuga dolor dolores eligendi illum dicta quis vitae expedita nemo praesentium possimus, consequatur molestias iusto et? Dolorum ipsum quaerat id maiores praesentium eius, quam hic dolores cumque reprehenderit distinctio odio nobis, excepturi aliquam ipsam vel iste? In excepturi impedit officia eaque asperiores, accusamus fugit ea, saepe facilis corporis, eligendi iste beatae natus illum atque non amet minima? Tempora consequatur ut suscipit dignissimos accusamus, amet exercitationem rem autem.<br /></p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia neque eaque omnis asperiores harum tempore. Voluptatem eaque in illum distinctio ex doloremque et repudiandae voluptate consequuntur exercitationem vero cum incidunt, aut odit eveniet, unde porro optio delectus. Sed, esse at reprehenderit modi voluptatem quibusdam eaque vitae ea sint nisi officia porro vel doloribus assumenda vero, fugiat iusto officiis ex corporis, voluptatibus impedit laudantium. Temporibus fugiat ea ducimus vero error quam, eaque laudantium eius expedita dolores officia sed iste. Iusto, consectetur aut mollitia, provident commodi eaque illo voluptatem dolore veritatis sint ipsum alias repellendus! Suscipit minima sequi saepe similique quam dolores distinctio, nobis molestias, quis illo voluptatem voluptate consequatur tenetur quaerat? Non dolores quaerat alias assumenda ipsum consequatur provident. Blanditiis, minima quam? Eius optio autem aspernatur necessitatibus nihil inventore impedit laudantium nesciunt tempora nam fuga dolor dolores eligendi illum dicta quis vitae expedita nemo praesentium possimus, consequatur molestias iusto et? Dolorum ipsum quaerat id maiores praesentium eius, quam hic dolores cumque reprehenderit distinctio odio nobis, excepturi aliquam ipsam vel iste? In excepturi impedit officia eaque asperiores, accusamus fugit ea, saepe facilis corporis, eligendi iste beatae natus illum atque non amet minima? Tempora consequatur ut suscipit dignissimos accusamus, amet exercitationem rem autem.</p>
     </div>
+    <main>
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+              &lt;div class="janela DuasColunas"&gt;
+                &lt;p&gt;*** Usar o Snippet do VsCode Lorem100 para preencher esta área!!! ***&lt;/p&gt;
+              &lt;/div&gt;
+            </pre
+        >
+      </div>
+      <div class="code">
+        <div>CSS</div>
+        <pre>
+                &lt;style&gt;
+                .janela {
+                  margin: 0px auto 0px;
+                  width: 750px;
+                  background-color: rgb(232, 232, 232);
+                  border: 1px dotted #333333;
+                  padding: 10px;
+                }
+          
+                .DuasColunas {
+                  text-align: justify;
+                  column-count: 2;
+                  column-gap: 40px;
+                  column-rule: 1px dotted #333;
+                }
+          
+                .janela p {
+                  margin-top: 0px;
+                  margin-bottom: 0px;
+                }
+                
+                /* No caso de estar em Orientação "Portrait" apresenta só uma coluna 
+                Necessária inclusão no "head" de :    
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                */
+                @media only screen and (orientation: portrait) {
+                  .DuasColunas {
+                    column-count: 1;
+                    column-rule: none;
+                  }
+                }
+          
+                &lt;/style&gt;
+                </pre
+        >
+      </div>
+      <hr />
+    </main>
 
     <SiteHeader>
       <p>3 Colunas (com <b>column-width</b>)</p>
     </SiteHeader>
 
     <div class="janela TresColunas">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia neque eaque omnis asperiores harum tempore. Voluptatem eaque in illum distinctio ex doloremque et repudiandae voluptate consequuntur exercitationem vero cum incidunt, aut odit eveniet, unde porro optio delectus. Sed, esse at reprehenderit modi voluptatem quibusdam eaque vitae ea sint nisi officia porro vel doloribus assumenda vero, fugiat iusto officiis ex corporis, voluptatibus impedit laudantium. Temporibus fugiat ea ducimus vero error quam, eaque laudantium eius expedita dolores officia sed iste. Iusto, consectetur aut mollitia, provident commodi eaque illo voluptatem dolore veritatis sint ipsum alias repellendus! Suscipit minima sequi saepe similique quam dolores distinctio, nobis molestias, quis illo voluptatem voluptate consequatur tenetur quaerat? Non dolores quaerat alias assumenda ipsum consequatur provident. Blanditiis, minima quam? Eius optio autem aspernatur necessitatibus nihil inventore impedit laudantium nesciunt tempora nam fuga dolor dolores eligendi illum dicta quis vitae expedita nemo praesentium possimus, consequatur molestias iusto et? Dolorum ipsum quaerat id maiores praesentium eius, quam hic dolores cumque reprehenderit distinctio odio nobis, excepturi aliquam ipsam vel iste? In excepturi impedit officia eaque asperiores, accusamus fugit ea, saepe facilis corporis, eligendi iste beatae natus illum atque non amet minima? Tempora consequatur ut suscipit dignissimos accusamus, amet exercitationem rem autem.<br /></p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia neque eaque omnis asperiores harum tempore. Voluptatem eaque in illum distinctio ex doloremque et repudiandae voluptate consequuntur exercitationem vero cum incidunt, aut odit eveniet, unde porro optio delectus. Sed, esse at reprehenderit modi voluptatem quibusdam eaque vitae ea sint nisi officia porro vel doloribus assumenda vero, fugiat iusto officiis ex corporis, voluptatibus impedit laudantium. Temporibus fugiat ea ducimus vero error quam, eaque laudantium eius expedita dolores officia sed iste. Iusto, consectetur aut mollitia, provident commodi eaque illo voluptatem dolore veritatis sint ipsum alias repellendus! Suscipit minima sequi saepe similique quam dolores distinctio, nobis molestias, quis illo voluptatem voluptate consequatur tenetur quaerat? Non dolores quaerat alias assumenda ipsum consequatur provident. Blanditiis, minima quam? Eius optio autem aspernatur necessitatibus nihil inventore impedit laudantium nesciunt tempora nam fuga dolor dolores eligendi illum dicta quis vitae expedita nemo praesentium possimus, consequatur molestias iusto et? Dolorum ipsum quaerat id maiores praesentium eius, quam hic dolores cumque reprehenderit distinctio odio nobis, excepturi aliquam ipsam vel iste? In excepturi impedit officia eaque asperiores, accusamus fugit ea, saepe facilis corporis, eligendi iste beatae natus illum atque non amet minima? Tempora consequatur ut suscipit dignissimos accusamus, amet exercitationem rem autem.</p>
     </div>
+    <main>
+          <div class="code">
+            <div>HTML</div>
+            <pre>
+              &lt;div class="janela TresColunas"&gt;
+                &lt;p&gt;*** Usar o Snippet do VsCode Lorem100 para preencher esta área!!! ***&lt;/p&gt;
+              &lt;/div&gt;
+            </pre>
+          </div>
+          <div class="code">
+            <div>CSS</div>
+            <pre>
+            &lt;style&gt;
+            .janela {
+              margin: 0px auto 0px;
+              width: 750px;
+              background-color: rgb(232, 232, 232);
+              border: 1px dotted #333333;
+              padding: 10px;
+            }
+      
+            .TresColunas {
+              text-align: justify;
+              column-width: 230px;
+              column-gap: 20px;
+              column-rule: 1px dotted #333;
+            }
+      
+            .janela p {
+              margin-top: 0px;
+              margin-bottom: 0px;
+            }
+
+            /* No caso de estar em Orientação "Portrait" apresenta só uma coluna 
+            Necessária inclusão no "head" de :    
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            */
+            @media only screen and (orientation: portrait) {
+              .TresColunas {
+                column-width: 750px;
+                column-rule: none;
+              }
+            }
+            &lt;/style&gt;
+            </pre>
+          </div>
+          <hr/>
+        </main>
 
     <SiteHeader>
       <p>2 Colunas c/Títulos e Imagens</p>
@@ -128,15 +268,151 @@
       <h2>Primeiro Título</h2>
       <p>
         <img class="esquerdaTop" src="imagens/creme_brule.jpg" />
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia neque eaque omnis asperiores harum tempore. Voluptatem eaque in illum distinctio ex doloremque et repudiandae voluptate consequuntur exercitationem vero cum incidunt, aut odit eveniet, unde porro optio delectus. Sed, esse at reprehenderit modi voluptatem quibusdam eaque vitae ea sint nisi officia porro vel doloribus assumenda vero, fugiat iusto officiis ex corporis, voluptatibus impedit laudantium. Temporibus fugiat ea ducimus vero error quam, eaque laudantium eius expedita dolores officia sed iste.
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Officia neque eaque omnis asperiores harum tempore. 
+        Voluptatem eaque in illum distinctio ex doloremque 
+        et repudiandae voluptate consequuntur exercitationem vero cum incidunt, 
+        aut odit eveniet, unde porro optio delectus. Sed, 
+        esse at reprehenderit modi voluptatem quibusdam eaque vitae 
+        ea sint nisi officia porro vel doloribus assumenda vero, 
+        fugiat iusto officiis ex corporis, voluptatibus impedit laudantium. 
+        Temporibus fugiat ea ducimus vero error quam, eaque laudantium 
+        eius expedita dolores officia sed iste.
       </p>
       <h2>Segundo Título - h2:not(:first-child)</h2>
-
       <p>
-        Iusto, consectetur aut mollitia, provident commodi eaque illo voluptatem dolore veritatis sint ipsum alias repellendus! Suscipit minima sequi saepe similique quam dolores distinctio, nobis molestias, quis illo voluptatem voluptate consequatur tenetur quaerat? Non dolores quaerat alias assumenda ipsum consequatur provident. Blanditiis,
+        Iusto, consectetur aut mollitia, provident commodi eaque illo voluptatem 
+        dolore veritatis sint ipsum alias repellendus! Suscipit minima sequi saepe 
+        similique quam dolores distinctio, nobis molestias, quis illo voluptatem 
+        voluptate consequatur tenetur quaerat? Non dolores quaerat alias assumenda 
+        ipsum consequatur provident. Blanditiis,
+        
         <img class="esquerda" src="imagens/caviar.jpg" />
-        minima quam? Eius optio autem aspernatur necessitatibus nihil inventore impedit laudantium nesciunt tempora nam fuga dolor dolores eligendi illum dicta quis vitae expedita nemo praesentium possimus, consequatur molestias iusto et? Dolorum ipsum quaerat <img class="direita" src="imagens/pato_laranja2.jpg" /> id maiores praesentium eius, quam hic dolores cumque reprehenderit distinctio odio nobis, excepturi aliquam ipsam vel iste? In excepturi impedit officia eaque asperiores, accusamus fugit ea, saepe facilis corporis, eligendi iste beatae natus illum atque non amet minima? Tempora consequatur ut suscipit dignissimos accusamus, amet exercitationem rem autem.<br />
+        
+        minima quam? Eius optio autem aspernatur necessitatibus nihil inventore impedit 
+        laudantium nesciunt tempora nam fuga dolor dolores eligendi illum dicta quis 
+        vitae expedita nemo praesentium possimus, consequatur molestias iusto et? 
+        Dolorum ipsum quaerat 
+        
+        <img class="direita" src="imagens/pato_laranja2.jpg" /> 
+        
+        id maiores praesentium eius, quam hic dolores cumque reprehenderit distinctio odio nobis, 
+        excepturi aliquam ipsam vel iste? In excepturi impedit officia eaque asperiores, 
+        accusamus fugit ea, saepe facilis corporis, eligendi iste beatae natus illum 
+        atque non amet minima? Tempora consequatur ut suscipit dignissimos accusamus, 
+        amet exercitationem rem autem.
       </p>
     </div>
+    <main>
+          <div class="code">
+            <div>HTML</div>
+            <pre>
+              &lt;div class="janela DuasColunas"&gt;
+                &lt;h2&gt;Primeiro Título&lt;/h2&gt;
+                &lt;p&gt;
+                  &lt;img class="esquerdaTop" src="imagens/creme_brule.jpg" /&gt;
+          
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                  Officia neque eaque omnis asperiores harum tempore. 
+                  Voluptatem eaque in illum distinctio ex doloremque 
+                  et repudiandae voluptate consequuntur exercitationem vero cum incidunt, 
+                  aut odit eveniet, unde porro optio delectus. Sed, 
+                  esse at reprehenderit modi voluptatem quibusdam eaque vitae 
+                  ea sint nisi officia porro vel doloribus assumenda vero, 
+                  fugiat iusto officiis ex corporis, voluptatibus impedit laudantium. 
+                  Temporibus fugiat ea ducimus vero error quam, eaque laudantium 
+                  eius expedita dolores officia sed iste.
+                &lt;/p&gt;
+                &lt;h2&gt;Segundo Título - h2:not(:first-child)&lt;/h2&gt;
+                &lt;p&gt;
+                  Iusto, consectetur aut mollitia, provident commodi eaque illo voluptatem 
+                  dolore veritatis sint ipsum alias repellendus! Suscipit minima sequi saepe 
+                  similique quam dolores distinctio, nobis molestias, quis illo voluptatem 
+                  voluptate consequatur tenetur quaerat? Non dolores quaerat alias assumenda 
+                  ipsum consequatur provident. Blanditiis,
+                  
+                  &lt;img class="esquerda" src="imagens/caviar.jpg" /&gt;
+                  
+                  minima quam? Eius optio autem aspernatur necessitatibus nihil inventore impedit 
+                  laudantium nesciunt tempora nam fuga dolor dolores eligendi illum dicta quis 
+                  vitae expedita nemo praesentium possimus, consequatur molestias iusto et? 
+                  Dolorum ipsum quaerat 
+                  
+                  &lt;img class="direita" src="imagens/pato_laranja2.jpg" /&gt; 
+                  
+                  id maiores praesentium eius, quam hic dolores cumque reprehenderit distinctio odio nobis, 
+                  excepturi aliquam ipsam vel iste? In excepturi impedit officia eaque asperiores, 
+                  accusamus fugit ea, saepe facilis corporis, eligendi iste beatae natus illum 
+                  atque non amet minima? Tempora consequatur ut suscipit dignissimos accusamus, 
+                  amet exercitationem rem autem.
+                &lt;/p&gt;
+              &lt;/div&gt;
+            </pre>
+          </div>
+              <div class="code">
+                <div>CSS</div>
+                <pre>
+                &lt;style&gt;
+                .janela {
+                  margin: 0px auto 0px;
+                  width: 750px;
+                  background-color: rgb(232, 232, 232);
+                  border: 1px dotted #333333;
+                  padding: 10px;
+                }
+          
+                .DuasColunas {
+                  text-align: justify;
+                  column-count: 2;
+                  column-gap: 40px;
+                  column-rule: 1px dotted #333;
+                }
+          
+                .janela p,
+                .janela h2 {
+                  margin-top: 0px;
+                  margin-bottom: 0px;
+                }
+                .janela h2 {
+                  margin-bottom: 5px;
+                }
+                .janela h2:not(:first-child) {
+                  margin-top: 10px;
+                }
+          
+                .janela img.esquerdaTop {
+                  float: left;
+                  margin: 0px 15px 1px 0px;
+                }
+          
+                .janela img.esquerda {
+                  float: left;
+                  margin: 15px 15px 1px 0px;
+                }
+          
+                .janela img.direita {
+                  float: right;
+                  margin: 15px 0px 1px 15px;
+                }
+                /* No caso de estar em Orientação "Portrait" apresenta só uma coluna 
+                Necessária inclusão no "head" de :    
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                */
+                @media only screen and (orientation: portrait) {
+                  .DuasColunas {
+                    column-count: 1;
+                    column-rule: none;
+                  }
+                }
+                &lt;/style&gt;
+                </pre>
+              </div>
+              <hr/>
+              <div style="padding: 50px">
+               <p>Código completo disponível no GitHub:</p>
+              <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
+              </div>
+    </main>
   </body>
 </html>

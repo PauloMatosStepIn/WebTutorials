@@ -3,6 +3,7 @@
     <title>Web CSS3 Tutorials : Menu Responsivo (Step 2)</title>
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" type="text/css" href="../../css/SiteHeader.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/main.css" />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
 
@@ -66,6 +67,7 @@
     </style>
   </head>
   <body>
+    
     <nav>
       <img src="imagens/logo-pizzaria-grande.png" />
       <ul id="menu-desktop">
@@ -79,18 +81,114 @@
     <header>
       <img src="imagens/foto-capa-pizza.jpg" />
     </header>
+
+    <main>
     <SiteHeader>
       <a style="padding-top: 20px" href="../../index.html#css3_14_Menu">
-        <div class="DivLink" style="background-color: lightgrey">Return to Web Tutorials</div>
+        <div class="DivLink">Return to Web Tutorials</div>
       </a>
       <a href="index.html">
         <div class="DivLink">Go to Menu Responsivo (Step 1)</div>
       </a>
+      
+      
       <h2>Web CSS3 Tutorials : Menu Responsivo (Step 2)</h2>
       <p>Exemplo de Menu Preparado para Desktop.</p>
+    <div class="code">
+      <div>HTML</div>
+      <pre>
+        &lt;nav&gt;
+          &lt;img src="imagens/logo-pizzaria-grande.png" /&gt;
+          &lt;ul id="menu-desktop"&gt;
+            &lt;li&gt;&lt;a href=""&gt;PIZZAS&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=""&gt;MEUS PEDIDOS&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=""&gt;CONTACTO&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=""&gt;LOGIN&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/nav&gt;
+    
+        &lt;header>
+          &lt;img src="imagens/foto-capa-pizza.jpg" />
+        &lt;/header>
+    
+      </pre>
+    </div>
+
+    <div class="code">
+      <div>CSS</div>
+      <pre>
+      &lt;style&gt;
+      body {
+        margin: 0;
+      }
+
+      nav {
+        position: fixed;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+
+      nav img {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        z-index: 1;
+      }
+
+      nav ul#menu-desktop {
+        margin: 0;
+        padding: 0;
+        text-align: right;
+      }
+      nav ul#menu-desktop li {
+        list-style-type: none;
+        display: inline;
+      }
+
+      nav ul#menu-desktop li a {
+        padding: 30px 40px;
+        text-decoration: none;
+
+        color: #fff;
+        display: inline-block;
+        margin-right: -3px;
+        font-family: Roboto, sans-serif;
+        font-size: 80%;
+        letter-spacing: 0.6;
+      }
+
+      nav ul#menu-desktop li a:hover {
+        background-color: rgba(213, 26, 44, 1);
+      }
+
+      header {
+        width: 100%;
+        height: 600px;
+        margin: 0 auto;
+      }
+
+      header img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: top center;
+      }
+
+      &lt;/style&gt;
+      </pre>
+    </div>
+
       <a href="index2.html">
         <div class="DivLink">Go to Menu Responsivo (Step 3)</div>
       </a>
-    </SiteHeader>
+<hr/>
+<div style="padding: 50px">
+ <p>Código completo disponível no GitHub:</p>
+<a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
+</div>
+</SiteHeader>
+
+</main>
   </body>
 </html>

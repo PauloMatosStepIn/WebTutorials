@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Web CSS3 Tutorials : Object Fit</title>
-    <link rel="stylesheet" type="text/css" href="../../css/SiteHeader.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/styles.css" />
 
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
 
@@ -92,49 +92,280 @@
     <header>
       <img src="imagens/GirlOnPc1200x628.jpg" />
     </header>
+    <main>
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+          &lt;header&gt;
+            &lt;img src="imagens/GirlOnPc1200x628.jpg" /&gt;
+          &lt;/header&gt;
+        </pre>
+      </div>
+
+      <div class="code">
+        <div>CSS</div>
+        <pre>
+        &lt;style&gt;
+        body {
+          margin: 0;
+          background-color: white;
+        }
+  
+        header {
+          width: 100%;
+          height: 600px;
+          margin: 0 auto;
+        }
+  
+        header img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top center;
+        }
+  
+        @media only screen and (max-width: 769px) {
+          header {
+            height: 320px;
+          }
+        }
+  
+        @media only screen and (orientation: landscape) and (max-height: 414px) {
+          header {
+            height: 160px;
+          }
+        }
+  
+        @media only screen and (max-width: 414px) {
+          header {
+            height: 160px;
+          }
+        }
+  
+        &lt;/style&gt;
+        </pre>
+      </div>
+
+      <hr />
+    </main>
 
     <SiteHeader>
       <a href="../../index.html#css3_13_ObjectFit">
         <div class="DivLink">Return to Web Tutorials</div>
       </a>
       <h2>Web CSS3 Tutorials : Object Fit</h2>
+      <p>A propriedade CSS <b>object-fit</b> é usada para especificar como uma tag &lt;img&gt; ou &lt;video&gt; se deve redimensionar de forma a preencher a área onde está definida(container). Esta propriedade especifica como o conteúdo deve preencher o container, fazendo-o de diversas formas: preservando a proporção da imagem, esticando ou encolhendo a imagem de forma a preencher a área do container.</p>
     </SiteHeader>
 
     <SiteHeader>
       <p>object-fit: none;</p>
     </SiteHeader>
+
     <div class="janela">
       <img src="imagens/GirlOnPc600x314.jpg" />
     </div>
+    <main>
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+        &lt;div class="janela"&gt;
+          &lt;img src="imagens/GirlOnPc600x314.jpg" /&gt;
+        &lt;/div&gt;
+      </pre
+        >
+      </div>
+      <div class="code">
+        <div>CSS</div>
+        <pre>
+      &lt;style&gt;
+      div.janela {
+        width: 80%;
+        height: 400px;
+        margin: 10px auto;
+        border: 1px solid #000;
+      }
+
+      div.janela img {
+        width: 100%;
+        height: 100%;
+        object-fit: none;
+      }
+      &lt;/style&gt;
+      </pre
+        >
+      </div>
+      <hr />
+    </main>
     <SiteHeader>
       <p>object-fit: none;</p>
       <p>object-position: top left;</p>
     </SiteHeader>
+
     <div id="j2" class="janela">
       <img src="imagens/GirlOnPc600x314.jpg" />
     </div>
+    <main>
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+        &lt;div id="j2" class="janela"&gt;
+          &lt;img src="imagens/GirlOnPc600x314.jpg" /&gt;
+        &lt;/div&gt;
+      </pre
+        >
+      </div>
+      <div class="code">
+        <div>CSS</div>
+        <pre>
+      &lt;style&gt;
+      div.janela {
+        width: 80%;
+        height: 400px;
+        margin: 10px auto;
+        border: 1px solid #000;
+      }
+
+      div.janela img {
+        width: 100%;
+        height: 100%;
+        object-fit: none;
+      }
+
+      #j2 img {
+        object-position: top left;
+      }
+      &lt;/style&gt;
+      </pre
+        >
+      </div>
+      <hr />
+    </main>
     <SiteHeader>
       <p>object-fit: fill;</p>
     </SiteHeader>
     <div id="j3" class="janela">
       <img src="imagens/GirlOnPc600x314.jpg" />
     </div>
-
+    <main>
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+          &lt;div id="j3" class="janela"&gt;
+            &lt;img src="imagens/GirlOnPc600x314.jpg" /&gt;
+          &lt;/div&gt;
+        </pre>
+      </div>
+      <div class="code">
+        <div>CSS</div>
+        <pre>
+        &lt;style&gt;
+        div.janela {
+          width: 80%;
+          height: 400px;
+          margin: 10px auto;
+          border: 1px solid #000;
+        }
+  
+        div.janela img {
+          width: 100%;
+          height: 100%;
+          object-fit: none;
+        }
+  
+        #j3 img {
+          object-fit: fill;
+        }
+        &lt;/style&gt;
+        </pre>
+      </div>
+      <hr />
+    </main>
     <SiteHeader>
       <p>object-fit: contain;</p>
     </SiteHeader>
     <div id="j4" class="janela">
       <img src="imagens/GirlOnPc600x314.jpg" />
     </div>
+    <main>
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+        &lt;div id="j4" class="janela"&gt;
+          &lt;img src="imagens/GirlOnPc600x314.jpg" /&gt;
+        &lt;/div&gt;
+      </pre
+        >
+      </div>
+      <div class="code">
+        <div>CSS</div>
+        <pre>
+      &lt;style&gt;
+      div.janela {
+        width: 80%;
+        height: 400px;
+        margin: 10px auto;
+        border: 1px solid #000;
+      }
+
+      div.janela img {
+        width: 100%;
+        height: 100%;
+        object-fit: none;
+      }
+
+      #j4 img {
+        object-fit: contain;
+      }
+      &lt;/style&gt;
+      </pre
+        >
+      </div>
+    <hr/>
+    </main>
 
     <SiteHeader>
       <p>object-fit: scale-down;</p>
       <p>object-position: top center;</p>
     </SiteHeader>
+    
     <div id="j5" class="janela">
       <img src="imagens/GirlOnPc600x314.jpg" />
     </div>
+<main>
+    <div class="code">
+      <div>HTML</div>
+      <pre>
+        &lt;div id="j5" class="janela"&gt;
+          &lt;img src="imagens/GirlOnPc600x314.jpg" /&gt;
+        &lt;/div&gt;
+      </pre>
+    </div>
+    <div class="code">
+      <div>CSS</div>
+      <pre>
+      &lt;style&gt;
+      div.janela {
+        width: 80%;
+        height: 400px;
+        margin: 10px auto;
+        border: 1px solid #000;
+      }
 
+      div.janela img {
+        width: 100%;
+        height: 100%;
+        object-fit: none;
+      }
+      
+      #j5 img {
+        object-fit: scale-down;
+        object-position: top center;
+      }
+      &lt;/style&gt;
+      </pre>
+    </div>
+  <hr/>
+  </main>
     <SiteHeader>
       <p>object-fit: cover;</p>
       <p>object-position: top center;</p>
@@ -142,5 +373,48 @@
     <div id="j6" class="janela">
       <img src="imagens/GirlOnPc600x314.jpg" />
     </div>
+    <main>
+    <div class="code">
+      <div>HTML</div>
+      <pre>
+        &lt;div id="j6" class="janela"&gt;
+          &lt;img src="imagens/GirlOnPc600x314.jpg" /&gt;
+        &lt;/div&gt;
+      </pre>
+    </div>
+      <div class="code">
+        <div>CSS</div>
+        <pre>
+        &lt;style&gt;
+        div.janela {
+          width: 80%;
+          height: 400px;
+          margin: 10px auto;
+          border: 1px solid #000;
+        }
+  
+        div.janela img {
+          width: 100%;
+          height: 100%;
+          object-fit: none;
+        }
+  
+        #j6 img {
+          object-fit: cover;
+          object-position: top center;
+        }
+  
+        #j6 {
+          border: 10px solid rgb(161, 124, 2);
+        }
+        &lt;/style&gt;
+        </pre>
+      </div>
+  <hr/>
+  <div style="padding: 50px">
+   <p>Código completo disponível no GitHub:</p>
+  <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
+  </div>
+    </main>
   </body>
 </html>
