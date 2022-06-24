@@ -1,0 +1,126 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Javascript Tutorials : SetInterval, Sequência de Fotos</title>
+    <link rel="stylesheet" type="text/css" href="../css/SiteHeader.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+  </head>
+  <body style="font-family: 'Nunito', sans-serif">
+    <main>
+      <SiteHeader>
+        <a href="../index.html#JavaScript_06_SetInterval">
+          <div class="DivLink">Return to Web Tutorials</div>
+        </a>
+        <h2>Web Javascript Tutorials : SetInterval</h2>
+      </SiteHeader>
+
+   
+      <div id="janela">
+        <p>No carregamento, ou após refresh da página mostra sequencialmente 4 fotos, com intervalo de 1 Segundo, e pára, ficando vísivel a última foto. </p>
+<hr/>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est animi dignissimos magnam doloribus! Aliquid voluptatum sed, cupiditate vero maxime nulla esse numquam quidem deleniti, aut, voluptate dolorem est? Quibusdam voluptates numquam beatae, repudiandae, corporis a recusandae sint ab laboriosam consectetur quam eum, nemo laudantium accusamus quasi quis aliquid ipsa saepe exercitationem? Deserunt itaque nulla dignissimos explicabo earum distinctio possimus beatae iure soluta voluptatum. Facilis quisquam, maiores cum, sint totam blanditiis modi unde eveniet voluptas delectus accusamus aliquid vero soluta. At, qui vero. Dolorem dicta molestias tenetur modi deleniti hic voluptatibus mollitia inventore! Obcaecati eum nihil cupiditate hic consectetur nostrum vitae.
+
+        <img src="imagens/boat1.jpg" width="360" height="360" id="foto" alt="foto" />
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptate maxime voluptas velit, dignissimos omnis? Ipsum, dicta pariatur sequi possimus impedit quisquam dolorem eveniet a sint itaque cumque magni laborum quibusdam accusantium libero harum omnis dolorum illum molestiae quos recusandae commodi ducimus? Odio nobis similique laboriosam voluptate unde numquam vero quam commodi recusandae, tempore perferendis tenetur, saepe quos amet quas voluptates quia perspiciatis sed accusantium cupiditate. Dolor rem id, qui, provident neque et voluptatum accusamus laboriosam nesciunt facilis reprehenderit vel ea, ab soluta ipsum magni blanditiis sint voluptate delectus porro eaque voluptates ex magnam. Rem rerum repellendus a error quidem!
+      </div>
+
+      <style>
+        #janela {
+          position: relative;
+          width: 100%;
+          line-height: 150%;
+          text-align: justify;
+        }
+
+        img {
+          float: left;
+          margin: 15px 15px 1px 0px;
+          border-radius: 5px;
+        }
+      </style>
+
+
+      <div class="code" style="margin-top: 30px;">
+        <div>HTML</div>
+        <pre>
+          &lt;div id="janela"&gt;
+            Lorem ... nostrum vitae.
+    
+            &lt;img src="imagens/boat1.jpg" width="360" height="360" id="foto" alt="foto" /&gt;
+    
+            Lorem ipsum ... quidem!
+          &lt;/div&gt;
+        </pre>
+      </div>
+    <div class="code">
+      <div>JAVASCRIPT</div>
+      <pre>
+      &lt;script&gt;
+      var indice = 2
+        var intervalo
+
+        function mudaFoto() {
+          if (indice >= 4) {
+            //indice = 1
+            clearInterval(intervalo)
+          }
+
+          foto.src = 'imagens/boat' + indice + '.jpg'
+
+          console.log(foto.src)
+
+          indice++
+      &lt;/script&gt;
+      </pre>
+    </div>
+
+        <div class="code">
+          <div>CSS</div>
+          <pre>
+          &lt;style&gt;
+          #janela {
+            position: relative;
+            width: 100%;
+            line-height: 150%;
+            text-align: justify;
+          }
+  
+          img {
+            float: left;
+            margin: 15px 15px 1px 0px;
+            border-radius: 5px;
+          }
+          &lt;/style&gt;
+          </pre>
+        </div>
+
+      <script>
+        var indice = 2
+        var intervalo
+
+        function mudaFoto() {
+          if (indice >= 4) {
+            //indice = 1
+            clearInterval(intervalo)
+          }
+
+          foto.src = 'imagens/boat' + indice + '.jpg'
+
+          console.log(foto.src)
+
+          indice++
+        }
+        intervalo = setInterval(mudaFoto, 1000)
+      </script>
+<hr/>
+<div style="padding: 50px">
+ <p>Código completo disponível no GitHub:</p>
+<a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
+</div>
+</main>
+  </body>
+</html>

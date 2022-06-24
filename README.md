@@ -6,9 +6,8 @@ Código completo disponível no GitHub
 
 1. Sample SVG
 2. Sample CANVAS
-3. Sample Geolocalização
-4. Sample Video
-5. Sample Audio
+3. Sample Video
+4. Sample Audio
 
 ## Web CSS3 Tutorials
 
@@ -29,5 +28,11 @@ Código completo disponível no GitHub
 
 ## Web JavaScript Tutorials
 
-1. Get / Set Elements
-2. Events
+1. Obter Geolocalização
+2. Get / Set Elements
+3. Events
+4. Change Styles
+5. Detect Values
+6. Forms
+7. SetInterval
+8. Relógio Analógico

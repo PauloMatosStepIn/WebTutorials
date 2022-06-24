@@ -1,0 +1,281 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/SiteHeader.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+
+    <title>Document</title>
+  </head>
+  <body style="font-family: 'Nunito', sans-serif">
+  <SiteHeader>
+    <a href="../index.html#JavaScript_07_RelogioAnalogico">
+      <div class="DivLink">Return to Web Tutorials</div>
+    </a>
+    <h2>Web Javascript Tutorials : Relógio Analógico</h2>
+  </SiteHeader>
+  <style>
+      .apresentacao {
+        display: flex;
+        padding: 2em;
+        height: 90vh;
+        justify-content: center;
+        align-items: middle;
+      }
+
+      .clockbox,
+      #clock {
+        width: 100%;
+        height: 100%;
+      }
+
+      /* Clock styles */
+      .circle {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 9;
+        stroke-miterlimit: 10;
+      }
+
+      .mid-circle {
+        fill: #fff;
+      }
+
+      .hour-marks {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 9;
+        stroke-miterlimit: 10;
+      }
+
+      .hour-arm {
+        fill: none;
+        stroke: gray;
+        stroke-width: 17;
+        stroke-miterlimit: 10;
+      }
+
+      .minute-arm {
+        fill: none;
+        stroke: rgb(74, 74, 74);
+        stroke-width: 11;
+        stroke-miterlimit: 10;
+      }
+
+      .second-arm {
+        fill: none;
+          stroke: 
+        rgb(39, 39, 39);
+        stroke-width: 4;
+        stroke-miterlimit: 10;
+      }
+
+      /* Transparent box ensuring arms center properly. */
+      .sizing-box {
+        fill: none;
+      }
+
+      /* Make all arms rotate around the same center point. */
+      /* Optional: Use transition for animation. */
+      #hora,
+      #minuto,
+      #segundo {
+        transform-origin: 300px 300px;
+      }
+    </style>
+    <main>
+      <div style="background-color: lightgray;" class="artigo">
+        <apresentacao>
+          <div class="clockbox">
+            <svg id="clock" xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+                <g id="relogio">
+                <circle class="circle" cx="300" cy="300" r="253.9" />
+                <path class="hour-marks" d="M300.5 94V61M506 300.5h32M300.5 506v33M94 300.5H60M411.3 107.8l7.9-13.8M493 190.2l13-7.4M492.1 411.4l16.5 9.5M411 492.3l8.9 15.3M189 492.3l-9.2 15.9M107.7 411L93 419.5M107.5 189.3l-17.1-9.9M188.1 108.2l-9-15.6" />
+                <circle class="mid-circle" cx="300" cy="300" r="16.2" />
+              </g>
+              <g id="hora">
+                <path class="hour-arm" d="M300.5 298V142" />
+                <circle class="sizing-box" cx="300" cy="300" r="253.9" />
+              </g>
+              <g id="minuto">
+                <path class="minute-arm" d="M300.5 298V67" />
+                <circle class="sizing-box" cx="300" cy="300" r="253.9" />
+              </g>
+              <g id="segundo">
+                <path class="second-arm" d="M300.5 350V55" />
+                <circle class="sizing-box" cx="300" cy="300" r="253.9" />
+              </g>
+            </svg>
+          </div>
+        </apresentacao>
+    
+      </div>      
+
+
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+          &lt;apresentacao>
+            &lt;div class="clockbox"&gt;
+              &lt;svg id="clock" xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600"&gt;
+                  &lt;g id="relogio"&gt;
+                  &lt;circle class="circle" cx="300" cy="300" r="253.9" /&gt;
+                  &lt;path class="hour-marks" d="M300.5 94V61M506 300.5h32M300.5 506v33M94 300.5H60M411.3 107.8l7.9-13.8M493 190.2l13-7.4M492.1 411.4l16.5 9.5M411 492.3l8.9 15.3M189 492.3l-9.2 15.9M107.7 411L93 419.5M107.5 189.3l-17.1-9.9M188.1 108.2l-9-15.6" /&gt;
+                  &lt;circle class="mid-circle" cx="300" cy="300" r="16.2" /&gt;
+                &lt;/g&gt;
+                &lt;g id="hora"&gt;
+                  &lt;path class="hour-arm" d="M300.5 298V142" /&gt;
+                  &lt;circle class="sizing-box" cx="300" cy="300" r="253.9" /&gt;
+                &lt;/g&gt;
+                &lt;g id="minuto"&gt;
+                  &lt;path class="minute-arm" d="M300.5 298V67" /&gt;
+                  &lt;circle class="sizing-box" cx="300" cy="300" r="253.9" /&gt;
+                &lt;/g&gt;
+                &lt;g id="segundo"&gt;
+                  &lt;path class="second-arm" d="M300.5 350V55" /&gt;
+                  &lt;circle class="sizing-box" cx="300" cy="300" r="253.9" /&gt;
+                &lt;/g&gt;
+              &lt;/svg&gt;
+            &lt;/div&gt;
+          &lt;/apresentacao&gt;
+        </pre>
+      </div>
+    <div class="code">
+      <div>JAVASCRIPT</div>
+      <pre>
+      &lt;script&gt;
+      var agora
+
+      function mostraHora() {
+        agora = new Date()
+        var hr = agora.getHours()
+        var min = agora.getMinutes()
+        var seg = agora.getSeconds()
+        /* para dar efeito de continuidade */
+        var mil = agora.getMilliseconds()
+
+        console.log(hr + ':' + min + ':' + seg)
+
+        var ponteiro_hr = hr * 30 + min / 2 + (seg * 6) / 360
+        var ponteiro_min = min * 6 + (seg * 6) / 60
+        var ponteiro_seg = seg * 6 + mil / (1000 / 6)
+
+        document.querySelector('#hora').style.transform = 'rotate(' + ponteiro_hr + 'deg)'
+        document.querySelector('#minuto').style.transform = 'rotate(' + ponteiro_min + 'deg)'
+        document.querySelector('#segundo').style.transform = 'rotate(' + ponteiro_seg + 'deg)'
+      }
+      /* Para dar o efeito de continuidade basta actualizar de 50 em 50 milisegundos */
+      var intervalo = setInterval(mostraHora, 50)
+      &lt;/script&gt;
+      </pre>
+    </div>
+
+    <div class="code">
+      <div>CSS</div>
+      <pre>
+      &lt;style&gt;
+      .apresentacao {
+        display: flex;
+        padding: 2em;
+        height: 90vh;
+        justify-content: center;
+        align-items: middle;
+      }
+
+      .clockbox,
+      #clock {
+        width: 100%;
+        height: 100%;
+      }
+
+      /* Clock styles */
+      .circle {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 9;
+        stroke-miterlimit: 10;
+      }
+
+      .mid-circle {
+        fill: #fff;
+      }
+
+      .hour-marks {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 9;
+        stroke-miterlimit: 10;
+      }
+
+      .hour-arm {
+        fill: none;
+        stroke: gray;
+        stroke-width: 17;
+        stroke-miterlimit: 10;
+      }
+
+      .minute-arm {
+        fill: none;
+        stroke: rgb(74, 74, 74);
+        stroke-width: 11;
+        stroke-miterlimit: 10;
+      }
+
+      .second-arm {
+        fill: none;
+          stroke: 
+        rgb(39, 39, 39);
+        stroke-width: 4;
+        stroke-miterlimit: 10;
+      }
+
+      /* Transparent box ensuring arms center properly. */
+      .sizing-box {
+        fill: none;
+      }
+
+      /* Make all arms rotate around the same center point. */
+      /* Optional: Use transition for animation. */
+      #hora,
+      #minuto,
+      #segundo {
+        transform-origin: 300px 300px;
+      }
+      &lt;/style&gt;
+      </pre>
+    </div>
+<hr/>
+<div style="padding: 50px">
+ <p>Código completo disponível no GitHub:</p>
+<a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
+</div>
+    </main>
+
+    <script>
+      var agora
+
+      function mostraHora() {
+        agora = new Date()
+        var hr = agora.getHours()
+        var min = agora.getMinutes()
+        var seg = agora.getSeconds()
+        /* para dar efeito de continuidade */
+        var mil = agora.getMilliseconds()
+
+        console.log(hr + ':' + min + ':' + seg)
+
+        var ponteiro_hr = hr * 30 + min / 2 + (seg * 6) / 360
+        var ponteiro_min = min * 6 + (seg * 6) / 60
+        var ponteiro_seg = seg * 6 + mil / (1000 / 6)
+
+        document.querySelector('#hora').style.transform = 'rotate(' + ponteiro_hr + 'deg)'
+        document.querySelector('#minuto').style.transform = 'rotate(' + ponteiro_min + 'deg)'
+        document.querySelector('#segundo').style.transform = 'rotate(' + ponteiro_seg + 'deg)'
+      }
+      /* Para dar o efeito de continuidade basta actualizar de 50 em 50 milisegundos */
+      var intervalo = setInterval(mostraHora, 50)
+    </script>
+  </body>
+</html>
