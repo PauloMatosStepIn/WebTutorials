@@ -6,17 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Web Javascript Tutorials : Get/Set Elements</title>
   <link rel="stylesheet" type="text/css" href="../css/SiteHeader.css" />
+  <link rel="stylesheet" type="text/css" href="../css/main.css" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap"
     rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="../css/code.css">
+    
 </head>
 
 <body style="font-family: 'Nunito', sans-serif; margin: 50px;">
 
   <body>
+<main>
     <SiteHeader>
-      <a href="index.html">
-        <div class="DivLink">Return to Index Page</div>
+      <a href="../index.html#JavaScript_01_GetSetElement">
+        <div class="DivLink">Return to Web Tutorials</div>
       </a>
       <h2>Web Javascript Tutorials : Get/Set Elements</h2>
       <h3>Nota:</h3>
@@ -24,12 +26,9 @@
         escolher opção: INSPECT -> Console<br />
         para ver resultado de JavaScript
       </p>
-      
     </SiteHeader>
 
-
-
-    <h1>Menu Pizzas</h1>
+    <h2>Menu Pizzas</h2>
     <ul id="opcoesPizza">
       <li class="em_promocao">Calabresa</li>
       <li>Portuguesa</li>
@@ -51,7 +50,9 @@
       <h3>Métodos JS de criação de elemento DOM / HTML usados nesta página<br/> 
         createElement / appendChild (<a href="js/js3_AdicionarElemento.js">js/js3_AdicionarElemento.js</a>)</h3>
 
+
         <div class="code">
+          <div>JAVASCRIPT</div>
           <pre>
             var novaPizza = document.createElement('li')
             elemento.appendChild(novaPizza)
@@ -60,12 +61,14 @@
         </div>
         <p>or (sem definir <i>novaPizza</i>):</p>
         <div class="code">
+          <div>JAVASCRIPT</div>
           <pre>
             elemento.appendChild(document.createElement('li')).innerHTML = 'Mais uma Pizza'
           </pre>
         </div>
         <p>or (sem definir <i>elemento</i> ):</p>
         <div class="code">
+          <div>JAVASCRIPT</div>
           <pre>
             document.querySelector('#opcoesPizza').appendChild(document.createElement('li')).innerHTML = 'Outra Pizza'
           </pre>
@@ -75,6 +78,7 @@
   
 
           <div class="code">
+            <div>JAVASCRIPT</div>
             <pre>
               var imagem = document.querySelector('img')
 
@@ -87,19 +91,19 @@
           </div>
           <h3>Métodos Atribuição por <b>id</b> de elemento DOM / HTML usados nesta página<br/> 
             (<a href="js/js5_AttribuicaoID.js">js/js5_AttribuicaoID.js</a>)</h3>
-            <p>Output:</p>
+            <h3>Output:</h3>
             <div class="code" style="padding-left: 20px; background-color: gray;">
-              <h1>Menu Pizzas</h1>
+              <h2>Menu Pizzas</h2>
               <ul id="opcoesPizza">
                 <li id="pizza1"></li>
                 <li id="pizza2"></li>
                 <li id="pizza3"></li>
               </ul>
             </div>
-            <p>Html:</p>
             <div class="code">
-            <pre>
-              &lt;h1&gt;Menu Pizzas&lt;/h1&gt;
+              <div>HTML</div>
+              <pre>
+              &lt;h2&gt;Menu Pizzas&lt;/h2&gt;
               &lt;ul id="opcoesPizza"&gt;
                 &lt;li id="pizza1"&gt;&lt;/li&gt;
                 &lt;li id="pizza2"&gt;&lt;/li&gt;
@@ -107,8 +111,9 @@
               &lt;/ul&gt;
             </pre>
             </div>
-            <p>JavaScript:</p>
+            
             <div class="code">
+              <div>JAVASCRIPT</div>
               <pre>
                 /* Atribuicao após querySelector */
                 var p1 = document.querySelector('#pizza1')
@@ -120,6 +125,12 @@
               </pre>
               </div>      
     </p>
+    <hr/>
+    <div style="padding: 50px">
+     <p>Código completo disponível no GitHub:</p>
+    <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
+    </div>
+  </main>
     <script src="js/js1_getElement.js"></script>
     <script src="js/js2_querySelector.js"></script>
     <script src="js/js3_AdicionarElemento.js"></script>

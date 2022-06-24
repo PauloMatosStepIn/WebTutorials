@@ -5,28 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Javascript Tutorials : Detect Values w/JavaScript</title>
     <link rel="stylesheet" type="text/css" href="../css/SiteHeader.css" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="../css/code.css" />
-
     <link id="PageCSS" rel="stylesheet" type="text/css" href="04_js/desktop.css" />
   </head>
 
   <body style="font-family: 'Nunito', sans-serif">
-    <SiteHeader>
-      <a href="index.html">
-        <div class="DivLink">Return to Index Page</div>
-      </a>
-      <h2>Web Javascript Tutorials : Detect Values w/JavaScript</h2>
-    </SiteHeader>
+    <main>
+      <SiteHeader>
+        <a href="../index.html#JavaScript_04_DetectValues">
+          <div class="DivLink">Return to Web Tutorials</div>
+        </a>
+        <h2>Web Javascript Tutorials : Detect Values w/JavaScript</h2>
+      </SiteHeader>
 
-    <hr />
-    <SiteHeader>
-      <h2>Detectar Largura da Janela do Browser w/JavaScript</h2>
-    </SiteHeader>
+      <hr />
+      <SiteHeader>
+        <h2>Detectar Largura da Janela do Browser w/JavaScript</h2>
+        <p>Na página do browser -&gt; click no botão do lado direito do mouse escolher opção: INSPECT -&gt; Console para ver resultado de JavaScript</p>
+      </SiteHeader>
 
-    <p>JavaScript:</p>
-    <div class="code">
-      <pre>
+      <div class="code">
+        <div>JAVASCRIPT</div>
+        <pre>
   &lt;script&gt;
     function getResolucao() {
       console.log('window.innerWidth: ' + window.innerWidth)
@@ -53,53 +54,48 @@
     }
   &lt;/script&gt;
 </pre
-      >
-    </div>
-    <script>
-      function getResolucao() {
-        console.log('window.innerWidth: ' + window.innerWidth)
-      }
-      window.onload = window.onresize = getResolucao
+        >
+      </div>
+      <script>
+        function getResolucao() {
+          console.log('window.innerWidth: ' + window.innerWidth)
+        }
+        window.onload = window.onresize = getResolucao
 
-      var largura
+        var largura
 
-      var fileCSS = document.querySelector('#PageCSS')
+        var fileCSS = document.querySelector('#PageCSS')
 
-      /* para funcionar em todos os tipos de dispositivos */
-      if (window.innerWidth) {
-        largura = window.innerWidth
-      } else if (document.documentElement && document.documentElement.clientWidth) {
-        largura = document.documentElement.clientWidth
-      } else if (document.body) {
-        largura = document.body
-      }
+        /* para funcionar em todos os tipos de dispositivos */
+        if (window.innerWidth) {
+          largura = window.innerWidth
+        } else if (document.documentElement && document.documentElement.clientWidth) {
+          largura = document.documentElement.clientWidth
+        } else if (document.body) {
+          largura = document.body
+        }
 
-      if (largura < 415) {
-        fileCSS.setAttribute('href', '04_js/phone.css')
-      } else {
-        fileCSS.setAttribute('href', '04_js/desktop.css')
-      }
-    </script>
+        if (largura < 415) {
+          fileCSS.setAttribute('href', '04_js/phone.css')
+        } else {
+          fileCSS.setAttribute('href', '04_js/desktop.css')
+        }
+      </script>
+      <hr />
+      <SiteHeader>
+        <h2>Detectar Posição do Mouse w/JavaScript</h2>
+      </SiteHeader>
 
-    <div id="janela">
-      <img src="imagens/coliseu.jpg" alt="foto" width="300" height="225" />
-      <p style="text-align: justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id vero nostrum voluptatem aliquid? Itaque nesciunt nihil obcaecati, commodi unde explicabo perferendis sint mollitia excepturi officiis eveniet error hic aut fugit vitae? Accusamus quia, molestiae deserunt sequi necessitatibus delectus perferendis voluptatibus recusandae ut aspernatur explicabo qui nobis doloremque modi magnam, rem repellat, pariatur est minima esse dignissimos. Fuga, hic consequuntur. Necessitatibus quaerat perspiciatis vitae aliquid culpa quo accusamus laboriosam, iste obcaecati suscipit reiciendis dicta esse illo at exercitationem maxime, ea pariatur officia optio? Mollitia illum assumenda magnam repellat! Minima, hic quam nemo corporis provident illum, facere necessitatibus nesciunt sit autem mollitia quis similique culpa numquam ab eos pariatur magni, exercitationem quibusdam illo porro delectus odio sed? Architecto ex sunt ipsum. Dolor aliquid magnam, ex quae ad sapiente, maxime error, consequuntur possimus explicabo minus blanditiis nam veritatis. At recusandae quos perspiciatis suscipit dolore? Repellendus natus velit ex quae distinctio at magnam nemo voluptas, quibusdam quam! Inventore recusandae magnam deserunt accusamus id atque excepturi doloremque saepe velit fugit! Suscipit placeat rem dolorem dignissimos natus voluptate. Fuga, molestias! Sint quas nobis recusandae veniam assumenda? Eligendi modi nobis voluptates corrupti, quo unde quia molestiae est ut nesciunt neque cumque sunt sint. Libero iste sint ex.</p>
-      <ul>
-        <li>Milan (Italy, north)</li>
-        <li>Bari (Italy, east)</li>
-        <li>Naples (Italy, south)</li>
-        <li>Agropoly (Italy, west)</li>
-      </ul>
-    </div>
+      <h3>Output:</h3>
+      <div style="background-color: lightgrey; color: black" class="code">
+        <pre>
+        Posição do Mouse: <span id="posicaoX"></span> x <span id="posicaoY"></span>    
+      </pre>
+      </div>
 
-    <hr />
-    <SiteHeader>
-      <h2>Detectar Posição do Mouse w/JavaScript</h2>
-    </SiteHeader>
-
-    <p>JavaScript:</p>
-    <div class="code">
-      <pre>
+      <div class="code">
+        <div>JAVASCRIPT</div>
+        <pre>
         &lt;script&gt;
           function getMousePosition(e) {
             var posX = document.querySelector('#posicaoX')
@@ -110,55 +106,55 @@
 
           document.addEventListener('mousemove', getMousePosition)
         &lt;/script&gt;
-      </pre>
-    </div>
+      </pre
+        >
+      </div>
 
-    <script>
-      function getMousePosition(e) {
-        var posX = document.querySelector('#posicaoX')
-        var posY = document.querySelector('#posicaoY')
-        posX.innerHTML = e.clientX
-        posY.innerHTML = e.clientY
-      }
+      <script>
+        function getMousePosition(e) {
+          var posX = document.querySelector('#posicaoX')
+          var posY = document.querySelector('#posicaoY')
+          posX.innerHTML = e.clientX
+          posY.innerHTML = e.clientY
+        }
 
-      document.addEventListener('mousemove', getMousePosition)
-    </script>
+        document.addEventListener('mousemove', getMousePosition)
+      </script>
 
-    <p>Html:</p>
-    <div class="code">
-      <pre>
+      <div class="code">
+        <div>HTML</div>
+        <pre>
         Posição do Mouse: &lt;span id="posicaoX"&gt;&lt;/span&gt; x &lt;span id="posicaoY"&gt;&lt;/span&gt;    
+      </pre
+        >
+      </div>
+      <hr />
+      <SiteHeader>
+        <h2>Detectar Tecla Pressionada w/JavaScript</h2>
+      </SiteHeader>
+      <h3>Output:</h3>
+      <div style="background-color: lightgrey; color: black" class="code">
+        <pre>
+        Tecla Pressionada (ASCII CODE): <span id="keyCode"></span> Character: <span id="key"></span>    
       </pre>
-    </div>
+      </div>
 
-    <p>Output:</p>
-    <div style="background-color: lightgrey; color: black" class="code">
-      <pre>
-        Posição do Mouse: <span id="posicaoX"></span> x <span id="posicaoY"></span>    
-      </pre>
-    </div>
+      <script>
+        function getTecla(e) {
+          /* keyCode = ASCII Code */
+          /* key = character */
+          var teclaCode = document.querySelector('#keyCode')
+          var teclaChar = document.querySelector('#key')
+          teclaCode.innerHTML = e.keyCode
+          teclaChar.innerHTML = e.key
+        }
 
-    <hr />
-    <SiteHeader>
-      <h2>Detectar Tecla Pressionada w/JavaScript</h2>
-    </SiteHeader>
+        document.addEventListener('keydown', getTecla)
+      </script>
 
-    <script>
-      function getTecla(e) {
-        /* keyCode = ASCII Code */
-        /* key = character */
-        var teclaCode = document.querySelector('#keyCode')
-        var teclaChar = document.querySelector('#key')
-        teclaCode.innerHTML = e.keyCode
-        teclaChar.innerHTML = e.key
-      }
-
-      document.addEventListener('keydown', getTecla)
-    </script>
-
-    <p>JavaScript:</p>
-    <div class="code">
-      <pre>
+      <div class="code">
+        <div>JAVASCRIPT</div>
+        <pre>
         &lt;script&gt;
         function getTecla(e) {
           /* keyCode = ASCII Code */
@@ -171,61 +167,63 @@
   
         document.addEventListener('keydown', getTecla)
           &lt;/script&gt;
-      </pre>
-    </div>
+      </pre
+        >
+      </div>
 
-    <p>Html:</p>
-    <div class="code">
-      <pre>
+      <div class="code">
+        <div>HTML</div>
+        <pre>
     Tecla Pressionada (ASCII CODE): &lt;span id="keyCode"&gt;&lt;/span&gt; Character: &lt;span id="key"&gt;&lt;/span&gt;    
   </pre
-      >
-    </div>
+        >
+      </div>
 
-    <p>Output:</p>
-    <div style="background-color: lightgrey; color: black" class="code">
-      <pre>
-        Tecla Pressionada (ASCII CODE): <span id="keyCode"></span> Character: <span id="key"></span>    
+      <hr />
+      <SiteHeader>
+        <h2>Detectar Posição de Scroll w/JavaScript</h2>
+      </SiteHeader>
+      <h3>Output:</h3>
+      <div style="background-color: lightgrey; color: black" class="code">
+        <pre>
+        (no canto superior direito do Browser) 
       </pre>
-    </div>
+      </div>
+      <style>
+        #posScroll {
+          position: fixed;
+          top: 0;
+          right: 0;
+          padding: 20px;
+          border: 1px solid gray;
+          border-radius: 5px;
+          background: white;
+        }
+      </style>
 
-    <hr />
-    <SiteHeader>
-      <h2>Detectar Posição de Scroll w/JavaScript</h2>
-    </SiteHeader>
-
-    <style>
-      #posScroll {
-        position: fixed;
-        top: 0;
-        right: 0;
-        padding: 20px;
-        border: 1px solid gray;
-        border-radius: 5px;
-        background: white;
-      }
-    </style>
-
-    <p>JavaScript:</p>
-    <div class="code">
-      <pre>
+      
+      <div class="code">
+      <div>JAVASCRIPT</div>
+        <pre>
         &lt;script&gt;
           document.addEventListener('scroll', () => {
             scrollPosValue.innerHTML = window.scrollY
           })
         &lt;/script&gt;
-      </pre>
-    </div>
+      </pre
+        >
+      </div>
 
-    <script>
-      document.addEventListener('scroll', () => {
-        scrollPosValue.innerHTML = window.scrollY
-      })
-    </script>
+      <script>
+        document.addEventListener('scroll', () => {
+          scrollPosValue.innerHTML = window.scrollY
+        })
+      </script>
 
-    <p>Css:</p>
-    <div class="code">
-      <pre>
+      
+      <div class="code">
+      <div>CSS</div>
+        <pre>
         &lt;style&gt;
           #posScroll {
             position: fixed;
@@ -237,33 +235,36 @@
             background: white;
           }
         &lt;/style&gt;
-      </pre>
-    </div>
+      </pre
+        >
+      </div>
 
-    <p>Html:</p>
-    <div class="code">
-      <pre>
+      
+      <div class="code">
+      <div>HTML</div>
+        <pre>
         &lt;span id="posScroll"&gt;Scroll pos:&lt;br /&gt;&lt;span id="scrollPosValue"&gt;&lt;/span&gt;&lt;/span&gt;
-      </pre>
-    </div>
+      </pre
+        >
+      </div>
 
-    <span id="posScroll">Scroll pos:<br /><span id="scrollPosValue"></span></span>
+      <span id="posScroll">Scroll pos:<br /><span id="scrollPosValue"></span></span>
 
-    <p>Output:</p>
-    <div style="background-color: lightgrey; color: black" class="code">
-      <pre>
-        (no canto superior direito do Browser) 
-      </pre>
-    </div>
+      <hr />
+      <SiteHeader>
+        <h2>Abrir DIV por Posição de Scroll w/JavaScript</h2>
+      </SiteHeader>
+      <h3>Output:</h3>
+      <div style="background-color: lightgrey; color: black" class="code">
+        <pre>
+        Caixa no centro da janela quando posição de scroll vertical superior a 300.  
+      </pre
+        >
+      </div>
 
-    <hr />
-    <SiteHeader>
-      <h2>Abrir DIV por Posição de Scroll w/JavaScript</h2>
-    </SiteHeader>
-
-    <p>JavaScript:</p>
-    <div class="code">
-      <pre>
+      <div class="code">
+        <div>JAVASCRIPT</div>
+        <pre>
         &lt;script&gt;
           document.addEventListener('scroll', () => {
             if (window.scrollY > 300) {
@@ -273,22 +274,23 @@
             }
           })
         &lt;/script&gt;
-      </pre>
-    </div>
+      </pre
+        >
+      </div>
 
-    <script>
-      document.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-          AvisoScroll.style.display = 'block'
-        } else {
-          AvisoScroll.style.display = 'none'
-        }
-      })
-    </script>
+      <script>
+        document.addEventListener('scroll', () => {
+          if (window.scrollY > 300) {
+            AvisoScroll.style.display = 'block'
+          } else {
+            AvisoScroll.style.display = 'none'
+          }
+        })
+      </script>
 
-    <p>Css:</p>
-    <div class="code">
-      <pre>
+      <div class="code">
+        <div>CSS</div>
+        <pre>
         &lt;style&gt;
           #AvisoScroll {
             position: fixed;
@@ -304,42 +306,40 @@
             box-shadow: 0 0 20px black;
           }
         &lt;/style&gt;
-      </pre>
-    </div>
+      </pre
+        >
+      </div>
 
-    <style>
-      #AvisoScroll {
-        position: fixed;
-        top: 200px;
-        left: 50%;
-        width: 300px;
-        height: 150px;
-        margin-left: -150px;
-        background-color: lightgray;
-        display: none;
-        border: 1px solid darkgray;
-        border-radius: 5px;
-        box-shadow: 0 0 20px black;
-      }
-    </style>
+      <style>
+        #AvisoScroll {
+          position: fixed;
+          top: 200px;
+          left: 50%;
+          width: 300px;
+          height: 150px;
+          margin-left: -150px;
+          background-color: lightgray;
+          display: none;
+          border: 1px solid darkgray;
+          border-radius: 5px;
+          box-shadow: 0 0 20px black;
+        }
+      </style>
 
-    <p>Html:</p>
-    <div class="code">
-      <pre>
-    &lt;div id="AvisoScroll"&gt;&lt;p style="padding: 20px"&gt;A posição de Scroll Vertical é superior a 300 !&lt;/p&gt;&lt;/div&gt;
-  
-  </pre
-      >
-    </div>
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+      &lt;div id="AvisoScroll"&gt;&lt;p style="padding: 20px"&gt;A posição de Scroll Vertical é superior a 300 !&lt;/p&gt;&lt;/div&gt;
+    </pre
+        >
+      </div>
 
-    <div id="AvisoScroll"><p style="padding: 20px">A posição de Scroll Vertical é superior a 300 !</p></div>
-
-    <p>Output:</p>
-    <div style="background-color: lightgrey; color: black" class="code">
-      <pre>
-        Caixa no centro da janela quando posição de scroll vertical superior a 300.  
-      </pre>
-    </div>
-
+      <div id="AvisoScroll"><p style="padding: 20px">A posição de Scroll Vertical é superior a 300 !</p></div>
+<hr/>
+<div style="padding: 50px">
+ <p>Código completo disponível no GitHub:</p>
+<a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
+</div>
+    </main>
   </body>
 </html>

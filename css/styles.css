@@ -14,6 +14,7 @@ main h1 {
   left: 0;
   margin: -20px -20px 20px -20px;
   background-color: darkgrey;
+  background-color: #273647;
   color: white;
   text-shadow: 0 0 3px rgb(24, 12, 0);
 }

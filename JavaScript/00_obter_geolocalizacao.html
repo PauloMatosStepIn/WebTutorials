@@ -36,7 +36,7 @@
     <script type="text/javascript">
       var nav = null
 
-      function pegarPosicao() {
+      function getPosicao() {
         document.getElementById('status').innerHTML = 'aguarde...'
 
         if (nav == null) {
@@ -91,7 +91,7 @@
   </head>
   <body>
     <main>
-      <a href="../index.html#html5_03_obter_geo">
+      <a href="../index.html#JavaScript_00_obter_geolocalizacao">
         <div class="DivLink" style="background-color: lightgrey">Return to Web Tutorials</div>
       </a>
       <h2>Web Html5 Tutorials : Geolocalização</h2>
@@ -99,7 +99,7 @@
       <div class="artigo">
         <div class="center" id="status"></div>
         <div class="center">
-          <input type="button" onclick="pegarPosicao()" value="Obter Geolocalização" />
+          <input type="button" onclick="getPosicao()" value="Obter Geolocalização" />
         </div>
       </div>
       <div class="code">
@@ -107,7 +107,7 @@
         <pre>
         &lt;div class="center" id="status"&gt;&lt;/div&gt;
         &lt;div class="center"&gt;
-          &lt;input type="button" onclick="pegarPosicao()" value="Obter Geolocalização" /&gt;
+          &lt;input type="button" onclick="getPosicao()" value="Obter Geolocalização" /&gt;
         &lt;/div&gt;
       </pre>
       </div>
@@ -118,7 +118,7 @@
           &lt;script&gt;
           var nav = null
 
-          function pegarPosicao() {
+          function getPosicao() {
             document.getElementById('status').innerHTML = 'aguarde...'
     
             if (nav == null) {
