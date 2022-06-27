@@ -1,12 +1,12 @@
 # WebTutorials
 
 Código completo disponível no GitHub
-## Web Html5 Tutorials [site](http://paulomatos.stepinportugal.com/WebTutorials/index.html#html5)
+## Web Html5 Tutorials [<site>](http://paulomatos.stepinportugal.com/WebTutorials/index.html#html5)
 
-1. Sample SVG
-2. Sample CANVAS
-3. Sample Video
-4. Sample Audio
+1. Sample SVG [<site>](http://paulomatos.stepinportugal.com/WebTutorials/html5/01_SVG.html)
+2. Sample CANVAS [<site>](http://paulomatos.stepinportugal.com/WebTutorials/html5/02_CANVAS.html)
+3. Sample Video [<site>](http://paulomatos.stepinportugal.com/WebTutorials/html5/04_Video.html)
+4. Sample Audio [<site>](http://paulomatos.stepinportugal.com/WebTutorials/html5/05_Audio.html)
 
 ## Web CSS3 Tutorials
 
