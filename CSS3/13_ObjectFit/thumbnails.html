@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Web CSS3 Tutorials : Object Fit - thumbnails</title>
-    <link rel="stylesheet" type="text/css" href="../../css/SiteHeader.css" />
-    <link rel="stylesheet" type="text/css" href="../../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/styles.css" />
+    
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
 
     <style>
@@ -106,6 +106,12 @@
         text-decoration: none;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
+        width: 94%;
+      }
+      @media only screen and (max-width: 415px) and (orientation: portrait) {
+        contents section.pizza a {
+          width: 94%;
+        }
       }
 
       contents section.pizza:nth-child(3n + 1) {
@@ -191,7 +197,7 @@
         <div>CSS</div>
         <pre>
       &lt;style&gt;
-      @media only screen and (max-width: 414px) {
+      @media only screen and (max-width: 415px) {
         contents section#apresentacao {
           width: 100%;
         }
@@ -279,11 +285,11 @@
       </pre
         >
       </div>
-<hr/>
-<div style="padding: 0px 50px 100px 50px" >
- <p>Código completo disponível no GitHub:</p>
-<a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
-</div>
+      <hr />
+      <div style="padding: 0px 50px 100px 50px">
+        <p>Código completo disponível no GitHub:</p>
+        <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
+      </div>
     </main>
   </body>
 </html>

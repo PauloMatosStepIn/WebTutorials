@@ -49,3 +49,12 @@ SiteHeader .center {
   display: block;
   margin: auto;
 }
+
+@media only screen and (max-width: 414px) and (orientation: portrait) {
+  SiteHeader a {
+    width: 100%;
+  }
+  SiteHeader p {
+    width: 100%;
+  }
+}

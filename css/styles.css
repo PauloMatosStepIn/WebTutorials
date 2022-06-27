@@ -1,3 +1,66 @@
+
+SiteHeader {
+  margin: 0;
+  font-family: Nunito;
+}
+SiteHeader a {
+  font-size: 18px;
+  padding: 2px;
+  display: block;
+  width: 300px;
+  margin: auto;
+  text-decoration: none;
+}
+
+SiteHeader h1,
+SiteHeader h2,
+SiteHeader h3,
+SiteHeader h4,
+SiteHeader a,
+SiteHeader p {
+  text-align: center;
+}
+SiteHeader a.ext {
+  text-decoration: underline;
+}
+SiteHeader a.InText {
+  text-decoration: underline;
+  text-align: unset;
+  padding: unset;
+  display: unset;
+  width: unset;
+  margin: unset;
+}
+SiteHeader .DivLink {
+  /* width: 100%;
+  height: 100%; */
+  background-color: tomato;
+  color: white;
+  border-radius: 5px;
+}
+SiteHeader p {
+  text-align: justify;
+  width: 400px;
+  display: block;
+  margin: auto;
+}
+SiteHeader .center {
+  text-align: center;
+  width: 10 0%;
+  display: block;
+  margin: auto;
+}
+
+@media only screen and (max-width: 414px) and (orientation: portrait) {
+  SiteHeader a {
+    width: 100%;
+  }
+  SiteHeader p {
+    width: 100%;
+  }
+}
+
+
 body {
   background: #f0f0f0;
   margin: 0;
@@ -80,6 +143,7 @@ a.InText {
   color: white;
   border-radius: 5px;
 }
+
 p {
   text-align: justify;
   width: 400px;
@@ -91,4 +155,31 @@ p {
   width: 10 0%;
   display: block;
   margin: auto;
+}
+
+@media only screen and (max-width: 415px) and (orientation: portrait) {
+  a,
+  p,
+  footer {
+    width: 95%;
+    font-size: large;
+  }
+
+  a.ext {
+    font-size: large;
+  }
+  main {
+    width: 90%;
+  }
+  main p {
+    width: 95%;
+  }
+  svg,
+  .grafico,
+  .artigo {
+    width: 90%;
+  }
+  .code {
+    font-size: large;
+  }
 }

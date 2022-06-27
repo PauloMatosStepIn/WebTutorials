@@ -39,3 +39,39 @@ div.code div {
   left: 0px;
   padding: 5px;
 }
+
+.DivLink {
+  width: 100%;
+  background-color: tomato;
+  color: white;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 415px) and (orientation: portrait) {
+  a,
+  p,
+  footer {
+    width: 95%;
+    font-size: large;
+  }
+
+  a.ext {
+    font-size: large;
+  }
+  main {
+    width: 90%;
+  }
+  main p {
+    width: 95%;
+  }
+  svg,
+  .grafico,
+  .artigo {
+    width: 90%;
+  }
+  .code {
+    font-size: large;
+  }
+}
+
+

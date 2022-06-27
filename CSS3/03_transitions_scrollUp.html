@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
 
     <title>Web CSS3 Tutorials : Transitions : ScrollUp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="../css/styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
 
@@ -14,6 +15,11 @@
         margin-top: 30px;
         margin-right: auto;
         margin-left: auto;
+      }
+      @media only screen and (max-width: 415px) and (orientation: portrait) {
+        #janela {
+          width: 100%;
+        }
       }
 
       .janela_base {
@@ -85,11 +91,11 @@
   <body>
     <main>
       <a href="../index.html#css3_03_transitions_scrollUp">
-        <div class="DivLink" style="background-color: rgb(107, 70, 70)">Return to Web Tutorials</div>
+        <div class="DivLink" style="margin-top: 20px">Return to Web Tutorials</div>
       </a>
       <h2>Web CSS3 Tutorials : Transitions : ScrollUp</h2>
       <apresentacao>
-        <p>Para ver o efeito de scroll passe o Mouse pelo nome...</p>
+        <p>Para ver o efeito de scroll passe o Mouse pelo nome... (em SmartPhone tem de clicar)</p>
         <div id="janela">
           <div class="janela_base">
             <div class="janela_foto">
@@ -138,7 +144,18 @@
         </div>
       </apresentacao>
 
-      <p style="margin-top: -200px">The so-called RGBA colors (Red Green Blue Alpha) that add a new factor, the alpha channel, that is, the opacity or transparency that follows the same percentage scheme: 0% represents absolute transparency and 100% represents absolute opacity which is the way we traditionally see colors.</p>
+      <style>
+        #after_thumbs {
+          margin-top: -200px;
+        }
+        @media only screen and (max-width: 415px) and (orientation: portrait) {
+          #after_thumbs {
+            margin-top: 500px;
+          }
+        }
+      </style>
+
+      <p id="after_thumbs">The so-called RGBA colors (Red Green Blue Alpha) that add a new factor, the alpha channel, that is, the opacity or transparency that follows the same percentage scheme: 0% represents absolute transparency and 100% represents absolute opacity which is the way we traditionally see colors.</p>
 
       <div class="code">
         <div>HTML</div>
@@ -277,7 +294,7 @@
       </div>
       <hr />
       <div style="padding: 50px">
-        <p style="color: black;">Código completo disponível no GitHub:</p>
+        <p style="color: black">Código completo disponível no GitHub:</p>
         <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
       </div>
     </main>
