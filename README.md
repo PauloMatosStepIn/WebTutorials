@@ -38,4 +38,4 @@ Código completo disponível no GitHub
 
 ## Git / GitHub
 
-1. Git Init
+1. Git Init from main
