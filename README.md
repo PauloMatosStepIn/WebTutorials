@@ -36,9 +36,3 @@ Código completo disponível no GitHub
 7. SetInterval
 8. Relógio Analógico
 
-
-aslflkajflajfl from main
-aslflkajflajfl from main
-aslflkajflajfl from main
-aslflkajflajfl from main
-aslflkajflajfl from main
