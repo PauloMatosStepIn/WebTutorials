@@ -11,6 +11,6 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
-        server: ${{ secrets.ftp_webtutorials_server }}
+        server: ftp.stepinportugal.com
         username: ${{ secrets.ftp_webtutorials_username }}
         password: ${{ secrets.ftp_webtutorials_password }}
