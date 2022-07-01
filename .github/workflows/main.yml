@@ -12,5 +12,5 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
         server: ftp.stepinportugal.com
-        username: ${{ secrets.ftp_webtutorials_username }}
+        username: ftppmwtutorials
         password: ${{ secrets.ftp_webtutorials_password }}
