@@ -9,11 +9,11 @@ jobs:
       uses: actions/checkout@v2
     
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      uses: PauloMatosStepIn/FTP-Deploy-Action@4.3.0
       with:
         server: ftp.stepinportugal.com
         username: ftppmwtutorials
-        password: yhbsVl_vjcoix8FutqPag7w:zr0p!k
+        password: ${{ secrets.FTP_PASSWORD }}
         exclude: |
           **/.git*
           **/.git*/**
