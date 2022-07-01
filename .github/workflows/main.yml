@@ -13,7 +13,7 @@ jobs:
       with:
         server: ftp.stepinportugal.com
         username: ftppmwtutorials
-        password: ${{ secrets.FTP_PASSWORD }}
+        password: yhbsVl_vjcoix8FutqPag7w:zr0p!k
         exclude: |
           **/.git*
           **/.git*/**
