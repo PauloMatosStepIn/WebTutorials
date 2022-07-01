@@ -13,4 +13,4 @@ jobs:
       with:
         server: ftp.stepinportugal.com
         username: ftppmwtutorials
-        password: ${{ secrets.ftp_webtutorials_password }}
+        password: ${{ secrets.ftp_password }}
