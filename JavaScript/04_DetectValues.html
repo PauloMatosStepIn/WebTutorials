@@ -6,8 +6,16 @@
     <title>Web Javascript Tutorials : Detect Values w/JavaScript</title>
     <link rel="stylesheet" type="text/css" href="../css/SiteHeader.css" />
     <link rel="stylesheet" type="text/css" href="../css/main.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
-    <link id="PageCSS" rel="stylesheet" type="text/css" href="04_js/desktop.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      id="PageCSS"
+      rel="stylesheet"
+      type="text/css"
+      href="04_js/desktop.css"
+    />
   </head>
 
   <body style="font-family: 'Nunito', sans-serif">
@@ -22,7 +30,10 @@
       <hr />
       <SiteHeader>
         <h2>Detectar Largura da Janela do Browser w/JavaScript</h2>
-        <p>Na página do browser -&gt; click no botão do lado direito do mouse escolher opção: INSPECT -&gt; Console para ver resultado de JavaScript</p>
+        <p>
+          Na página do browser -&gt; click no botão do lado direito do mouse
+          escolher opção: INSPECT -&gt; Console para ver resultado de JavaScript
+        </p>
       </SiteHeader>
 
       <div class="code">
@@ -58,27 +69,30 @@
       </div>
       <script>
         function getResolucao() {
-          console.log('window.innerWidth: ' + window.innerWidth)
+          console.log("window.innerWidth: " + window.innerWidth);
         }
-        window.onload = window.onresize = getResolucao
+        window.onload = window.onresize = getResolucao;
 
-        var largura
+        var largura;
 
-        var fileCSS = document.querySelector('#PageCSS')
+        var fileCSS = document.querySelector("#PageCSS");
 
         /* para funcionar em todos os tipos de dispositivos */
         if (window.innerWidth) {
-          largura = window.innerWidth
-        } else if (document.documentElement && document.documentElement.clientWidth) {
-          largura = document.documentElement.clientWidth
+          largura = window.innerWidth;
+        } else if (
+          document.documentElement &&
+          document.documentElement.clientWidth
+        ) {
+          largura = document.documentElement.clientWidth;
         } else if (document.body) {
-          largura = document.body
+          largura = document.body;
         }
 
         if (largura < 415) {
-          fileCSS.setAttribute('href', '04_js/phone.css')
+          fileCSS.setAttribute("href", "04_js/phone.css");
         } else {
-          fileCSS.setAttribute('href', '04_js/desktop.css')
+          fileCSS.setAttribute("href", "04_js/desktop.css");
         }
       </script>
       <hr />
@@ -112,13 +126,13 @@
 
       <script>
         function getMousePosition(e) {
-          var posX = document.querySelector('#posicaoX')
-          var posY = document.querySelector('#posicaoY')
-          posX.innerHTML = e.clientX
-          posY.innerHTML = e.clientY
+          var posX = document.querySelector("#posicaoX");
+          var posY = document.querySelector("#posicaoY");
+          posX.innerHTML = e.clientX;
+          posY.innerHTML = e.clientY;
         }
 
-        document.addEventListener('mousemove', getMousePosition)
+        document.addEventListener("mousemove", getMousePosition);
       </script>
 
       <div class="code">
@@ -143,13 +157,13 @@
         function getTecla(e) {
           /* keyCode = ASCII Code */
           /* key = character */
-          var teclaCode = document.querySelector('#keyCode')
-          var teclaChar = document.querySelector('#key')
-          teclaCode.innerHTML = e.keyCode
-          teclaChar.innerHTML = e.key
+          var teclaCode = document.querySelector("#keyCode");
+          var teclaChar = document.querySelector("#key");
+          teclaCode.innerHTML = e.keyCode;
+          teclaChar.innerHTML = e.key;
         }
 
-        document.addEventListener('keydown', getTecla)
+        document.addEventListener("keydown", getTecla);
       </script>
 
       <div class="code">
@@ -187,7 +201,8 @@
       <div style="background-color: lightgrey; color: black" class="code">
         <pre>
         (no canto superior direito do Browser) 
-      </pre>
+      </pre
+        >
       </div>
       <style>
         #posScroll {
@@ -201,9 +216,8 @@
         }
       </style>
 
-      
       <div class="code">
-      <div>JAVASCRIPT</div>
+        <div>JAVASCRIPT</div>
         <pre>
         &lt;script&gt;
           document.addEventListener('scroll', () => {
@@ -215,14 +229,13 @@
       </div>
 
       <script>
-        document.addEventListener('scroll', () => {
-          scrollPosValue.innerHTML = window.scrollY
-        })
+        document.addEventListener("scroll", () => {
+          scrollPosValue.innerHTML = window.scrollY;
+        });
       </script>
 
-      
       <div class="code">
-      <div>CSS</div>
+        <div>CSS</div>
         <pre>
         &lt;style&gt;
           #posScroll {
@@ -239,16 +252,17 @@
         >
       </div>
 
-      
       <div class="code">
-      <div>HTML</div>
+        <div>HTML</div>
         <pre>
         &lt;span id="posScroll"&gt;Scroll pos:&lt;br /&gt;&lt;span id="scrollPosValue"&gt;&lt;/span&gt;&lt;/span&gt;
       </pre
         >
       </div>
 
-      <span id="posScroll">Scroll pos:<br /><span id="scrollPosValue"></span></span>
+      <span id="posScroll"
+        >Scroll pos:<br /><span id="scrollPosValue"></span
+      ></span>
 
       <hr />
       <SiteHeader>
@@ -279,13 +293,13 @@
       </div>
 
       <script>
-        document.addEventListener('scroll', () => {
+        document.addEventListener("scroll", () => {
           if (window.scrollY > 300) {
-            AvisoScroll.style.display = 'block'
+            AvisoScroll.style.display = "block";
           } else {
-            AvisoScroll.style.display = 'none'
+            AvisoScroll.style.display = "none";
           }
-        })
+        });
       </script>
 
       <div class="code">
@@ -334,12 +348,18 @@
         >
       </div>
 
-      <div id="AvisoScroll"><p style="padding: 20px">A posição de Scroll Vertical é superior a 300 !</p></div>
-<hr/>
-<div style="padding: 50px">
- <p>Código completo disponível no GitHub:</p>
-<a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
-</div>
+      <div id="AvisoScroll">
+        <p style="padding: 20px">
+          A posição de Scroll Vertical é superior a 300 !
+        </p>
+      </div>
+      <hr />
+      <div style="padding: 50px">
+        <p>Código completo disponível no GitHub:</p>
+        <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext"
+          >github.com : WebTutorials</a
+        >
+      </div>
     </main>
   </body>
 </html>

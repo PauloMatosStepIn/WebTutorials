@@ -5,21 +5,24 @@
     <title>Web Html5 Tutorials : Geolocalização</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="../css/styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
       #status {
         display: block;
         padding: 10px;
         border: 1px dotted #999;
-        font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
         color: #666;
         font-size: 12px;
         margin-bottom: 20px;
         width: 90%;
       }
 
-      input[type='button'] {
+      input[type="button"] {
         width: 170px;
         padding: 10px;
         color: #fff;
@@ -35,57 +38,60 @@
     </style>
 
     <script type="text/javascript">
-      var nav = null
+      var nav = null;
 
       function getPosicao() {
-        document.getElementById('status').innerHTML = 'aguarde...'
+        document.getElementById("status").innerHTML = "aguarde...";
 
         if (nav == null) {
-          nav = window.navigator
+          nav = window.navigator;
         }
 
         // https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition
 
-        var geoloc = nav.geolocation
+        var geoloc = nav.geolocation;
         if (geoloc != null) {
-          geoloc.watchPosition(retornarPosicao, retornarFalha, config)
+          geoloc.watchPosition(retornarPosicao, retornarFalha, config);
         }
 
         function config() {
-          enableHighAccuracy: true
-          timeout: 5000
-          maximumAge: 1000
+          enableHighAccuracy: true;
+          timeout: 5000;
+          maximumAge: 1000;
         }
 
         function retornarPosicao(posicao) {
-          var latitude = posicao.coords.latitude
-          var longitude = posicao.coords.longitude
-          document.getElementById('status').innerHTML = 'Latitude: ' + latitude + ' Longitude: ' + longitude
+          var latitude = posicao.coords.latitude;
+          var longitude = posicao.coords.longitude;
+          document.getElementById("status").innerHTML =
+            "Latitude: " + latitude + " Longitude: " + longitude;
         }
 
         function retornarFalha(erro) {
-          var mensagem = ''
+          var mensagem = "";
 
           // Check for known errors
           switch (erro.code) {
             case erro.PERMISSION_DENIED:
-              mensagem = 'Acesso a sua localização está desligado. Mude as configurações e volte.'
-              break
+              mensagem =
+                "Acesso a sua localização está desligado. Mude as configurações e volte.";
+              break;
 
             case erro.POSITION_UNAVAILABLE:
-              mensagem = 'Dados de localização estão indisponíveis no momento.'
-              break
+              mensagem = "Dados de localização estão indisponíveis no momento.";
+              break;
 
             case erro.TIMEOUT:
-              mensagem = 'Sua localização pode não ser especificada por um determinado tempo.'
-              break
+              mensagem =
+                "Sua localização pode não ser especificada por um determinado tempo.";
+              break;
 
             default:
-              mensagem = 'Falha! Não foi possível identificar sua localização'
-              break
+              mensagem = "Falha! Não foi possível identificar sua localização";
+              break;
           }
 
-          document.getElementById('status').innerHTML = mensagem
+          document.getElementById("status").innerHTML = mensagem;
         }
       }
     </script>
@@ -93,14 +99,20 @@
   <body>
     <main>
       <a href="../index.html#JavaScript_00_obter_geolocalizacao">
-        <div class="DivLink" style="margin-top: 20px;">Return to Web Tutorials</div>
+        <div class="DivLink" style="margin-top: 20px">
+          Return to Web Tutorials
+        </div>
       </a>
       <h2>Web Html5 Tutorials : Geolocalização</h2>
 
       <div class="artigo">
         <div class="center" id="status"></div>
         <div class="center">
-          <input type="button" onclick="getPosicao()" value="Obter Geolocalização" />
+          <input
+            type="button"
+            onclick="getPosicao()"
+            value="Obter Geolocalização"
+          />
         </div>
       </div>
       <div class="code">
@@ -110,7 +122,8 @@
         &lt;div class="center"&gt;
           &lt;input type="button" onclick="getPosicao()" value="Obter Geolocalização" /&gt;
         &lt;/div&gt;
-      </pre>
+      </pre
+        >
       </div>
 
       <div class="code">
@@ -176,7 +189,9 @@
       <hr />
       <div style="padding: 50px">
         <p>Código completo disponível no GitHub:</p>
-        <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
+        <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext"
+          >github.com : WebTutorials</a
+        >
       </div>
     </main>
   </body>

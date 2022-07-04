@@ -1,0 +1,464 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/SiteHeader.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <title>Web Javascript Tutorials : Ajax</title>
+
+    <style>
+      .apresentacao {
+        width: 670px;
+        line-height: 200%;
+        padding: 15px;
+        margin-left: 230px;
+      }
+
+      input {
+        display: block;
+      }
+
+      input,
+      select {
+        font-size: 1.3em;
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: #f0f0f0;
+        border: 1px solid #999;
+        border-radius: 5px;
+        width: 300px;
+        color: #111;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      .artigo {
+        margin: 30px 150px 50px 0px;
+        box-shadow: 0 0 5px #999;
+        background: #fff;
+        padding: 50px;
+      }
+    </style>
+  </head>
+
+  <body style="font-family: 'Nunito', sans-serif">
+    <SiteHeader>
+      <a href="../index.html#JavaScript_08_Ajax">
+        <div class="DivLink">Return to Web Tutorials</div>
+      </a>
+      <h2>Web Javascript Tutorials : Ajax</h2>
+      <a class="ext" href="https://openweathermap.org/api/one-call-3">
+        OpenWeather - Current and forecast weather data - How to make an API
+        call
+      </a>
+    </SiteHeader>
+    <main>
+      <div class="apresentacao">
+        <h3>Coordenadas do Local onde se encontra:</h3>
+        <p id="status"></p>
+
+        <div class="artigo">
+          <h2 id="pos_nome_cidade"></h2>
+          <ul>
+            <li id="pos_descricao"></li>
+            <li id="pos_temp_max"></li>
+            <li id="pos_temp_min"></li>
+          </ul>
+        </div>
+
+        <form action="#">
+          <select id="cidades">
+            <option value="0">Escolha uma cidade</option>
+            <option value="Lisbon,pt">Lisboa, Portugal</option>
+            <option value="Madrid,es">Madrid, Espanha</option>
+            <option value="Paris,fr">Paris, França</option>
+            <option value="Rome,it">Roma, Itália</option>
+          </select>
+        </form>
+        <div class="artigo">
+          <h2 id="nome_cidade"></h2>
+          <ul>
+            <li id="descricao"></li>
+            <li id="temp_max"></li>
+            <li id="temp_min"></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="code">
+        <div>CSS</div>
+        <pre>
+      &lt;style&gt;
+        .apresentacao {
+          width: 670px;
+          line-height: 200%;
+          padding: 15px;
+          margin-left: 230px;
+        }
+
+        input {
+          display: block;
+        }
+
+        input,
+        select {
+          font-size: 1.3em;
+          margin-bottom: 20px;
+          padding: 15px;
+          background-color: #f0f0f0;
+          border: 1px solid #999;
+          border-radius: 5px;
+          width: 300px;
+          color: #111;
+        }
+
+        li {
+          list-style: none;
+        }
+
+        .artigo {
+          margin: 30px 150px 50px 0px;
+          box-shadow: 0 0 5px #999;
+          background: #fff;
+          padding: 50px;
+        }
+      &lt;/style&gt;
+        </pre>
+      </div>
+
+      <div class="code">
+        <div>JAVASCRIPT</div>
+        <pre>
+      &lt;script&gt;
+      window.onload = function () {
+        var url = "http://api.openweathermap.org/data/2.5/weather?";
+        var minhaAPI = "My API key from Open Weather";
+
+        http: var resultado;
+        var cidade;
+
+        var nav = null;
+
+        cidades.onchange = function () {
+          var ajax = null;
+          if (window.XMLHttpRequest) {
+            ajax = new XMLHttpRequest();
+          } else if (window.ActiveXObject) {
+            ajax = new ActiveXObject("Msxml2.XMLHTTP");
+          }
+
+          var cidade = cidades.value;
+
+          var url_completo =
+            url +
+            "q=" +
+            cidade +
+            "&units=metric&lang=pt" +
+            "&appid=" +
+            minhaAPI;
+
+          if (cidade != 0) {
+            ajax.open("GET", url_completo, true);
+            ajax.send(null);
+            ajax.onreadystatechange = function () {
+              if (ajax.readyState == 4) {
+                if (ajax.status == 200) {
+                  resultado = JSON.parse(ajax.responseText);
+                  console.log(resultado);
+                  nome_cidade.innerHTML = resultado.name;
+                  temp_min.innerHTML = resultado.main.temp_min;
+                  temp_max.innerHTML = resultado.main.temp_max;
+                  descricao.innerHTML = resultado.weather[0].description;
+                }
+              }
+            };
+          } else {
+            nome_cidade.innerHTML = "";
+            temp_min.innerHTML = "";
+            temp_max.innerHTML = "";
+            descricao.innerHTML = "";
+          }
+        };
+
+        function pegarPosicao() {
+          document.getElementById("status").innerHTML = "aguarde...";
+
+          if (nav == null) {
+            nav = window.navigator;
+          }
+
+          var geoloc = nav.geolocation;
+          if (geoloc != null) {
+            geoloc.getCurrentPosition(retornarPosicao, retornarFalha);
+          }
+        }
+
+        function retornarPosicao(posicao) {
+          var latitude = posicao.coords.latitude;
+          var longitude = posicao.coords.longitude;
+          document.getElementById("status").innerHTML =
+            "Latitude: " + latitude + " longitude: " + longitude;
+          mostrarPrevisaoTempo(latitude, longitude);
+        }
+
+        function retornarFalha(erro) {
+          var mensagem = "";
+
+          switch (erro.code) {
+            case erro.PERMISSION_DENIED:
+              mensagem = "Acesso a sua localização está desligado.";
+              break;
+
+            case erro.POSITION_UNAVAILABLE:
+              mensagem = "Dados de localização estão indisponíveis no momento.";
+              break;
+
+            case erro.TIMEOUT:
+              mensagem =
+                "Sua localização, pode não ser especificada por um determinado tempo.";
+              break;
+
+            default:
+              mensagem = "Sua localização não pode ser especificada.";
+              break;
+          }
+          document.getElementById("status").innerHTML = mensagem;
+        }
+
+        function mostrarPrevisaoTempo(lat, lon) {
+          var ajax = null;
+          if (window.XMLHttpRequest) {
+            ajax = new XMLHttpRequest();
+          } else if (window.ActiveXObject) {
+            ajax = new ActiveXObject("Msxml2.XMLHTTP");
+          }
+
+          var url_completo =
+            url +
+            "lat=" +
+            lat +
+            "&lon=" +
+            lon +
+            "&units=metric&lang=pt" +
+            "&appid=" +
+            minhaAPI;
+
+          console.log(url_completo);
+
+          ajax.open("GET", url_completo, true);
+          ajax.send(null);
+          ajax.onreadystatechange = function () {
+            if (ajax.readyState == 4) {
+              if (ajax.status == 200) {
+                resultado = JSON.parse(ajax.responseText);
+                console.log(resultado);
+                pos_nome_cidade.innerHTML = resultado.name;
+                pos_temp_min.innerHTML = resultado.main.temp_min;
+                pos_temp_max.innerHTML = resultado.main.temp_max;
+                pos_descricao.innerHTML = resultado.weather[0].description;
+              }
+            }
+          };
+        }
+
+        pegarPosicao();
+      };
+
+      &lt;/script&gt;
+    </pre
+        >
+      </div>
+
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+    &lt;main&gt;
+      &lt;div class="apresentacao"&gt;
+        &lt;h3&gt;Coordenadas do Local onde se encontra:&lt;/h3&gt;
+        &lt;p id="status"&gt;&lt;/p&gt;
+
+        &lt;div class="artigo"&gt;
+          &lt;h2 id="pos_nome_cidade"&gt;&lt;/h2&gt;
+          &lt;ul&gt;
+            &lt;li id="pos_descricao"&gt;&lt;/li&gt;
+            &lt;li id="pos_temp_max"&gt;&lt;/li&gt;
+            &lt;li id="pos_temp_min"&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+
+        &lt;form action="#"&gt;
+          &lt;select id="cidades"&gt;
+            &lt;option value="0"&gt;Escolha uma cidade&lt;/option&gt;
+            &lt;option value="Lisbon,pt"&gt;Lisboa, Portugal&lt;/option&gt;
+            &lt;option value="Madrid,es"&gt;Madrid, Espanha&lt;/option&gt;
+            &lt;option value="Paris,fr"&gt;Paris, França&lt;/option&gt;
+            &lt;option value="Rome,it"&gt;Roma, Itália&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/form&gt;
+        &lt;div class="artigo"&gt;
+          &lt;h2 id="nome_cidade"&gt;&lt;/h2&gt;
+          &lt;ul&gt;
+            &lt;li id="descricao"&gt;&lt;/li&gt;
+            &lt;li id="temp_max"&gt;&lt;/li&gt;
+            &lt;li id="temp_min"&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/main&gt;
+  </pre
+        >
+      </div>
+
+      <hr />
+      <div style="padding: 50px">
+        <p>Código completo disponível no GitHub:</p>
+        <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">
+          github.com : WebTutorials
+        </a>
+      </div>
+    </main>
+
+    <script>
+      window.onload = function () {
+        var url = "http://api.openweathermap.org/data/2.5/weather?";
+        var minhaAPI = "595cb59ed7e7532f8ca868ac9bb3cffd";
+
+        http: var resultado;
+        var cidade;
+
+        var nav = null;
+
+        cidades.onchange = function () {
+          var ajax = null;
+          if (window.XMLHttpRequest) {
+            ajax = new XMLHttpRequest();
+          } else if (window.ActiveXObject) {
+            ajax = new ActiveXObject("Msxml2.XMLHTTP");
+          }
+
+          var cidade = cidades.value;
+
+          var url_completo =
+            url +
+            "q=" +
+            cidade +
+            "&units=metric&lang=pt" +
+            "&appid=" +
+            minhaAPI;
+
+          if (cidade != 0) {
+            ajax.open("GET", url_completo, true);
+            ajax.send(null);
+            ajax.onreadystatechange = function () {
+              if (ajax.readyState == 4) {
+                if (ajax.status == 200) {
+                  resultado = JSON.parse(ajax.responseText);
+                  console.log(resultado);
+                  nome_cidade.innerHTML = resultado.name;
+                  temp_min.innerHTML = resultado.main.temp_min;
+                  temp_max.innerHTML = resultado.main.temp_max;
+                  descricao.innerHTML = resultado.weather[0].description;
+                }
+              }
+            };
+          } else {
+            nome_cidade.innerHTML = "";
+            temp_min.innerHTML = "";
+            temp_max.innerHTML = "";
+            descricao.innerHTML = "";
+          }
+        };
+
+        function pegarPosicao() {
+          document.getElementById("status").innerHTML = "aguarde...";
+
+          if (nav == null) {
+            nav = window.navigator;
+          }
+
+          var geoloc = nav.geolocation;
+          if (geoloc != null) {
+            geoloc.getCurrentPosition(retornarPosicao, retornarFalha);
+          }
+        }
+
+        function retornarPosicao(posicao) {
+          var latitude = posicao.coords.latitude;
+          var longitude = posicao.coords.longitude;
+          document.getElementById("status").innerHTML =
+            "Latitude: " + latitude + " longitude: " + longitude;
+          mostrarPrevisaoTempo(latitude, longitude);
+        }
+
+        function retornarFalha(erro) {
+          var mensagem = "";
+
+          switch (erro.code) {
+            case erro.PERMISSION_DENIED:
+              mensagem = "Acesso a sua localização está desligado.";
+              break;
+
+            case erro.POSITION_UNAVAILABLE:
+              mensagem = "Dados de localização estão indisponíveis no momento.";
+              break;
+
+            case erro.TIMEOUT:
+              mensagem =
+                "Sua localização, pode não ser especificada por um determinado tempo.";
+              break;
+
+            default:
+              mensagem = "Sua localização não pode ser especificada.";
+              break;
+          }
+          document.getElementById("status").innerHTML = mensagem;
+        }
+
+        function mostrarPrevisaoTempo(lat, lon) {
+          var ajax = null;
+          if (window.XMLHttpRequest) {
+            ajax = new XMLHttpRequest();
+          } else if (window.ActiveXObject) {
+            ajax = new ActiveXObject("Msxml2.XMLHTTP");
+          }
+
+          var url_completo =
+            url +
+            "lat=" +
+            lat +
+            "&lon=" +
+            lon +
+            "&units=metric&lang=pt" +
+            "&appid=" +
+            minhaAPI;
+
+          console.log(url_completo);
+
+          ajax.open("GET", url_completo, true);
+          ajax.send(null);
+          ajax.onreadystatechange = function () {
+            if (ajax.readyState == 4) {
+              if (ajax.status == 200) {
+                resultado = JSON.parse(ajax.responseText);
+                console.log(resultado);
+                pos_nome_cidade.innerHTML = resultado.name;
+                pos_temp_min.innerHTML = resultado.main.temp_min;
+                pos_temp_max.innerHTML = resultado.main.temp_max;
+                pos_descricao.innerHTML = resultado.weather[0].description;
+              }
+            }
+          };
+        }
+
+        pegarPosicao();
+      };
+    </script>
+  </body>
+</html>
