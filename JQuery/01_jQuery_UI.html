@@ -1,0 +1,1710 @@
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/SiteHeader.css" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="jquery-ui.css" rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Trebuchet MS", sans-serif;
+        margin: 50px;
+      }
+      .demoHeaders {
+        margin-top: 2em;
+      }
+      #dialog-link {
+        padding: 0.4em 1em 0.4em 20px;
+        text-decoration: none;
+        position: relative;
+      }
+      #dialog-link span.ui-icon {
+        margin: 0 5px 0 0;
+        position: absolute;
+        left: 0.2em;
+        top: 50%;
+        margin-top: -8px;
+      }
+      #icons {
+        margin: 0;
+        padding: 0;
+      }
+      #icons li {
+        margin: 2px;
+        position: relative;
+        padding: 4px 0;
+        cursor: pointer;
+        float: left;
+        list-style: none;
+      }
+      #icons span.ui-icon {
+        float: left;
+        margin: 0 4px;
+      }
+      .fakewindowcontain .ui-widget-overlay {
+        position: absolute;
+      }
+      select {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body style="font-family: 'Nunito', sans-serif">
+    <main>
+      <SiteHeader>
+        <a href="../index.html#JQuery_01_jQuery_UI">
+          <div class="DivLink">Return to Web Tutorials</div>
+        </a>
+        <h2>Web JQuery Tutorials : JQuery UI</h2>
+      </SiteHeader>
+
+      <p>
+        Para criar a base desta página com uma versão custom de JQuery com o
+        Widgets e Temas seleccionados:
+
+        <a href="https://jqueryui.com/download/#!" class="ext"
+          >jQuery UI Download Builder</a
+        >
+      </p>
+      <!-- Accordion -->
+      <SiteHeader>
+        <h2 class="demoHeaders">Accordion</h2>
+        <p>
+          Displays collapsible content panels for presenting information in a
+          limited amount of space.
+        </p>
+      </SiteHeader>
+
+      <div id="accordion">
+        <h3>Opção 1</h3>
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          magni porro hic repellendus ad consectetur cumque itaque nisi
+          distinctio, atque tenetur, sapiente necessitatibus. Est illo
+          perspiciatis suscipit accusantium voluptate quibusdam impedit dolor
+          sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Sed quia asperiores, sint mollitia
+          fugiat earum soluta debitis fugit repudiandae repellat, cumque
+          mollitia distinctio quaerat quam magnam explicabo, adipisci obcaecati
+          accusantium vel velit sit harum soluta! Unde accusantium sit a eius
+          ipsam, dolores dolore distinctio atque quo consequatur? Cupiditate,
+          voluptatum. Autem reprehenderit expedita et doloremque architecto
+          illo, similique corrupti, excepturi id quasi molestias vel?
+        </div>
+        <h3>Opção 2</h3>
+        <div>
+          Phasellus mattis tincidunt nibh. Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Ratione error, vitae eum provident totam
+          voluptate nulla molestias praesentium eius. Repellat hic maxime ab
+          dolorum reprehenderit placeat dolorem similique, adipisci fugiat
+          cupiditate quas illo beatae officiis nemo nihil doloremque explicabo
+          eligendi, autem numquam. Magnam beatae similique ex autem labore vero
+          accusamus?
+        </div>
+        <h3>Opção 3</h3>
+        <div>Nam dui erat, auctor a, dignissim quis.</div>
+      </div>
+
+      <script src="external/jquery/jquery.js"></script>
+      <script src="jquery-ui.js"></script>
+
+      <SiteHeader>
+        <p style="padding-top: 20px">
+          Este exemplo é colapsável, o tamanho está aadptado ao conteúdo, os
+          icons estão costumizados e está activo por defeito o último elemento.
+        </p>
+
+        <a href="https://jqueryui.com/accordion/" class="ext"
+          >JQuery accordion Demo</a
+        >
+        <a href="https://api.jqueryui.com/accordion/" class="ext"
+          >JQuery accordion API Documentation</a
+        >
+      </SiteHeader>
+
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+	&lt;div id="accordion"&gt;
+		&lt;h3&gt;Opção 1&lt;/h3&gt;
+		&lt;div&gt;
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+			... 
+			illo, similique corrupti, excepturi id quasi molestias vel?
+		&lt;/div&gt;
+		&lt;h3&gt;Opção 2&lt;/h3&gt;
+		&lt;div&gt;
+			Phasellus mattis tincidunt nibh. Lorem ipsum dolor, sit amet
+			...
+			accusamus?
+		&lt;/div&gt;
+		&lt;h3&gt;Opção 3&lt;/h3&gt;
+		&lt;div&gt;Nam dui erat, auctor a, dignissim quis.&lt;/div&gt;
+	&lt;/div&gt;
+				</pre
+        >
+      </div>
+
+      <div class="code">
+        <div>JAVASCRIPT</div>
+        <pre>
+		&lt;script&gt;
+		$("#accordion").accordion({
+			collapsible: true,
+			heightStyle: "content",
+			icons: {
+				header: "ui-icon-circle-arrow-e",
+				activeHeader: "ui-icon-circle-arrow-s",
+			},
+			active: -1,
+		});
+		&lt;/script&gt;
+	</pre
+        >
+      </div>
+
+      <script>
+        $("#accordion").accordion({
+          collapsible: true,
+          heightStyle: "content",
+          icons: {
+            header: "ui-icon-circle-arrow-e",
+            activeHeader: "ui-icon-circle-arrow-s",
+          },
+          active: -1,
+        });
+      </script>
+
+      <!-- Menu -->
+
+      <SiteHeader>
+        <h2>Menu</h2>
+        <p>
+          Themeable menu with mouse and keyboard interactions for navigation.
+        </p>
+        <a href="https://jqueryui.com/menu/#icons" class="ext"
+          >JQuery Demo Menu</a
+        >
+      </SiteHeader>
+
+      <ul style="width: 200px" id="menu">
+        <li><div>Menu 1</div></li>
+        <li><div>Menu 2</div></li>
+        <li>
+          <div>Menu 3</div>
+          <ul style="width: 200px">
+            <li><div>Sub-Menu 1</div></li>
+            <li><div>Sub-Menu 2</div></li>
+            <li><div>Sub-Menu 3</div></li>
+            <li><div>Sub-Menu 4</div></li>
+            <li>
+              <div>Sub-Menu Icons</div>
+              <ul style="width: 200px">
+                <li class="ui-widget-header"><div>Sample Icons</div></li>
+                <li>
+                  <div><span class="ui-icon ui-icon-disk"></span>Save</div>
+                </li>
+                <li>
+                  <div><span class="ui-icon ui-icon-zoomin"></span>Zoom In</div>
+                </li>
+                <li>
+                  <div>
+                    <span class="ui-icon ui-icon-zoomout"></span>Zoom Out
+                  </div>
+                </li>
+                <li class="ui-state-disabled">
+                  <div><span class="ui-icon ui-icon-print"></span>Print...</div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><div>Item 4</div></li>
+        <li><div>Item 5</div></li>
+      </ul>
+
+      <SiteHeader>
+        <p style="padding-top: 20px">
+          Exemplo de Menu com Sub-Menus, Categorias e Icons
+        </p>
+      </SiteHeader>
+
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+	&lt;h2 class="demoHeaders"&gt;Menu&lt;/h2&gt;
+	&lt;ul style="width: 200px" id="menu"&gt;
+		&lt;li&gt;&lt;div&gt;Menu 1&lt;/div&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;div&gt;Menu 2&lt;/div&gt;&lt;/li&gt;
+		&lt;li&gt;
+			&lt;div&gt;Menu 3&lt;/div&gt;
+			&lt;ul style="width: 200px"&gt;
+				&lt;li&gt;&lt;div&gt;Sub-Menu 1&lt;/div&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;div&gt;Sub-Menu 2&lt;/div&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;div&gt;Sub-Menu 3&lt;/div&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;div&gt;Sub-Menu 4&lt;/div&gt;&lt;/li&gt;
+				&lt;li&gt;
+					&lt;div&gt;Sub-Menu Icons&lt;/div&gt;
+					&lt;ul style="width: 200px"&gt;
+						&lt;li class="ui-widget-header"&gt;&lt;div&gt;Sample Icons&lt;/div&gt;&lt;/li&gt;
+						&lt;li&gt;
+							&lt;div&gt;&lt;span class="ui-icon ui-icon-disk"&gt;&lt;/span&gt;Save&lt;/div&gt;
+						&lt;/li&gt;
+						&lt;li&gt;
+							&lt;div&gt;&lt;span class="ui-icon ui-icon-zoomin"&gt;&lt;/span&gt;Zoom In&lt;/div&gt;
+						&lt;/li&gt;
+						&lt;li&gt;
+							&lt;div&gt;
+								&lt;span class="ui-icon ui-icon-zoomout"&gt;&lt;/span&gt;Zoom Out
+							&lt;/div&gt;
+						&lt;/li&gt;
+						&lt;li class="ui-state-disabled"&gt;
+							&lt;div&gt;&lt;span class="ui-icon ui-icon-print"&gt;&lt;/span&gt;Print...&lt;/div&gt;
+						&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+		&lt;li&gt;&lt;div&gt;Item 4&lt;/div&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;div&gt;Item 5&lt;/div&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+				</pre
+        >
+      </div>
+
+      <div class="code">
+        <div>JAVASCRIPT</div>
+        <pre>
+	&lt;script&gt;
+		$("#menu").menu();
+	&lt;/script&gt;
+				</pre
+        >
+      </div>
+
+      <script>
+        $("#menu").menu();
+      </script>
+
+      <!-- Tabs -->
+      <SiteHeader>
+        <h2>Tabs</h2>
+        <p>
+          A single content area with multiple panels, each associated with a
+          header in a list.
+        </p>
+      </SiteHeader>
+      <div id="tabs">
+        <ul>
+          <li><a href="#tabs-1">Primeiro Tab</a></li>
+          <li><a href="#tabs-2">Segundo Tab</a></li>
+          <li><a href="#tabs-3">Terceiro Tab</a></li>
+        </ul>
+        <div id="tabs-1">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </div>
+        <div id="tabs-2">
+          Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium
+          vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce
+          sed lorem in enim dictum bibendum.
+        </div>
+        <div id="tabs-3">
+          Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis.
+          Pellentesque nisi urna, interdum eget, sagittis et, consequat
+          vestibulum, lacus. Mauris porttitor ullamcorper augue.
+        </div>
+      </div>
+
+      <SiteHeader>
+        <p style="padding-top: 20px">
+          Tabs colapsáveis, último Tab activo por defeito, com Drag&Drop para
+          re-ordenar.
+        </p>
+        <a href="https://jqueryui.com/tabs/#default" class="ext"
+          >JQuery Tabs Demo</a
+        >
+      </SiteHeader>
+
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+		&lt;div id="tabs"&gt;
+			&lt;ul&gt;
+				&lt;li&gt;&lt;a href="#tabs-1"&gt;Primeiro Tab&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#tabs-2"&gt;Segundo Tab&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#tabs-3"&gt;Terceiro Tab&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;div id="tabs-1"&gt;
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+				eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+				minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+				aliquip ex ea commodo consequat.
+			&lt;/div&gt;
+			&lt;div id="tabs-2"&gt;
+				Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium
+				vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce
+				sed lorem in enim dictum bibendum.
+			&lt;/div&gt;
+			&lt;div id="tabs-3"&gt;
+				Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis.
+				Pellentesque nisi urna, interdum eget, sagittis et, consequat
+				vestibulum, lacus. Mauris porttitor ullamcorper augue.
+			&lt;/div&gt;
+		&lt;/div&gt;
+	</pre
+        >
+      </div>
+
+      <div class="code">
+        <div>JAVASCRIPT</div>
+        <pre>
+		&lt;script&gt;
+	$(function () {
+		var tabs = $("#tabs").tabs({
+			active: -1,
+			collapsible: true
+		});
+		tabs.find(".ui-tabs-nav").sortable({
+			axis: "x",
+			stop: function () {
+				tabs.tabs("refresh");
+			},
+		});
+	});
+		&lt;/script&gt;
+	</pre
+        >
+      </div>
+
+      <script>
+        $(function () {
+          var tabs = $("#tabs").tabs({
+            active: -1,
+            collapsible: true,
+          });
+          tabs.find(".ui-tabs-nav").sortable({
+            axis: "x",
+            stop: function () {
+              tabs.tabs("refresh");
+            },
+          });
+        });
+      </script>
+
+      <SiteHeader>
+        <h2>Tabs Verticais à Esquerda</h2>
+        <p>
+          Exemplo com Tabs à esquerda, Sortable por Drag & Drop, Colapsável para
+          permitir que fiquem todos inativos, background-color customizada.
+        </p>
+      </SiteHeader>
+
+      <div id="vtabs">
+        <ul>
+          <li><a href="#vtabs-1">Primeiro Tab</a></li>
+          <li><a href="#vtabs-2">Segundo Tab</a></li>
+          <li><a href="#vtabs-3">Terceiro Tab</a></li>
+        </ul>
+        <div id="vtabs-1">
+          <h2>Primeiro Bloco</h2>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </div>
+        <div id="vtabs-2">
+          <h2>Segundo Bloco</h2>
+          Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium
+          vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce
+          sed lorem in enim dictum bibendum.
+        </div>
+        <div id="vtabs-3">
+          <h2>Terceiro Bloco (activo por defeito)</h2>
+          Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis.
+          Pellentesque nisi urna, interdum eget, sagittis et, consequat
+          vestibulum, lacus. Mauris porttitor ullamcorper augue.
+        </div>
+      </div>
+
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+	&lt;div id="vtabs"&gt;
+		&lt;ul&gt;
+			&lt;li&gt;&lt;a href="#vtabs-1"&gt;Primeiro Tab&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#vtabs-2"&gt;Segundo Tab&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#vtabs-3"&gt;Terceiro Tab&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;div id="vtabs-1"&gt;
+			&lt;h2&gt;Primeiro Bloco&lt;/h2&gt;
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+			eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+			minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+			aliquip ex ea commodo consequat.
+		&lt;/div&gt;
+		&lt;div id="vtabs-2"&gt;
+			&lt;h2&gt;Segundo Bloco&lt;/h2&gt;
+			Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium
+			vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce
+			sed lorem in enim dictum bibendum.
+		&lt;/div&gt;
+		&lt;div id="vtabs-3"&gt;
+			&lt;h2&gt;Terceiro Bloco (activo por defeito)&lt;/h2&gt;
+			Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis.
+			Pellentesque nisi urna, interdum eget, sagittis et, consequat
+			vestibulum, lacus. Mauris porttitor ullamcorper augue.
+		&lt;/div&gt;
+	&lt;/div&gt;
+	</pre
+        >
+      </div>
+
+      <div class="code">
+        <div>JAVASCRIPT</div>
+        <pre>
+		&lt;script&gt;
+			$(function () {
+				var tabs = $("#vtabs").tabs({
+					active: -1,
+					collapsible: true,
+				});
+				tabs.find(".ui-tabs-nav").sortable({
+					axis: "y",
+					stop: function () {
+						tabs.tabs("refresh");
+					},
+				});
+			});
+
+			$(function () {
+				$("#vtabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
+				$("#vtabs li")
+					.removeClass("ui-corner-top")
+					.addClass("ui-corner-left");
+			});		
+		&lt;/script&gt;
+	</pre
+        >
+      </div>
+
+      <div class="code">
+        <div>CSS</div>
+        <pre>
+	&lt;style&gt;
+		.ui-tabs-vertical {
+			width: 700px;
+		}
+		.ui-tabs-vertical .ui-tabs-nav {
+			display: inline-block;
+			background: none;
+			border: none;
+		}
+		.ui-tabs-vertical .ui-tabs-nav li {
+			border: solid 1px gray;
+			clear: left;
+			margin-bottom: 5px;
+			outline: none;
+			width: 200px;
+		}
+		.ui-tabs-vertical .ui-tabs-nav li a {
+			width: 200px;
+			outline: none;
+			display: block;
+		}
+		.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active {
+			margin-bottom: 5px;
+			outline: none;
+			width: 200px;
+			background-color: firebrick;
+			border: solid 1px rgb(77, 12, 12);
+		}
+
+		.ui-tabs-vertical .ui-tabs-panel {
+			float: right;
+			width: 460px;
+			padding: 5px;
+		}
+	&lt;/style&gt;
+	</pre
+        >
+      </div>
+
+      <script>
+        $(function () {
+          var tabs = $("#vtabs").tabs({
+            active: -1,
+            collapsible: true,
+          });
+          tabs.find(".ui-tabs-nav").sortable({
+            axis: "y",
+            stop: function () {
+              tabs.tabs("refresh");
+            },
+          });
+        });
+
+        $(function () {
+          $("#vtabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
+          $("#vtabs li")
+            .removeClass("ui-corner-top")
+            .addClass("ui-corner-left");
+        });
+      </script>
+
+      <style>
+        .ui-tabs-vertical {
+          width: 700px;
+        }
+        .ui-tabs-vertical .ui-tabs-nav {
+          display: inline-block;
+          background: none;
+          border: none;
+        }
+        .ui-tabs-vertical .ui-tabs-nav li {
+          border: solid 1px gray;
+          clear: left;
+          margin-bottom: 5px;
+          outline: none;
+          width: 200px;
+        }
+        .ui-tabs-vertical .ui-tabs-nav li a {
+          width: 200px;
+          outline: none;
+          display: block;
+        }
+        .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active {
+          margin-bottom: 5px;
+          outline: none;
+          width: 200px;
+          background-color: firebrick;
+          border: solid 1px rgb(77, 12, 12);
+        }
+
+        .ui-tabs-vertical .ui-tabs-panel {
+          float: right;
+          width: 460px;
+          padding: 5px;
+        }
+      </style>
+
+      <!-- Datepicker -->
+      <SiteHeader>
+        <h2>Datepicker</h2>
+      </SiteHeader>
+
+      <!-- <div id="datepicker"></div> -->
+
+      <script>
+        $(function () {
+          var months = [
+            "Janeiro",
+            "Fevereiro",
+            "Março",
+            "Abril",
+            "Maio",
+            "Junho",
+            "Julho",
+            "Agosto",
+            "Setembro",
+            "Outubro",
+            "Novembro",
+            "Dezembro",
+          ];
+
+          var dayNames = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+
+          var configini = {
+            monthNames: months,
+            dayNamesMin: dayNames,
+            prevText: "Anterior",
+            nextText: "Próximo",
+            dateFormat: "dd/mm/yy",
+            minDate: "+0",
+            maxDate: "+1y+1m",
+            onSelect: function (dateText, inst) {
+              $("#fim").datepicker(
+                "option",
+                "minDate",
+                $("#inicio").datepicker("getDate")
+              );
+            },
+          };
+
+          var configfim = {
+            monthNames: months,
+            dayNamesMin: dayNames,
+            prevText: "Anterior",
+            nextText: "Próximo",
+            dateFormat: "dd/mm/yy",
+            minDate: "+0",
+            maxDate: "+1y+1m",
+          };
+
+          $("#inicio").datepicker(configini);
+          $("#fim").datepicker(configfim);
+        });
+      </script>
+
+      <p>
+        Data Inicial:
+        <input type="text" id="inicio" class="data_evento" />
+      </p>
+
+      <p>
+        Data Final:
+        <input type="text" id="fim" class="data_evento" />
+      </p>
+
+      <!-- Autocomplete -->
+      <h2 class="demoHeaders">Autocomplete</h2>
+      <div>
+        <input id="autocomplete" title='type "a"' />
+      </div>
+
+      <!-- Button -->
+      <h2 class="demoHeaders">Button</h2>
+      <button id="button">A button element</button>
+      <button id="button-icon">An icon-only button</button>
+
+      <!-- Checkboxradio -->
+      <h2 class="demoHeaders">Checkboxradio</h2>
+      <form style="margin-top: 1em">
+        <div id="radioset">
+          <input type="radio" id="radio1" name="radio" /><label for="radio1"
+            >Choice 1</label
+          >
+          <input
+            type="radio"
+            id="radio2"
+            name="radio"
+            checked="checked"
+          /><label for="radio2">Choice 2</label>
+          <input type="radio" id="radio3" name="radio" /><label for="radio3"
+            >Choice 3</label
+          >
+        </div>
+      </form>
+
+      <!-- Controlgroup -->
+      <h2 class="demoHeaders">Controlgroup</h2>
+      <fieldset>
+        <legend>Rental Car</legend>
+        <div id="controlgroup">
+          <select id="car-type">
+            <option>Compact car</option>
+            <option>Midsize car</option>
+            <option>Full size car</option>
+            <option>SUV</option>
+            <option>Luxury</option>
+            <option>Truck</option>
+            <option>Van</option>
+          </select>
+          <label for="transmission-standard">Standard</label>
+          <input type="radio" name="transmission" id="transmission-standard" />
+          <label for="transmission-automatic">Automatic</label>
+          <input type="radio" name="transmission" id="transmission-automatic" />
+          <label for="insurance">Insurance</label>
+          <input type="checkbox" name="insurance" id="insurance" />
+          <label for="horizontal-spinner" class="ui-controlgroup-label"
+            ># of cars</label
+          >
+          <input id="horizontal-spinner" class="ui-spinner-input" />
+          <button>Book Now!</button>
+        </div>
+      </fieldset>
+
+      <h2 class="demoHeaders">Dialog</h2>
+      <p>
+        <button id="dialog-link" class="ui-button ui-corner-all ui-widget">
+          <span class="ui-icon ui-icon-newwin"></span>Open Dialog
+        </button>
+      </p>
+
+      <h2 class="demoHeaders">Overlay and Shadow Classes</h2>
+      <div
+        style="
+          position: relative;
+          width: 96%;
+          height: 200px;
+          padding: 1% 2%;
+          overflow: hidden;
+        "
+        class="fakewindowcontain"
+      >
+        <p>
+          Lorem ipsum dolor sit amet, Nulla nec tortor. Donec id elit quis purus
+          consectetur consequat.
+        </p>
+        <p>
+          Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis
+          ornare, ultrices ut, nisi. Aliquam ante. Suspendisse scelerisque dui
+          nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis
+          id, sem. Morbi in orci.
+        </p>
+        <p>
+          Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam
+          molestie scelerisque quam. Nullam feugiat cursus lacus.orem ipsum
+          dolor sit amet, consectetur adipiscing elit. Donec libero risus,
+          commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor.
+          Donec id elit quis purus consectetur consequat.
+        </p>
+        <p>
+          Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis
+          ornare, ultrices ut, nisi. Aliquam ante. Suspendisse scelerisque dui
+          nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis
+          id, sem. Morbi in orci. Nulla purus lacus, pulvinar vel, malesuada ac,
+          mattis nec, quam. Nam molestie scelerisque quam.
+        </p>
+        <p>
+          Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur
+          adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis,
+          posuere eu, pede. Nulla nec tortor. Donec id elit quis purus
+          consectetur consequat. Nam congue semper tellus. Sed erat dolor,
+          dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante.
+        </p>
+        <p>
+          Suspendisse scelerisque dui nec velit. Duis augue augue, gravida
+          euismod, vulputate ac, facilisis id, sem. Morbi in orci. Nulla purus
+          lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie
+          scelerisque quam. Nullam feugiat cursus lacus.orem ipsum dolor sit
+          amet, consectetur adipiscing elit. Donec libero risus, commodo vitae,
+          pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit
+          quis purus consectetur consequat. Nam congue semper tellus. Sed erat
+          dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi.
+        </p>
+
+        <!-- ui-dialog -->
+        <div class="ui-widget-overlay ui-front"></div>
+        <div
+          style="
+            position: absolute;
+            width: 320px;
+            left: 50px;
+            top: 30px;
+            padding: 1.2em;
+          "
+          class="ui-widget ui-front ui-widget-content ui-corner-all ui-widget-shadow"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </div>
+      </div>
+
+      <!-- ui-dialog -->
+      <div id="dialog" title="Dialog Title">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
+
+      <h2 class="demoHeaders">Framework Icons (content color preview)</h2>
+      <ul id="icons" class="ui-widget ui-helper-clearfix">
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-caret-1-n">
+          <span class="ui-icon ui-icon-caret-1-n"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-caret-1-ne">
+          <span class="ui-icon ui-icon-caret-1-ne"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-caret-1-e">
+          <span class="ui-icon ui-icon-caret-1-e"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-caret-1-se">
+          <span class="ui-icon ui-icon-caret-1-se"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-caret-1-s">
+          <span class="ui-icon ui-icon-caret-1-s"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-caret-1-sw">
+          <span class="ui-icon ui-icon-caret-1-sw"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-caret-1-w">
+          <span class="ui-icon ui-icon-caret-1-w"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-caret-1-nw">
+          <span class="ui-icon ui-icon-caret-1-nw"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-caret-2-n-s">
+          <span class="ui-icon ui-icon-caret-2-n-s"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-caret-2-e-w">
+          <span class="ui-icon ui-icon-caret-2-e-w"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-triangle-1-n"
+        >
+          <span class="ui-icon ui-icon-triangle-1-n"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-triangle-1-ne"
+        >
+          <span class="ui-icon ui-icon-triangle-1-ne"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-triangle-1-e"
+        >
+          <span class="ui-icon ui-icon-triangle-1-e"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-triangle-1-se"
+        >
+          <span class="ui-icon ui-icon-triangle-1-se"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-triangle-1-s"
+        >
+          <span class="ui-icon ui-icon-triangle-1-s"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-triangle-1-sw"
+        >
+          <span class="ui-icon ui-icon-triangle-1-sw"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-triangle-1-w"
+        >
+          <span class="ui-icon ui-icon-triangle-1-w"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-triangle-1-nw"
+        >
+          <span class="ui-icon ui-icon-triangle-1-nw"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-triangle-2-n-s"
+        >
+          <span class="ui-icon ui-icon-triangle-2-n-s"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-triangle-2-e-w"
+        >
+          <span class="ui-icon ui-icon-triangle-2-e-w"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-n">
+          <span class="ui-icon ui-icon-arrow-1-n"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-ne">
+          <span class="ui-icon ui-icon-arrow-1-ne"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-e">
+          <span class="ui-icon ui-icon-arrow-1-e"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-se">
+          <span class="ui-icon ui-icon-arrow-1-se"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-s">
+          <span class="ui-icon ui-icon-arrow-1-s"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-sw">
+          <span class="ui-icon ui-icon-arrow-1-sw"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-w">
+          <span class="ui-icon ui-icon-arrow-1-w"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-nw">
+          <span class="ui-icon ui-icon-arrow-1-nw"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-2-n-s">
+          <span class="ui-icon ui-icon-arrow-2-n-s"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrow-2-ne-sw"
+        >
+          <span class="ui-icon ui-icon-arrow-2-ne-sw"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-2-e-w">
+          <span class="ui-icon ui-icon-arrow-2-e-w"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrow-2-se-nw"
+        >
+          <span class="ui-icon ui-icon-arrow-2-se-nw"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowstop-1-n"
+        >
+          <span class="ui-icon ui-icon-arrowstop-1-n"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowstop-1-e"
+        >
+          <span class="ui-icon ui-icon-arrowstop-1-e"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowstop-1-s"
+        >
+          <span class="ui-icon ui-icon-arrowstop-1-s"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowstop-1-w"
+        >
+          <span class="ui-icon ui-icon-arrowstop-1-w"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowthick-1-n"
+        >
+          <span class="ui-icon ui-icon-arrowthick-1-n"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowthick-1-ne"
+        >
+          <span class="ui-icon ui-icon-arrowthick-1-ne"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowthick-1-e"
+        >
+          <span class="ui-icon ui-icon-arrowthick-1-e"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowthick-1-se"
+        >
+          <span class="ui-icon ui-icon-arrowthick-1-se"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowthick-1-s"
+        >
+          <span class="ui-icon ui-icon-arrowthick-1-s"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowthick-1-sw"
+        >
+          <span class="ui-icon ui-icon-arrowthick-1-sw"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowthick-1-w"
+        >
+          <span class="ui-icon ui-icon-arrowthick-1-w"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowthick-1-nw"
+        >
+          <span class="ui-icon ui-icon-arrowthick-1-nw"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowthick-2-n-s"
+        >
+          <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowthick-2-ne-sw"
+        >
+          <span class="ui-icon ui-icon-arrowthick-2-ne-sw"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowthick-2-e-w"
+        >
+          <span class="ui-icon ui-icon-arrowthick-2-e-w"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowthick-2-se-nw"
+        >
+          <span class="ui-icon ui-icon-arrowthick-2-se-nw"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowthickstop-1-n"
+        >
+          <span class="ui-icon ui-icon-arrowthickstop-1-n"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowthickstop-1-e"
+        >
+          <span class="ui-icon ui-icon-arrowthickstop-1-e"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowthickstop-1-s"
+        >
+          <span class="ui-icon ui-icon-arrowthickstop-1-s"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowthickstop-1-w"
+        >
+          <span class="ui-icon ui-icon-arrowthickstop-1-w"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowreturnthick-1-w"
+        >
+          <span class="ui-icon ui-icon-arrowreturnthick-1-w"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowreturnthick-1-n"
+        >
+          <span class="ui-icon ui-icon-arrowreturnthick-1-n"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowreturnthick-1-e"
+        >
+          <span class="ui-icon ui-icon-arrowreturnthick-1-e"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowreturnthick-1-s"
+        >
+          <span class="ui-icon ui-icon-arrowreturnthick-1-s"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowreturn-1-w"
+        >
+          <span class="ui-icon ui-icon-arrowreturn-1-w"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowreturn-1-n"
+        >
+          <span class="ui-icon ui-icon-arrowreturn-1-n"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowreturn-1-e"
+        >
+          <span class="ui-icon ui-icon-arrowreturn-1-e"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowreturn-1-s"
+        >
+          <span class="ui-icon ui-icon-arrowreturn-1-s"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowrefresh-1-w"
+        >
+          <span class="ui-icon ui-icon-arrowrefresh-1-w"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowrefresh-1-n"
+        >
+          <span class="ui-icon ui-icon-arrowrefresh-1-n"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowrefresh-1-e"
+        >
+          <span class="ui-icon ui-icon-arrowrefresh-1-e"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrowrefresh-1-s"
+        >
+          <span class="ui-icon ui-icon-arrowrefresh-1-s"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-4">
+          <span class="ui-icon ui-icon-arrow-4"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-arrow-4-diag"
+        >
+          <span class="ui-icon ui-icon-arrow-4-diag"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-extlink">
+          <span class="ui-icon ui-icon-extlink"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-newwin">
+          <span class="ui-icon ui-icon-newwin"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-refresh">
+          <span class="ui-icon ui-icon-refresh"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-shuffle">
+          <span class="ui-icon ui-icon-shuffle"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-transfer-e-w"
+        >
+          <span class="ui-icon ui-icon-transfer-e-w"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-transferthick-e-w"
+        >
+          <span class="ui-icon ui-icon-transferthick-e-w"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-folder-collapsed"
+        >
+          <span class="ui-icon ui-icon-folder-collapsed"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-folder-open">
+          <span class="ui-icon ui-icon-folder-open"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-document">
+          <span class="ui-icon ui-icon-document"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-document-b">
+          <span class="ui-icon ui-icon-document-b"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-note">
+          <span class="ui-icon ui-icon-note"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-mail-closed">
+          <span class="ui-icon ui-icon-mail-closed"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-mail-open">
+          <span class="ui-icon ui-icon-mail-open"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-suitcase">
+          <span class="ui-icon ui-icon-suitcase"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-comment">
+          <span class="ui-icon ui-icon-comment"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-person">
+          <span class="ui-icon ui-icon-person"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-print">
+          <span class="ui-icon ui-icon-print"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-trash">
+          <span class="ui-icon ui-icon-trash"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-locked">
+          <span class="ui-icon ui-icon-locked"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-unlocked">
+          <span class="ui-icon ui-icon-unlocked"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-bookmark">
+          <span class="ui-icon ui-icon-bookmark"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-tag">
+          <span class="ui-icon ui-icon-tag"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-home">
+          <span class="ui-icon ui-icon-home"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-flag">
+          <span class="ui-icon ui-icon-flag"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-calculator">
+          <span class="ui-icon ui-icon-calculator"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-cart">
+          <span class="ui-icon ui-icon-cart"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-pencil">
+          <span class="ui-icon ui-icon-pencil"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-clock">
+          <span class="ui-icon ui-icon-clock"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-disk">
+          <span class="ui-icon ui-icon-disk"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-calendar">
+          <span class="ui-icon ui-icon-calendar"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-zoomin">
+          <span class="ui-icon ui-icon-zoomin"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-zoomout">
+          <span class="ui-icon ui-icon-zoomout"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-search">
+          <span class="ui-icon ui-icon-search"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-wrench">
+          <span class="ui-icon ui-icon-wrench"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-gear">
+          <span class="ui-icon ui-icon-gear"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-heart">
+          <span class="ui-icon ui-icon-heart"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-star">
+          <span class="ui-icon ui-icon-star"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-link">
+          <span class="ui-icon ui-icon-link"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-cancel">
+          <span class="ui-icon ui-icon-cancel"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-plus">
+          <span class="ui-icon ui-icon-plus"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-plusthick">
+          <span class="ui-icon ui-icon-plusthick"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-minus">
+          <span class="ui-icon ui-icon-minus"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-minusthick">
+          <span class="ui-icon ui-icon-minusthick"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-close">
+          <span class="ui-icon ui-icon-close"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-closethick">
+          <span class="ui-icon ui-icon-closethick"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-key">
+          <span class="ui-icon ui-icon-key"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-lightbulb">
+          <span class="ui-icon ui-icon-lightbulb"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-scissors">
+          <span class="ui-icon ui-icon-scissors"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-clipboard">
+          <span class="ui-icon ui-icon-clipboard"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-copy">
+          <span class="ui-icon ui-icon-copy"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-contact">
+          <span class="ui-icon ui-icon-contact"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-image">
+          <span class="ui-icon ui-icon-image"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-video">
+          <span class="ui-icon ui-icon-video"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-script">
+          <span class="ui-icon ui-icon-script"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-alert">
+          <span class="ui-icon ui-icon-alert"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-info">
+          <span class="ui-icon ui-icon-info"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-notice">
+          <span class="ui-icon ui-icon-notice"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-help">
+          <span class="ui-icon ui-icon-help"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-check">
+          <span class="ui-icon ui-icon-check"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-bullet">
+          <span class="ui-icon ui-icon-bullet"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-radio-off">
+          <span class="ui-icon ui-icon-radio-off"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-radio-on">
+          <span class="ui-icon ui-icon-radio-on"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-pin-w">
+          <span class="ui-icon ui-icon-pin-w"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-pin-s">
+          <span class="ui-icon ui-icon-pin-s"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-play">
+          <span class="ui-icon ui-icon-play"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-pause">
+          <span class="ui-icon ui-icon-pause"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-seek-next">
+          <span class="ui-icon ui-icon-seek-next"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-seek-prev">
+          <span class="ui-icon ui-icon-seek-prev"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-seek-end">
+          <span class="ui-icon ui-icon-seek-end"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-seek-first">
+          <span class="ui-icon ui-icon-seek-first"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-stop">
+          <span class="ui-icon ui-icon-stop"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-eject">
+          <span class="ui-icon ui-icon-eject"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-volume-off">
+          <span class="ui-icon ui-icon-volume-off"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-volume-on">
+          <span class="ui-icon ui-icon-volume-on"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-power">
+          <span class="ui-icon ui-icon-power"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-signal-diag">
+          <span class="ui-icon ui-icon-signal-diag"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-signal">
+          <span class="ui-icon ui-icon-signal"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-battery-0">
+          <span class="ui-icon ui-icon-battery-0"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-battery-1">
+          <span class="ui-icon ui-icon-battery-1"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-battery-2">
+          <span class="ui-icon ui-icon-battery-2"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-battery-3">
+          <span class="ui-icon ui-icon-battery-3"></span>
+        </li>
+        <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-plus">
+          <span class="ui-icon ui-icon-circle-plus"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-circle-minus"
+        >
+          <span class="ui-icon ui-icon-circle-minus"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-circle-close"
+        >
+          <span class="ui-icon ui-icon-circle-close"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-circle-triangle-e"
+        >
+          <span class="ui-icon ui-icon-circle-triangle-e"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-circle-triangle-s"
+        >
+          <span class="ui-icon ui-icon-circle-triangle-s"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-circle-triangle-w"
+        >
+          <span class="ui-icon ui-icon-circle-triangle-w"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-circle-triangle-n"
+        >
+          <span class="ui-icon ui-icon-circle-triangle-n"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-circle-arrow-e"
+        >
+          <span class="ui-icon ui-icon-circle-arrow-e"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-circle-arrow-s"
+        >
+          <span class="ui-icon ui-icon-circle-arrow-s"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-circle-arrow-w"
+        >
+          <span class="ui-icon ui-icon-circle-arrow-w"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-circle-arrow-n"
+        >
+          <span class="ui-icon ui-icon-circle-arrow-n"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-circle-zoomin"
+        >
+          <span class="ui-icon ui-icon-circle-zoomin"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-circle-zoomout"
+        >
+          <span class="ui-icon ui-icon-circle-zoomout"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-circle-check"
+        >
+          <span class="ui-icon ui-icon-circle-check"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-circlesmall-plus"
+        >
+          <span class="ui-icon ui-icon-circlesmall-plus"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-circlesmall-minus"
+        >
+          <span class="ui-icon ui-icon-circlesmall-minus"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-circlesmall-close"
+        >
+          <span class="ui-icon ui-icon-circlesmall-close"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-squaresmall-plus"
+        >
+          <span class="ui-icon ui-icon-squaresmall-plus"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-squaresmall-minus"
+        >
+          <span class="ui-icon ui-icon-squaresmall-minus"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-squaresmall-close"
+        >
+          <span class="ui-icon ui-icon-squaresmall-close"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-grip-dotted-vertical"
+        >
+          <span class="ui-icon ui-icon-grip-dotted-vertical"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-grip-dotted-horizontal"
+        >
+          <span class="ui-icon ui-icon-grip-dotted-horizontal"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-grip-solid-vertical"
+        >
+          <span class="ui-icon ui-icon-grip-solid-vertical"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-grip-solid-horizontal"
+        >
+          <span class="ui-icon ui-icon-grip-solid-horizontal"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-gripsmall-diagonal-se"
+        >
+          <span class="ui-icon ui-icon-gripsmall-diagonal-se"></span>
+        </li>
+        <li
+          class="ui-state-default ui-corner-all"
+          title=".ui-icon-grip-diagonal-se"
+        >
+          <span class="ui-icon ui-icon-grip-diagonal-se"></span>
+        </li>
+      </ul>
+
+      <!-- Slider -->
+      <h2 class="demoHeaders">Slider</h2>
+      <div id="slider"></div>
+
+      <!-- Progressbar -->
+      <h2 class="demoHeaders">Progressbar</h2>
+      <div id="progressbar"></div>
+
+      <!-- Progressbar -->
+      <h2 class="demoHeaders">Selectmenu</h2>
+      <select id="selectmenu">
+        <option>Slower</option>
+        <option>Slow</option>
+        <option selected="selected">Medium</option>
+        <option>Fast</option>
+        <option>Faster</option>
+      </select>
+
+      <!-- Spinner -->
+      <h2 class="demoHeaders">Spinner</h2>
+      <input id="spinner" />
+
+      <!-- Tooltip -->
+      <h2 class="demoHeaders">Tooltip</h2>
+      <p id="tooltip">
+        <a href="#" title="That's what this widget is">Tooltips</a> can be
+        attached to any element. When you hover the element with your mouse, the
+        title attribute is displayed in a little box next to the element, just
+        like a native tooltip.
+      </p>
+
+      <!-- Highlight / Error -->
+      <h2 class="demoHeaders">Highlight / Error</h2>
+      <div class="ui-widget">
+        <div
+          class="ui-state-highlight ui-corner-all"
+          style="margin-top: 20px; padding: 0 0.7em"
+        >
+          <p>
+            <span
+              class="ui-icon ui-icon-info"
+              style="float: left; margin-right: 0.3em"
+            ></span>
+            <strong>Hey!</strong> Sample ui-state-highlight style.
+          </p>
+        </div>
+      </div>
+      <br />
+      <div class="ui-widget">
+        <div class="ui-state-error ui-corner-all" style="padding: 0 0.7em">
+          <p>
+            <span
+              class="ui-icon ui-icon-alert"
+              style="float: left; margin-right: 0.3em"
+            ></span>
+            <strong>Alert:</strong> Sample ui-state-error style.
+          </p>
+        </div>
+      </div>
+    </main>
+    <script>
+      var availableTags = [
+        "ActionScript",
+        "AppleScript",
+        "Asp",
+        "BASIC",
+        "C",
+        "C++",
+        "Clojure",
+        "COBOL",
+        "ColdFusion",
+        "Erlang",
+        "Fortran",
+        "Groovy",
+        "Haskell",
+        "Java",
+        "JavaScript",
+        "Lisp",
+        "Perl",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Scala",
+        "Scheme",
+      ];
+      $("#autocomplete").autocomplete({
+        source: availableTags,
+      });
+
+      $("#button").button();
+      $("#button-icon").button({
+        icon: "ui-icon-gear",
+        showLabel: false,
+      });
+
+      $("#radioset").buttonset();
+
+      $("#controlgroup").controlgroup();
+
+      $("#dialog").dialog({
+        autoOpen: false,
+        width: 400,
+        buttons: [
+          {
+            text: "Ok",
+            click: function () {
+              $(this).dialog("close");
+            },
+          },
+          {
+            text: "Cancel",
+            click: function () {
+              $(this).dialog("close");
+            },
+          },
+        ],
+      });
+
+      // Link to open the dialog
+      $("#dialog-link").click(function (event) {
+        $("#dialog").dialog("open");
+        event.preventDefault();
+      });
+
+      $("#datepicker").datepicker({
+        inline: true,
+      });
+
+      $("#slider").slider({
+        range: true,
+        values: [17, 67],
+      });
+
+      $("#progressbar").progressbar({
+        value: 20,
+      });
+
+      $("#spinner").spinner();
+
+      $("#tooltip").tooltip();
+
+      $("#selectmenu").selectmenu();
+
+      // Hover states on the static widgets
+      $("#dialog-link, #icons li").hover(
+        function () {
+          $(this).addClass("ui-state-hover");
+        },
+        function () {
+          $(this).removeClass("ui-state-hover");
+        }
+      );
+    </script>
+  </body>
+</html>
