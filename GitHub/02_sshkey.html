@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>GitHub Tutorials : SSH Key p/Todos Repositórios GitHub</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+
+  </head>
+  <body>
+    <main>
+      <a style="padding: 20px" href="../index.html#github_02_sshkey">
+        <div class="DivLink">Return to Web Tutorials</div>
+      </a>
+      <div class="artigo">
+        <h2>GitHub Tutorials : SSH Key p/Todos Repositórios GitHub</h2>
+        <h3>Generating a new SSH key</h3>
+        <p>No Terminal VsCode abrir uma sessão "Git Bash" (com os icons do canto superior direito do terminal)</p>
+        <p>Executar: <b>ls -al ~/.ssh</b>  (verificar se existem os ficheiros de certificados id_ed25519 e id_ed25519.pub)</p>
+        <p>Executar: <b>ssh-keygen -t ed25519 -C "&lt;Your email&gt;"</b>  (Generating a new SSH key)</p>
+        <p>Executar: <b>eval "$(ssh-agent -s)"</b>  (Ensure the ssh-agent is running)</p>
+        <p>Executar: <b>ssh-add ~/.ssh/id_ed25519</b>  (Add your SSH private key to the ssh-agent)</p>
+        <p>Executar: <b>clip &lt; ~/.ssh/id_ed25519.pub</b>  (Copy the SSH public key to your clipboard.)</p><br/>
+        <h3>Adding a new SSH key to your GitHub account</h3>
+        <p>Aceder à sua conta no GitHub, Clicar na foto no canto superior direito p/aceder ao menu do utilizador.</p>
+        <p>Escolher Settings</p>
+        <p>No Menu do lado esquerdo, escolher <b>SSH & GPG keys</b></p>
+        <p>Em SSH keys, clicar em <b>New SSH key</b></p>
+        <p>Fazer "paste" da chave pública para o campo "key", e confirmar clicando em: "Add SSH key"</p>
+        <h3>resultado:</h3>
+        <p>Após estes procedimentos já pode acerder a partir do computador/device que tem a chave privada ao seus repositórios GitHub usando a opção SSH.</p>
+      </div>
+
+
+      <hr />
+      <div style="padding: 50px">
+        <p>Código completo disponível no GitHub:</p>
+        <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
+      </div>
+    </main>
+  </body>
+</html>

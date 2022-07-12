@@ -37,3 +37,26 @@ Código completo disponível no GitHub
 7. SetInterval
 8. Relógio Analógico
 9. Ajax
+
+## Web JQuery Tutorials
+
+. Accordion
+. Menu
+. Tabs
+. Tabs Verticais à Esquerda
+. Datepicker
+
+## GitHub Tutorials
+
+. Projecto Git Local
+. SSH Key p/Todos Repositórios
+. Repositório GitHub
+. GitHub Secrets for Actions
+. CI/CD Deploy On Push
+
+## Recursos
+
+. Markdown Cheat Sheet
+. Free Icons
+. File Samples
+. sitemap.xml Generator

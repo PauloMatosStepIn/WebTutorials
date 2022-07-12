@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>GitHub Tutorials : CI/CD Deploy On Push</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <a style="padding: 20px" href="../index.html#github_05_DeployOnPush">
+        <div class="DivLink">Return to Web Tutorials</div>
+      </a>
+
+      <style>
+        .artigo p {
+          padding-top: 10px;
+        }
+      </style>
+      <div class="artigo">
+        <h2>GitHub Tutorials : </h2>
+        <p>
+          Na sua conta de GitHub aceder ao repositório, no menu do cabeçalho
+          escolher a opção <b>Actions</b>
+        </p>
+        <p>Clicar em <b>set up a workflow yourself </b></p>
+        <p>Copiar o conteúdo do <a href="https://github.com/PauloMatosStepIn/WebTutorials/blob/main/.github/workflows/main.yml">main.yml</a> para o seu ficheiro yaml.</p>
+        <p>Escolher a opção de <b>Start Commit</b>, preencher descrição e confirmar com <b>Commit Changes</b></p>
+        <p>(Ir a Actions e ver os resultados da execução)</p>
+        <p>(após a execução da actualização o seu site deve estar actualizado com o novo conteúdo)</p>
+        <p><i>Como requisito é necessário configurar um utilizador de ftp com password e o path para o directório adequado no WebServer. É necessário também criar os seguintes "Action Secrets" no repositório: FTP_SERVER, FTP_USER e FTP_PASSWORD (ver opção  <a href="04_secrets.html">GitHub Secrets for Actions</a> para informação de como criar).</i></p>
+        
+      </div>
+
+      <hr />
+      <div style="padding: 50px">
+        <p>Código completo disponível no GitHub:</p>
+        <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext"
+          >github.com : WebTutorials</a
+        >
+      </div>
+    </main>
+  </body>
+</html>
