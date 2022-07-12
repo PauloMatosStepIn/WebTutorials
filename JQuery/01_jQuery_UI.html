@@ -596,12 +596,16 @@
         }
       </style>
 
-      <!-- Datepicker -->
       <SiteHeader>
         <h2>Datepicker</h2>
+        <p>
+          Campos de data com DatePicker associado, com meses, dias de semana e
+          botões traduzidos para português.
+        </p>
+        <p>Formato de data: "dd/mm/YYYY".</p>
+        <p>Data de início tem de ser igual ou superior à data actual.</p>
+        <p>Data de Fim tem de ser igual ou superior à Data de Início.</p>
       </SiteHeader>
-
-      <!-- <div id="datepicker"></div> -->
 
       <script>
         $(function () {
@@ -656,13 +660,125 @@
 
       <p>
         Data Inicial:
-        <input type="text" id="inicio" class="data_evento" />
+        <input type="text" id="inicio" />
       </p>
 
       <p>
         Data Final:
-        <input type="text" id="fim" class="data_evento" />
+        <input type="text" id="fim" />
       </p>
+
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+          &lt;p&gt;
+            Data Inicial:
+            &lt;input type="text" id="inicio" /&gt;
+          &lt;/p&gt;
+    
+          &lt;p&gt;
+            Data Final:
+            &lt;input type="text" id="fim" /&gt;
+          &lt;/p&gt;
+        </pre>
+      </div>
+
+      <div class="code">
+        <div>JAVASCRIPT</div>
+        <pre>
+        &lt;script&gt;
+          $(function () {
+            var months = [
+              "Janeiro",
+              "Fevereiro",
+              "Março",
+              "Abril",
+              "Maio",
+              "Junho",
+              "Julho",
+              "Agosto",
+              "Setembro",
+              "Outubro",
+              "Novembro",
+              "Dezembro",
+            ];
+  
+            var dayNames = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+  
+            var configini = {
+              monthNames: months,
+              dayNamesMin: dayNames,
+              prevText: "Anterior",
+              nextText: "Próximo",
+              dateFormat: "dd/mm/yy",
+              minDate: "+0",
+              maxDate: "+1y+1m",
+              onSelect: function (dateText, inst) {
+                $("#fim").datepicker(
+                  "option",
+                  "minDate",
+                  $("#inicio").datepicker("getDate")
+                );
+              },
+            };
+  
+            var configfim = {
+              monthNames: months,
+              dayNamesMin: dayNames,
+              prevText: "Anterior",
+              nextText: "Próximo",
+              dateFormat: "dd/mm/yy",
+              minDate: "+0",
+              maxDate: "+1y+1m",
+            };
+  
+            $("#inicio").datepicker(configini);
+            $("#fim").datepicker(configfim);
+          });
+  
+        &lt;/script&gt;
+        </pre>
+      </div>
+
+      <!-- Slider -->
+      <SiteHeader>
+        <h2>Slider</h2>
+      </SiteHeader>
+      <div id="slider"></div>
+
+      <style>
+        .show_value {
+          margin-top: 10px;
+          border: none;
+          outline: none;
+          display: block;
+          font-size: 36px;
+        }
+      </style>
+
+      <input
+        class="show_value"
+        readonly="readonly"
+        type="text"
+        id="slider_value"
+      />
+
+      <script>
+        $(function () {
+          $("#slider").slider({
+            // range: true,
+            // values: [40, 60],
+            step: 0.01,
+            value: 50,
+            min: 1,
+            max: 99,
+            slide: function (event, ui) {
+              $("#slider_value").val(ui.value + " EUR");
+            },
+          });
+          $("#slider_value").val($("#slider").slider("value") + " EUR");
+        });
+      </script>
 
       <!-- Autocomplete -->
       <h2 class="demoHeaders">Autocomplete</h2>
@@ -1553,10 +1669,6 @@
         </li>
       </ul>
 
-      <!-- Slider -->
-      <h2 class="demoHeaders">Slider</h2>
-      <div id="slider"></div>
-
       <!-- Progressbar -->
       <h2 class="demoHeaders">Progressbar</h2>
       <div id="progressbar"></div>
@@ -1679,11 +1791,6 @@
 
       $("#datepicker").datepicker({
         inline: true,
-      });
-
-      $("#slider").slider({
-        range: true,
-        values: [17, 67],
       });
 
       $("#progressbar").progressbar({
