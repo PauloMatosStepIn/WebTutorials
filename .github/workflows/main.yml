@@ -11,8 +11,8 @@ jobs:
     - name: 📂 Update files on Server
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
-        server: ftp.stepinportugal.com
-        username: ftppmwtutorials
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
         exclude: |
           **/.git*
