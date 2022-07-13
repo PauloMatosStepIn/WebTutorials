@@ -81,7 +81,7 @@
         </p>
       </SiteHeader>
 
-      <div id="accordion">
+      <div id="accordion" name="accordion">
         <h3>Opção 1</h3>
         <div>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
@@ -193,7 +193,7 @@
         >
       </SiteHeader>
 
-      <ul style="width: 200px" id="menu">
+      <ul style="width: 200px" id="menu" name="menu">
         <li><div>Menu 1</div></li>
         <li><div>Menu 2</div></li>
         <li>
@@ -300,7 +300,7 @@
           header in a list.
         </p>
       </SiteHeader>
-      <div id="tabs">
+      <div id="tabs" name="tabs">
         <ul>
           <li><a href="#tabs-1">Primeiro Tab</a></li>
           <li><a href="#tabs-2">Segundo Tab</a></li>
@@ -408,7 +408,7 @@
         </p>
       </SiteHeader>
 
-      <div id="vtabs">
+      <div id="vtabs" name="vtabs">
         <ul>
           <li><a href="#vtabs-1">Primeiro Tab</a></li>
           <li><a href="#vtabs-2">Segundo Tab</a></li>
@@ -597,7 +597,7 @@
       </style>
 
       <SiteHeader>
-        <h2>Datepicker</h2>
+        <h2 id="datepicker" name="datepicker">Datepicker</h2>
         <p>
           Campos de data com DatePicker associado, com meses, dias de semana e
           botões traduzidos para português.
@@ -743,8 +743,8 @@
       <!-- Slider -->
       <SiteHeader>
         <h2>Slider</h2>
+        <p>Intervalo: 1 a 99, salto de 0.01, Valor Inicial: 50. Actualiza control text.</p>
       </SiteHeader>
-      <div id="slider"></div>
 
       <style>
         .show_value {
@@ -756,12 +756,41 @@
         }
       </style>
 
+      <div id="slider" name="slider"></div>
       <input
         class="show_value"
         readonly="readonly"
         type="text"
         id="slider_value"
       />
+
+      <div class="code">
+        <div>CSS</div>
+        <pre>
+        &lt;style&gt;
+          .show_value {
+            margin-top: 10px;
+            border: none;
+            outline: none;
+            display: block;
+            font-size: 36px;
+          }
+        &lt;/style&gt;
+        </pre>
+      </div>
+
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+          &lt;div id="slider" name="slider"&gt;&lt;/div&gt;
+          &lt;input
+            class="show_value"
+            readonly="readonly"
+            type="text"
+            id="slider_value"
+          /&gt;
+        </pre>
+      </div>
 
       <script>
         $(function () {
@@ -779,6 +808,28 @@
           $("#slider_value").val($("#slider").slider("value") + " EUR");
         });
       </script>
+
+      <div class="code">
+        <div>JAVASCRIPT</div>
+        <pre>
+        &lt;script&gt;
+        $(function () {
+          $("#slider").slider({
+            // range: true,
+            // values: [40, 60],
+            step: 0.01,
+            value: 50,
+            min: 1,
+            max: 99,
+            slide: function (event, ui) {
+              $("#slider_value").val(ui.value + " EUR");
+            },
+          });
+          $("#slider_value").val($("#slider").slider("value") + " EUR");
+        });
+        &lt;/script&gt;
+        </pre>
+      </div>
 
       <!-- Autocomplete -->
       <h2 class="demoHeaders">Autocomplete</h2>
