@@ -47,6 +47,8 @@ Código completo disponível no GitHub
 3. Tabs [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/01_jQuery_UI.html#tabs)
 4. Tabs Verticais à Esquerda [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/01_jQuery_UI.html#vtabs)
 5. Datepicker [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/01_jQuery_UI.html#datepicker)
+6. Slider [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/01_jQuery_UI.html#slider)
+7. Range Slider [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/01_jQuery_UI.html#rangeslider)
 
 ## GitHub Tutorials
 
