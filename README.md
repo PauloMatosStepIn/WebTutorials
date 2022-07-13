@@ -11,22 +11,22 @@ Código completo disponível no GitHub
 
 ## Web CSS3 Tutorials
 
-. Transitions [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/01_transitions.html)
-. Transitions c/2 elementos [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/02_transitions2Elements.html)
-. Transitions : ScrollUp [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/03_transitions_scrollUp.html)
-. Transitions : rotateY [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/01a_transitions.html)
-. keyframes [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/05_keyframes.html)
-. Landing Page [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/06_landingPage.html)
-. Slide Show [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/07_SlideShow.html)
-. Media Type [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/08_MediaTypes/)
-. Menu Responsivo [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/08_MediaTypes/IndexNav.html)
-. Máscara / Sombra [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/09_mascara.html)
-. Sombras [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/10_sombras.html)
-. Colunas [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/11_colunas.html)
-. Background Responsivo [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/12_BackgroundResponsivo/)
-. Object Fit  [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/13_ObjectFit/)
-. Object Fit : thumbnails  [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/13_ObjectFit/thumbnails.html)
-. Menu Responsivo [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/14_Menu/)
+1. Transitions [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/01_transitions.html)
+2. Transitions c/2 elementos [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/02_transitions2Elements.html)
+3. Transitions : ScrollUp [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/03_transitions_scrollUp.html)
+4. Transitions : rotateY [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/01a_transitions.html)
+5. keyframes [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/05_keyframes.html)
+6. Landing Page [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/06_landingPage.html)
+7. Slide Show [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/07_SlideShow.html)
+8. Media Type [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/08_MediaTypes/)
+9. Menu Responsivo [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/08_MediaTypes/IndexNav.html)
+10. Máscara / Sombra [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/09_mascara.html)
+11. Sombras [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/10_sombras.html)
+12. Colunas [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/11_colunas.html)
+13. Background Responsivo [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/12_BackgroundResponsivo/)
+14. Object Fit [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/13_ObjectFit/)
+15. Object Fit : thumbnails [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/13_ObjectFit/thumbnails.html)
+16. Menu Responsivo [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/css3/14_Menu/)
 
 ## Web JavaScript Tutorials
 
@@ -42,23 +42,23 @@ Código completo disponível no GitHub
 
 ## Web JQuery Tutorials
 
-. Accordion [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/01_jQuery_UI.html#accordion)
-. Menu [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/01_jQuery_UI.html#menu)
-. Tabs [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/01_jQuery_UI.html#tabs)
-. Tabs Verticais à Esquerda [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/01_jQuery_UI.html#vtabs)
-. Datepicker [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/01_jQuery_UI.html#datepicker)
+1. Accordion [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/01_jQuery_UI.html#accordion)
+2. Menu [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/01_jQuery_UI.html#menu)
+3. Tabs [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/01_jQuery_UI.html#tabs)
+4. Tabs Verticais à Esquerda [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/01_jQuery_UI.html#vtabs)
+5. Datepicker [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/01_jQuery_UI.html#datepicker)
 
 ## GitHub Tutorials
 
-. Projecto Git Local [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/github/)
-. SSH Key p/Todos Repositórios [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/github/02_sshkey.html)
-. Repositório GitHub [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/github/03_githubrepo.html)
-. GitHub Secrets for Actions [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/github/04_secrets.html)
-. CI/CD Deploy On Push [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/github/05_DeployOnPush.html)
+1. Projecto Git Local [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/github/)
+2. SSH Key p/Todos Repositórios [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/github/02_sshkey.html)
+3. Repositório GitHub [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/github/03_githubrepo.html)
+4. GitHub Secrets for Actions [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/github/04_secrets.html)
+5. CI/CD Deploy On Push [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/github/05_DeployOnPush.html)
 
 ## Recursos
 
-. Markdown Cheat Sheet [&lt;site&gt;](https://www.markdownguide.org/cheat-sheet/)
-. Free Icons [&lt;site&gt;](https://www.iconfinder.com/search/icons?family=free-icons-14&price=free)
-. File Samples [&lt;site&gt;](https://filesamples.com/)
-. sitemap.xml Generator [&lt;site&gt;](https://www.xml-sitemaps.com/)
+1. Markdown Cheat Sheet [&lt;site&gt;](https://www.markdownguide.org/cheat-sheet/)
+2. Free Icons [&lt;site&gt;](https://www.iconfinder.com/search/icons?family=free-icons-14&price=free)
+3. File Samples [&lt;site&gt;](https://filesamples.com/)
+4. sitemap.xml Generator [&lt;site&gt;](https://www.xml-sitemaps.com/)
