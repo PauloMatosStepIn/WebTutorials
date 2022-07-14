@@ -190,11 +190,11 @@
         &lt;script&gt;
           $(function () {
             //adicionar div legenda
-            $('<div id="legenda"></div>').insertBefore("ul.album");
+            $('&lt;div id="legenda"&gt;&lt;/div&gt;').insertBefore("ul.album");
             //adicionar div foto
-            $('<div id="mainfoto"></div>').insertBefore("#legenda");
+            $('&lt;div id="mainfoto"&gt;&lt;/div&gt;').insertBefore("#legenda");
             //adicionar tag de imagem
-            $("#mainfoto").prepend("<img />");
+            $("#mainfoto").prepend("&lt;img /&gt;");
             //adicionar foto a tag img
             $("#mainfoto img").attr("src", $("#galeria a").attr("href"));
             //adiciona texto a legenda
