@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>JQuery Tutorials : Zoom fora do Objecto</title>
+    <link rel="stylesheet" type="text/css" href="../css/SiteHeader.css" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  </head>
+  <body style="font-family: 'Nunito', 'Times New Roman', Times, serif">
+    <link href="xzoom/css/xzoom.min.css" rel="stylesheet" />
+
+    <main>
+      <Siteheader>
+        <a style="padding: 20px" href="../index.html#jquery_06_xzoom">
+          <div class="DivLink">Return to Web Tutorials</div>
+        </a>
+      </Siteheader>
+
+      <style>
+        .artigo p {
+          padding-top: 10px;
+        }
+      </style>
+
+      <h1 style="margin-top: 10px">JQuery Tutorials : Zoom fora do Objecto</h1>
+      <p>
+        Nesta página é usado o plugin jQuery <b><a href="https://payalord.github.io/xZoom/">"xZoom"</a></b>
+      </p>
+      <p></p>
+
+      <p>Necessário fazer download do "xZoom". Para o código seguinte funcionar foi necessário: criar as sub-directorias xzoom\js (para onde foram movidos os ficheiros js da dir "dist" do download) e xzoom\css (para onde foram movidos os ficheiros css da dir "dist" do download)</p>
+
+      <section id="default" style="padding-top: 0px">
+        <div><h3>Abrir Zoom à Direita</h3></div>
+        <div class="xzoom-container">
+          <img class="xzoom" id="xzoom-default" src="xzoom/images/gallery/preview/01_b_car.jpg" xoriginal="xzoom/images/gallery/original/01_b_car.jpg" />
+          <div class="xzoom-thumbs">
+            <a href="xzoom/images/gallery/original/01_b_car.jpg"><img class="xzoom-gallery" width="80px;" src="xzoom/images/gallery/preview/01_b_car.jpg" title="Blue Car" /></a>
+            <a href="xzoom/images/gallery/original/02_o_car.jpg"><img class="xzoom-gallery" width="80px;" src="xzoom/images/gallery/preview/02_o_car.jpg" title="Ford Focus Orange"/></a>
+            <a href="xzoom/images/gallery/original/03_r_car.jpg"><img class="xzoom-gallery" width="80px;" src="xzoom/images/gallery/preview/03_r_car.jpg" title="Fiat 500 Red"/></a>
+            <a href="xzoom/images/gallery/original/04_g_car.jpg"><img class="xzoom-gallery" width="80px;" src="xzoom/images/gallery/preview/04_g_car.jpg" title="Silver Car"/></a>
+          </div>
+        </div>
+      </section>
+
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+          &lt;link href="xzoom/css/xzoom.min.css" rel="stylesheet" /&gt;
+          &lt;section id="default" style="padding-top: 0px"&gt;
+            &lt;div&gt;&lt;h3&gt;Abrir Zoom à Direita&lt;/h3&gt;&lt;/div&gt;
+            &lt;div class="xzoom-container"&gt;
+              &lt;img class="xzoom" id="xzoom-default" src="xzoom/images/gallery/preview/01_b_car.jpg" xoriginal="xzoom/images/gallery/original/01_b_car.jpg" /&gt;
+              &lt;div class="xzoom-thumbs"&gt;
+                &lt;a href="xzoom/images/gallery/original/01_b_car.jpg"&gt;&lt;img class="xzoom-gallery" width="80px;" src="xzoom/images/gallery/preview/01_b_car.jpg" title="Blue Car" /&gt;&lt;/a&gt;
+                &lt;a href="xzoom/images/gallery/original/02_o_car.jpg"&gt;&lt;img class="xzoom-gallery" width="80px;" src="xzoom/images/gallery/preview/02_o_car.jpg" title="Ford Focus Orange"/&gt;&lt;/a&gt;
+                &lt;a href="xzoom/images/gallery/original/03_r_car.jpg"&gt;&lt;img class="xzoom-gallery" width="80px;" src="xzoom/images/gallery/preview/03_r_car.jpg" title="Fiat 500 Red"/&gt;&lt;/a&gt;
+                &lt;a href="xzoom/images/gallery/original/04_g_car.jpg"&gt;&lt;img class="xzoom-gallery" width="80px;" src="xzoom/images/gallery/preview/04_g_car.jpg" title="Silver Car"/&gt;&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/section&gt;
+          &lt;script src="external/jquery/jquery.js"&gt;&lt;/script&gt;
+          &lt;script src="jquery-ui.js"&gt;&lt;/script&gt;
+          &lt;script src="xzoom/js/xzoom.min.js"&gt;&lt;/script&gt;
+          &lt;script src="xzoom/js/setup.js"&gt;&lt;/script&gt;
+        </pre>
+      </div>
+
+      <hr />
+      <div style="padding: 50px">
+        <p>Código completo disponível no GitHub:</p>
+        <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
+      </div>
+    </main>
+
+    <script src="external/jquery/jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="xzoom/js/xzoom.min.js"></script>
+    <script src="xzoom/js/setup.js"></script>
+  </body>
+</html>

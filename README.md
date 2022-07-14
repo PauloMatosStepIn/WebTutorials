@@ -49,14 +49,19 @@ Código completo disponível no GitHub
 5. Datepicker [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/01_jQuery_UI.html#datepicker)
 6. Slider [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/01_jQuery_UI.html#slider)
 7. Range Slider [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/01_jQuery_UI.html#rangeslider)
+8. Galeria Fotos [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/03_galeriafotos.html)
 
 ## Web JQuery Tutorials - Forms
 
 1. FadeIn / FadeOut [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/02_forms.html#fadein)
 2. disabled / checked [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/02_forms.html#disabled)
 3. Select All [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/02_forms.html#selectall)
-4. Galeria Fotos [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/03_galeriafotos.html)
-5. Select Box User Friendly [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/04_SelectBoxUserFriendly.html)
+
+## Web JQuery Tutorials - Plugins
+
+1. Select Box User Friendly [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/04_SelectBoxUserFriendly.html)
+2. Zoom on Image [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/05_zoom.html)
+3. Zoom fora do Objecto [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/06_xzoom.html)
 
 ## GitHub Tutorials
 
@@ -72,3 +77,8 @@ Código completo disponível no GitHub
 2. Free Icons [&lt;site&gt;](https://www.iconfinder.com/search/icons?family=free-icons-14&price=free)
 3. File Samples [&lt;site&gt;](https://filesamples.com/)
 4. sitemap.xml Generator [&lt;site&gt;](https://www.xml-sitemaps.com/)
+5. jQuery Mask Plugin [&lt;site&gt;](https://igorescobar.github.io/jQuery-Mask-Plugin/)
+6. jQuery Chosen Plugin [&lt;site&gt;](https://harvesthq.github.io/chosen/)
+7. jQuery Super Labels Plugin [&lt;site&gt;](https://github.com/remybach/jQuery.superLabels)
+8. jQuery Light-Zoom Plugin [&lt;site&gt;](https://github.com/JafarAkhondali/lightzoom)
+9. jQuery xZoom Plugin [&lt;site&gt;](https://payalord.github.io/xZoom/)

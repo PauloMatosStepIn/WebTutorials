@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>JQuery Tutorials : Zoom on Image</title>
+    <link rel="stylesheet" type="text/css" href="../css/SiteHeader.css" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  </head>
+  <body style="font-family: 'Nunito', 'Times New Roman', Times, serif">
+    <!-- <link href="lightzoom/css/glassstyle.css" rel="stylesheet" /> -->
+
+    <main>
+      <Siteheader>
+        <a style="padding: 20px" href="../index.html#jquery_05_zoom">
+          <div class="DivLink">Return to Web Tutorials</div>
+        </a>
+      </Siteheader>
+
+      <style>
+        .artigo p {
+          padding-top: 10px;
+        }
+      </style>
+
+      <h1 style="margin-top: 10px">JQuery Tutorials : Zoom on Image</h1>
+      <p>
+        Nesta página é usado o plugin jQuery <b><a href="https://github.com/JafarAkhondali/lightzoom">"Light-Zoom"</a></b>
+      </p>
+      <p></p>
+
+      <p>Necessário fazer download do "Light-Zoom". Para o código seguinte funcionar foi necessário copiar o download para uma sub-directoria lightzoom, e foram criadas as sub-directorias lightzoom\js (para onde foram movidos os ficheiros js da root do download) e lightzoom\css (para onde foram movidos os ficheiros css da root do download)</p>
+
+      <img src="images/foto.jpg" id="imagem" style="width: 100%" />
+
+      <div class="code">
+        <div>CSS</div>
+        <pre>
+    &lt;style&gt;
+      #glass {
+        position: absolute;
+        border-radius: 50%;
+        box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+        display: none;
+        background-repeat: no-repeat;
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+    &lt;/style&gt;
+        </pre>
+      </div>
+
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+          &lt;img src="images/foto.jpg" id="imagem" style="width: 100%" /&gt;
+        </pre>
+      </div>
+
+      <div class="code">
+        <div>JAVASCRIPT</div>
+        <pre>
+          &lt;script src="external/jquery/jquery.js">&lt;/script&gt;
+          &lt;script src="jquery-ui.js"&gt;&lt;/script&gt;
+      
+          &lt;script src="lightzoom/js/lightzoom.js"&gt;&lt;/script&gt;
+
+          &lt;script&gt;
+          $(function () {
+            $("#imagem").lightzoom({
+              zoomPower: 4,
+              glassSize: 360,
+            });
+          });
+          &lt;/script&gt;
+        </pre>
+      </div>
+      <hr />
+      <div style="padding: 50px">
+        <p>Código completo disponível no GitHub:</p>
+        <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
+      </div>
+    </main>
+
+    <script src="external/jquery/jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+
+    <script src="lightzoom/js/lightzoom.js"></script>
+
+    <style>
+      #glass {
+        position: absolute;
+        border-radius: 50%;
+        box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+        display: none;
+        background-repeat: no-repeat;
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+    </style>
+
+    <script>
+      $(function () {
+        $("#imagem").lightzoom({
+          zoomPower: 4,
+          glassSize: 360,
+        });
+      });
+    </script>
+  </body>
+</html>
