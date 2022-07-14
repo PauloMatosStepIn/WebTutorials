@@ -50,6 +50,13 @@ Código completo disponível no GitHub
 6. Slider [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/01_jQuery_UI.html#slider)
 7. Range Slider [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/01_jQuery_UI.html#rangeslider)
 
+## Web JQuery Tutorials - Forms
+
+1. FadeIn / FadeOut [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/02_forms.html#fadein)
+2. disabled / checked [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/02_forms.html#disabled)
+3. Select All [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/02_forms.html#selectall)
+3. Galeria Fotos [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/03_galeriafotos.html)
+
 ## GitHub Tutorials
 
 1. Projecto Git Local [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/github/)
