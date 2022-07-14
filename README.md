@@ -55,7 +55,8 @@ Código completo disponível no GitHub
 1. FadeIn / FadeOut [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/02_forms.html#fadein)
 2. disabled / checked [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/02_forms.html#disabled)
 3. Select All [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/02_forms.html#selectall)
-3. Galeria Fotos [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/03_galeriafotos.html)
+4. Galeria Fotos [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/03_galeriafotos.html)
+5. Select Box User Friendly [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/04_SelectBoxUserFriendly.html)
 
 ## GitHub Tutorials
 
