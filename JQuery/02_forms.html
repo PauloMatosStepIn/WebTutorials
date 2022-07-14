@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>JQuery Tutorials : Forms</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+
+    <style>
+      input[type="text"] {
+        border: 1px solid #999;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 3px;
+        width: 200px;
+      }
+
+      label,
+      input[type="submit"] {
+        display: block;
+        margin-bottom: 3px;
+      }
+
+      input + span {
+        margin-left: 15px;
+        border: 1px solid #ccc;
+        background-color: #f0f0f0;
+        padding: 5px 10px;
+        color: #999;
+        border-radius: 3px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="external/jquery/jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+
+    <main>
+      <a style="padding: 20px" href="../index.html#jquery_02_forms">
+        <div class="DivLink">Return to Web Tutorials</div>
+      </a>
+
+      <style>
+        .artigo p {
+          padding-top: 10px;
+        }
+      </style>
+
+      <script>
+        $(function () {
+          //para não mostrar conteúdos anteriores
+          $("input").attr("autocomplete", "off");
+
+          //optional sintax:
+          //$("input[type='text'] + span").css("display","none");
+          $("input[type='text'] + span").css({ display: "none" });
+
+          $("input[type='text']").focus(function () {
+            $(this).next().fadeIn(1000);
+          });
+          $("input[type='text']").blur(function () {
+            $(this).next().fadeOut(1000);
+          });
+        });
+      </script>
+
+      <h1 style="margin-top: 10px">JQuery Tutorials : Forms</h1>
+      <div class="artigo">
+        <h2 id="fadein" name="fadein">fadeIn / fadeOut</h2>
+
+        <p>Quando um campo recebe o FOCUS é mostrada a mensagem de apoio, quando perde o FOCUS a mensagem é escondida. AutoComplete colocado em Off.</p>
+
+        <form action="#" method="get" id="formulario">
+          <label for="nome">Nome Completo</label>
+          <input type="text" name="nomecompleto" id="nomecompleto" /><span>Digite o seu nome completo</span>
+
+          <label for="nome">Email </label>
+          <input type="text" name="email" id="email" /><span>Digite um seu email</span>
+
+          <label for="nome">NIF</label>
+          <input type="text" name="nif" id="nif" /><span>Digite apenas números</span>
+
+          <input type="submit" value="Enviar" />
+        </form>
+
+        <div class="code">
+          <div>CSS</div>
+          <pre>
+          &lt;style&gt;
+            input[type="text"] {
+              border: 1px solid #999;
+              padding: 10px;
+              margin-bottom: 20px;
+              border-radius: 3px;
+              width: 200px;
+            }
+      
+            label,
+            input[type="submit"] {
+              display: block;
+              margin-bottom: 3px;
+            }
+      
+            input + span {
+              margin-left: 15px;
+              border: 1px solid #ccc;
+              background-color: #f0f0f0;
+              padding: 5px 10px;
+              color: #999;
+              border-radius: 3px;
+              font-size: 14px;
+            }
+          &lt;/style&gt;
+          </pre>
+        </div>
+
+        <div class="code">
+          <div>JAVASCRIPT</div>
+          <pre>
+          &lt;script&gt;
+            $(function () {
+              //para não mostrar conteúdos anteriores
+              $("input").attr("autocomplete", "off");
+    
+              //optional sintax:
+              //$("input[type='text'] + span").css("display","none");
+              $("input[type='text'] + span").css({ display: "none" });
+    
+              $("input[type='text']").focus(function () {
+                $(this).next().fadeIn(1000);
+              });
+              $("input[type='text']").blur(function () {
+                $(this).next().fadeOut(1000);
+              });
+            });
+          &lt;/script&gt;
+          </pre>
+        </div>
+
+        <div class="code">
+          <div>HTML</div>
+          <pre>
+            &lt;form action="#" method="get" id="formulario"&gt;
+              &lt;label for="nome"&gt;Nome Completo&lt;/label&gt;
+              &lt;input type="text" name="nomecompleto" id="nomecompleto" /&gt;&lt;span
+                &gt;Digite o seu nome completo&lt;/span
+              &gt;
+    
+              &lt;label for="nome"&gt;Email &lt;/label&gt;
+              &lt;input type="text" name="email" id="email" /&gt;&lt;span
+                &gt;Digite um seu email&lt;/span
+              &gt;
+    
+              &lt;label for="nome"&gt;NIF&lt;/label&gt;
+              &lt;input type="text" name="nif" id="nif" /&gt;&lt;span
+                &gt;Digite apenas números&lt;/span
+              &gt;
+    
+              &lt;input type="submit" value="Enviar" /&gt;
+            &lt;/form&gt;
+      
+          </pre>
+        </div>
+      </div>
+
+      <div class="artigo" style="height: 1550px">
+        <h2 id="disabled" name="disabled">disabled / checked</h2>
+        <p>Quando se clica na secção, habilita só os checkboxes da secção seleccionada.</p>
+        <p style="padding-bottom: 10px">Quando se clica, coloca em false todas as checkboxes.</p>
+        <style>
+          #form_sports section {
+            float: left;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 10px;
+            width: 190px;
+            height: 120px;
+            box-shadow: 0 0 4px #ccc;
+            background-color: #fff;
+            margin-bottom: 20px;
+          }
+
+          #form_sports label {
+            float: left;
+            width: 180px;
+            display: block;
+            margin-bottom: 5px;
+          }
+
+          #form_sports label.sport {
+            border-bottom: 1px dotted #ccc;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+          }
+        </style>
+
+        <form action="#" method="get" id="form_sports">
+          <section class="sports">
+            <label class="sport"><input type="radio" name="sport" />Futebol</label>
+            <label><input type="checkbox" name="CRonaldo" value="3" />Cristiano Ronaldo</label>
+            <label><input type="checkbox" name="Messi" value="1" />Messi</label>
+            <label><input type="checkbox" name="Neymar" value="2" />Neymar</label>
+          </section>
+
+          <section class="sports">
+            <label class="sport"><input type="radio" name="sport" />Formula 1</label>
+            <label><input type="checkbox" name="Vettel" value="4" />Ayrton Senna</label>
+            <label><input type="checkbox" name="Alonso" value="5" />Alain Prost</label>
+            <label><input type="checkbox" name="Hamilton" value="6" />Michael Schumacher</label>
+          </section>
+
+          <section class="sports">
+            <label class="sport"><input type="radio" name="sport" />Tenis</label>
+            <label><input type="checkbox" name="Djokovic" value="7" />Djokovic</label>
+            <label><input type="checkbox" name="Murray" value="8" />Murray</label>
+            <label><input type="checkbox" name="Ferrer" value="9" />Ferrer</label>
+          </section>
+        </form>
+
+        <script>
+          $(function () {
+            $("section.sports input:checkbox").attr("disabled", "disabled");
+
+            $("section.sports input:radio").click(function () {
+              //remove opção disabled
+              $("section.sports input:checkbox").removeAttr("disabled");
+
+              //desabilitar os outros
+              //siblings -> irmaos
+              $(this).parents(".sports").siblings(".sports").find(":checkbox").attr("disabled", "disabled");
+
+              $("section.sports input:checkbox").prop("checked", false);
+            });
+          });
+        </script>
+
+        <div class="code" style="margin-top: 20px">
+          <div>CSS</div>
+          <pre>
+          &lt;style&gt;
+            #form_sports section {
+              float: left;
+              margin-right: 10px;
+              border: 1px solid #ccc;
+              border-radius: 6px;
+              padding: 10px;
+              width: 190px;
+              height: 120px;
+              box-shadow: 0 0 4px #ccc;
+              background-color: #fff;
+            }
+
+            #form_sports label {
+              float: left;
+              width: 180px;
+              display: block;
+              margin-bottom: 5px;
+            }
+
+            #form_sports label.sport {
+              border-bottom: 1px dotted #ccc;
+              padding-bottom: 10px;
+              margin-bottom: 10px;
+            }
+          &lt;/style&gt;
+          </pre>
+        </div>
+
+        <div class="code">
+          <div>HTML</div>
+          <pre>
+            &lt;form action="#" method="get" id="form_sports"&gt;
+              &lt;section class="sports"&gt;
+                &lt;label class="sport"&gt;&lt;input type="radio" name="sport" /&gt;Futebol&lt;/label&gt;
+                &lt;label&gt;&lt;input type="checkbox" name="CRonaldo" value="3" /&gt;Cristiano Ronaldo&lt;/label&gt;
+                &lt;label&gt;&lt;input type="checkbox" name="Messi" value="1" /&gt;Messi&lt;/label&gt;
+                &lt;label&gt;&lt;input type="checkbox" name="Neymar" value="2" /&gt;Neymar&lt;/label&gt;
+              &lt;/section&gt;
+    
+              &lt;section class="sports"&gt;
+                &lt;label class="sport"&gt;&lt;input type="radio" name="sport" /&gt;Formula 1&lt;/label&gt;
+                &lt;label&gt;&lt;input type="checkbox" name="Vettel" value="4" /&gt;Ayrton Senna&lt;/label&gt;
+                &lt;label&gt;&lt;input type="checkbox" name="Alonso" value="5" /&gt;Alain Prost&lt;/label&gt;
+                &lt;label&gt;&lt;input type="checkbox" name="Hamilton" value="6" /&gt;Michael Schumacher&lt;/label&gt;
+              &lt;/section&gt;
+    
+              &lt;section class="sports"&gt;
+                &lt;label class="sport"&gt;&lt;input type="radio" name="sport" /&gt;Tenis&lt;/label&gt;
+                &lt;label&gt;&lt;input type="checkbox" name="Djokovic" value="7" /&gt;Djokovic&lt;/label&gt;
+                &lt;label&gt;&lt;input type="checkbox" name="Murray" value="8" /&gt;Murray&lt;/label&gt;
+                &lt;label&gt;&lt;input type="checkbox" name="Ferrer" value="9" /&gt;Ferrer&lt;/label&gt;
+              &lt;/section&gt;
+            &lt;/form&gt;
+          </pre>
+        </div>
+
+        <div class="code">
+          <div>JAVASCRIPT</div>
+          <pre>
+            &lt;script&gt;
+            $(function () {
+              $("section.sports input:checkbox").attr("disabled", "disabled");
+  
+              $("section.sports input:radio").click(function () {
+                //remove opção disabled
+                $("section.sports input:checkbox").removeAttr("disabled");
+  
+                //desabilitar os outros
+                //siblings -> irmaos
+                $(this).parents(".sports").siblings(".sports").find(":checkbox").attr("disabled", "disabled");
+  
+                $("section.sports input:checkbox").prop("checked", false);
+              });
+            });
+            &lt;/script&gt;
+          </pre>
+        </div>
+      </div>
+
+      <style>
+        #selectall form {
+          width: 280px;
+          margin: 50px auto;
+        }
+
+        #selectall section {
+          float: left;
+          margin-right: 10px;
+          border: 1px solid #ccc;
+          border-radius: 6px;
+          padding: 10px;
+          width: 250px;
+          box-shadow: 0 0 4px #ccc;
+          background-color: #fff;
+          margin-bottom: 20px;
+        }
+
+        #selectall label {
+          float: left;
+          width: 100%;
+          display: block;
+          margin-bottom: 5px;
+        }
+
+        #selectall label.sport {
+          border-bottom: 1px dotted #ccc;
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+        }
+      </style>
+
+      <div id="selectall" name="selectall" class="artigo" style="height: 1400px">
+        <h2>Select All</h2>
+
+        <form action="#" method="get" id="formulario">
+          <section>
+            <label><input type="checkbox" class="selectall" />Selecionar Todos</label>
+            <label><input type="checkbox" class="opcoes" />Carlos</label>
+            <label><input type="checkbox" class="opcoes" />Cristiano</label>
+            <label><input type="checkbox" class="opcoes" />João </label>
+            <label><input type="checkbox" class="opcoes" />Joca</label>
+            <label><input type="checkbox" class="opcoes" />José</label>
+            <label><input type="checkbox" class="opcoes" />Salomé</label>
+          </section>
+        </form>
+
+        <div class="code">
+          <div>CSS</div>
+          <pre>
+          &lt;style&gt;
+            #selectall form {
+              width: 280px;
+              margin: 50px auto;
+            }
+    
+            #selectall section {
+              float: left;
+              margin-right: 10px;
+              border: 1px solid #ccc;
+              border-radius: 6px;
+              padding: 10px;
+              width: 250px;
+              box-shadow: 0 0 4px #ccc;
+              background-color: #fff;
+            }
+    
+            #selectall label {
+              float: left;
+              width: 100%;
+              display: block;
+              margin-bottom: 5px;
+            }
+    
+            #selectall label.sport {
+              border-bottom: 1px dotted #ccc;
+              padding-bottom: 10px;
+              margin-bottom: 10px;
+            }
+          &lt;/style&gt;
+          </pre>
+        </div>
+
+        <div class="code">
+          <div>HTML</div>
+          <pre>
+      &lt;form action="#" method="get" id="formulario"&gt;
+        &lt;section&gt;
+          &lt;label&gt;&lt;input type="checkbox" class="selectall" /&gt;Selecionar Todos&lt;/label&gt;
+          &lt;label&gt;&lt;input type="checkbox" class="opcoes" /&gt;Carlos&lt;/label&gt;
+          &lt;label&gt;&lt;input type="checkbox" class="opcoes" /&gt;Cristiano&lt;/label&gt;
+          &lt;label&gt;&lt;input type="checkbox" class="opcoes" /&gt;João &lt;/label&gt;
+          &lt;label&gt;&lt;input type="checkbox" class="opcoes" /&gt;Joca&lt;/label&gt;
+          &lt;label&gt;&lt;input type="checkbox" class="opcoes" /&gt;José&lt;/label&gt;
+          &lt;label&gt;&lt;input type="checkbox" class="opcoes" /&gt;Salomé&lt;/label&gt;
+        &lt;/section&gt;
+      &lt;/form&gt;
+          </pre>
+        </div>
+
+<div class="code">
+  <div>JAVASCRIPT</div>
+  <pre>
+    &lt;script&gt;
+      $(function () {
+        $(".selectall").click(function () {
+          if ($(this).is(":checked")) {
+            $(".opcoes").prop("checked", true);
+          } else {
+            $(".opcoes").prop("checked", false);
+          }
+        });
+        $(".opcoes").click(function () {
+          $(".selectall").prop("checked", false);
+        });
+      });
+    &lt;/script&gt;
+  </pre>
+</div>
+
+      </div>
+
+      <script>
+        $(function () {
+          $(".selectall").click(function () {
+            if ($(this).is(":checked")) {
+              $(".opcoes").prop("checked", true);
+            } else {
+              $(".opcoes").prop("checked", false);
+            }
+          });
+          $(".opcoes").click(function () {
+            $(".selectall").prop("checked", false);
+          });
+        });
+      </script>
+
+
+
+      <hr />
+      <div style="padding: 50px">
+        <p>Código completo disponível no GitHub:</p>
+        <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
+      </div>
+    </main>
+  </body>
+</html>

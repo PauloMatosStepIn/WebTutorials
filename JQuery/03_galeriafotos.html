@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>JQuery Tutorials : Galeria Fotos</title>
+    <link rel="stylesheet" type="text/css" href="../css/SiteHeader.css" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  </head>
+  <body style="font-family: 'Nunito', 'Times New Roman', Times, serif">
+    <script src="external/jquery/jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+
+    <main>
+      <Siteheader>
+        <a style="padding: 20px" href="../index.html#jquery_03_galeriafotos">
+          <div class="DivLink">Return to Web Tutorials</div>
+        </a>
+      </Siteheader>
+
+      <style>
+        .artigo p {
+          padding-top: 10px;
+        }
+      </style>
+
+      <style>
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+        li {
+          float: left;
+          margin-right: 1px;
+          cursor: pointer;
+        }
+
+        #mainfoto {
+          width: 700px;
+          margin: 10px auto 0;
+        }
+        #galeria {
+          width: 700px;
+          margin: 0 auto;
+          margin-bottom: 50px;
+        }
+        #legenda {
+          float: left;
+          width: 350px;
+          height: 21px;
+          padding: 5px;
+          background-color: lightgray;
+          font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+          font-size: 18px;
+          color: #333;
+          text-align: center;
+        }
+
+        ul.album {
+          float: right;
+        }
+      </style>
+
+      <h1 style="margin-top: 10px">JQuery Tutorials : Galeria Fotos</h1>
+
+      <div id="galeria">
+        <ul class="album">
+          <li>
+            <a href="images/foto01.jpg"><img class="thumb" src="thumbnails/foto01.jpg" title="Título foto 1" /></a>
+          </li>
+          <li>
+            <a href="images/foto02.jpg"><img class="thumb" src="thumbnails/foto02.jpg" title="Título foto 2" /></a>
+          </li>
+          <li>
+            <a href="images/foto03.jpg"><img class="thumb" src="thumbnails/foto03.jpg" title="Título foto 3" /></a>
+          </li>
+          <li>
+            <a href="images/foto04.jpg"><img class="thumb" src="thumbnails/foto04.jpg" title="Título foto 4" /></a>
+          </li>
+          <li>
+            <a href="images/foto05.jpg"><img class="thumb" src="thumbnails/foto05.jpg" title="Título foto 5" /></a>
+          </li>
+          <li>
+            <a href="images/foto06.jpg"><img class="thumb" src="thumbnails/foto06.jpg" title="Título foto 6" /></a>
+          </li>
+        </ul>
+      </div>
+
+      <script>
+        $(function () {
+          //adicionar div legenda
+          $('<div id="legenda"></div>').insertBefore("ul.album");
+          //adicionar div foto
+          $('<div id="mainfoto"></div>').insertBefore("#legenda");
+          //adicionar tag de imagem
+          $("#mainfoto").prepend("<img />");
+          //adicionar foto a tag img
+          $("#mainfoto img").attr("src", $("#galeria a").attr("href"));
+          //adiciona texto a legenda
+          $("#legenda").text($("#galeria a img").attr("title"));
+
+          function abrirFoto(e) {
+            e.preventDefault();
+            $("#mainfoto img").attr("src", $(this).parent().attr("href"));
+            $("#legenda").text($(this).attr("title"));
+          }
+
+          $(".thumb").on("click", abrirFoto);
+        });
+      </script>
+
+      <div style="margin-top: 20px" class="code">
+        <div>CSS</div>
+        <pre>
+        &lt;style&gt;
+          ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+          }
+          li {
+            float: left;
+            margin-right: 1px;
+            cursor: pointer;
+          }
+  
+          #mainfoto {
+            width: 700px;
+            margin: 10px auto 0;
+          }
+          #galeria {
+            width: 700px;
+            margin: 0 auto;
+          }
+          #legenda {
+            float: left;
+            width: 350px;
+            height: 21px;
+            padding: 5px;
+            background-color: lightgray;
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+          }
+  
+          ul.album {
+            float: right;
+          }
+        &lt;/style&gt;
+        </pre>
+      </div>
+
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+          &lt:div id="galeria"&gt;
+            &lt:ul class="album"&gt;
+              &lt;li&gt;
+                &lt;a href="images/foto01.jpg"&gt;&lt;img class="thumb" src="thumbnails/foto01.jpg" title="Título foto 1" /&gt;&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href="images/foto02.jpg"&gt;&lt;img class="thumb" src="thumbnails/foto02.jpg" title="Título foto 2" /&gt;&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href="images/foto03.jpg"&gt;&lt;img class="thumb" src="thumbnails/foto03.jpg" title="Título foto 3" /&gt;&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href="images/foto04.jpg"&gt;&lt;img class="thumb" src="thumbnails/foto04.jpg" title="Título foto 4" /&gt;&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href="images/foto05.jpg"&gt;&lt;img class="thumb" src="thumbnails/foto05.jpg" title="Título foto 5" /&gt;&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href="images/foto06.jpg"&gt;&lt;img class="thumb" src="thumbnails/foto06.jpg" title="Título foto 6" /&gt;&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+        </pre>
+      </div>
+
+      <div class="code">
+        <div>JAVASCRIPT</div>
+        <pre>
+        &lt;script&gt;
+          $(function () {
+            //adicionar div legenda
+            $('<div id="legenda"></div>').insertBefore("ul.album");
+            //adicionar div foto
+            $('<div id="mainfoto"></div>').insertBefore("#legenda");
+            //adicionar tag de imagem
+            $("#mainfoto").prepend("<img />");
+            //adicionar foto a tag img
+            $("#mainfoto img").attr("src", $("#galeria a").attr("href"));
+            //adiciona texto a legenda
+            $("#legenda").text($("#galeria a img").attr("title"));
+  
+            function abrirFoto(e) {
+              e.preventDefault();
+              $("#mainfoto img").attr("src", $(this).parent().attr("href"));
+              $("#legenda").text($(this).attr("title"));
+            }
+  
+            $(".thumb").on("click", abrirFoto);
+          });
+        &lt;/script&gt;
+        </pre>
+      </div>
+
+      <div style="padding: 50px">
+        <p>Código completo disponível no GitHub:</p>
+        <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
+      </div>
+    </main>
+  </body>
+</html>
