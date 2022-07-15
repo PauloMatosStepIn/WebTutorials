@@ -1,0 +1,294 @@
+<!--
+***
+Credits:
+http://www.workshop.rs/jqbargraph/
+***
+-->
+
+<!DOCTYPE html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>JQuery Tutorials : Gráficos de Barras</title>
+    <link rel="stylesheet" type="text/css" href="../css/SiteHeader.css" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  </head>
+  <body style="font-family: 'Nunito', 'Times New Roman', Times, serif">
+    <link href="xzoom/css/xzoom.min.css" rel="stylesheet" />
+
+    <main>
+      <Siteheader>
+        <a style="padding: 20px" href="../index.html#jquery_07_graficos">
+          <div class="DivLink">Return to Web Tutorials</div>
+        </a>
+      </Siteheader>
+
+      <style>
+        .artigo p {
+          padding-top: 10px;
+        }
+      </style>
+
+      <h1 style="margin-top: 10px">JQuery Tutorials : Gráficos de Barras</h1>
+      <p>
+        Nesta página é usado o plugin jQuery <b><a href="http://www.workshop.rs/jqbargraph/">"jqBarGraph"</a></b>
+      </p>
+      <p>
+        jqBarGraph é um plugin jQuery que lhe dá liberdade para mostrar seus dados como gráficos. Existem três tipos de gráficos: simples, multiplos e em pilha. <br />
+        Apenas é necessário passar os dados para o plugin.
+      </p>
+
+      <p>Necessário fazer download do "jqBarGraph". Para o código seguinte funcionar foi necessário: criar as sub-directorias jqBarGraph\js (para onde foi copiado o ficheiro "jqBarGraph.1.1.min.js" do download)</p>
+
+      <style>
+        #grafico1,
+        #grafico2,
+        #grafico3
+         {
+          width: 600px;
+          height: 300px;
+          margin: 30px auto;
+          font-family: sans-serif;
+          font-size: 14px;
+          font-weight: bold;
+          color: rgb(100, 100, 100);
+        }
+      </style>
+
+      <h3>Gráfico Barras</h3>
+      <div id="grafico1"></div>
+
+      <div class="code">
+        <div>CSS</div>
+        <pre>
+        &lt;style&gt;
+          #grafico1
+           {
+            width: 600px;
+            height: 300px;
+            margin: 30px auto;
+            font-family: sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: rgb(100, 100, 100);
+          } 
+        &lt;/style&gt;
+        </pre>
+      </div>
+
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+          &lt;div id="grafico1"&gt;&lt;/div&gt;
+        </pre>
+      </div>
+
+      <div class="code">
+        <div>JAVASCRIPT</div>
+        <pre>
+          &lt;script src="external/jquery/jquery.js"&gt;&lt;/script&gt;
+          &lt;script src="jquery-ui.js"&gt;&lt;/script&gt;
+          &lt;script src="jqBarGraph/js/jqBarGraph.1.1.min.js"&gt;&lt;/script&gt;
+      
+          &lt;script&gt;
+          $(function () {
+            var DadosGrafico1 = new Array([10, "Jan", "#00429d"], [15, "Fev", "#3965ad"], [12, "Mar", "#5889bd"], [13, "Abr", "#74aece"], [9, "Mai", "#91d4df"], [15, "Jun", "#c3f7f6"]);
+            $("#grafico1").jqBarGraph({
+              data: DadosGrafico1,
+              width: 600,
+              height: 300,
+              barSpace: 5,
+              speed: 1,
+              //sort:"asc",
+              //sort:"desc",
+              prefix: "EUR ",
+              postfix: ",00",
+              position: "bottom", //default
+              //position:"top",
+            });
+          });
+          &lt;/script&gt;
+        </pre>
+      </div>
+
+<hr>
+      <h3>Gráfico Barras Compostas</h3>
+      <div id="grafico2"></div>
+
+      <div class="code">
+        <div>CSS</div>
+        <pre>
+        &lt;style&gt;
+          #grafico2
+           {
+            width: 600px;
+            height: 300px;
+            margin: 30px auto;
+            font-family: sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: rgb(100, 100, 100);
+          } 
+        &lt;/style&gt;
+        </pre>
+      </div>
+
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+          &lt;div id="grafico2"&gt;&lt;/div&gt;
+        </pre>
+      </div>
+
+      <div class="code">
+        <div>JAVASCRIPT</div>
+        <pre>
+          &lt;script src="external/jquery/jquery.js"&gt;&lt;/script&gt;
+          &lt;script src="jquery-ui.js"&gt;&lt;/script&gt;
+          &lt;script src="jqBarGraph/js/jqBarGraph.1.1.min.js"&gt;&lt;/script&gt;
+      
+          &lt;script&gt;
+          $(function () {
+            var DadosGrafico2 = new Array([[18, 50, 51], "2019"], [[20, 76, 64], "2020"], [[15, 81, 73], "2021"], [[25, 86, 54], "2022"]);
+            $("#grafico2").jqBarGraph({
+              data: DadosGrafico2,
+              width: 600,
+              height: 300,
+              barSpace: 5,
+              speed: 1,
+              colors: ["#00429d", "#669bc6", "#91d4df"],
+              legend:true,
+              legends:['Operação','Produção','Distrib.']
+            });
+          });
+          &lt;/script&gt;
+        </pre>
+      </div>
+
+
+<hr>
+      <h3>Gráfico Barras Múltiplas</h3>
+      <div id="grafico3"></div>
+
+      <div class="code">
+        <div>CSS</div>
+        <pre>
+        &lt;style&gt;
+          #grafico3
+           {
+            width: 600px;
+            height: 300px;
+            margin: 30px auto;
+            font-family: sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: rgb(100, 100, 100);
+          } 
+        &lt;/style&gt;
+        </pre>
+      </div>
+
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+          &lt;div id="grafico3"&gt;&lt;/div&gt;
+        </pre>
+      </div>
+
+      <div class="code">
+        <div>JAVASCRIPT</div>
+        <pre>
+          &lt;script src="external/jquery/jquery.js"&gt;&lt;/script&gt;
+          &lt;script src="jquery-ui.js"&gt;&lt;/script&gt;
+          &lt;script src="jqBarGraph/js/jqBarGraph.1.1.min.js"&gt;&lt;/script&gt;
+      
+          &lt;script&gt;
+          $(function () {
+            var DadosGrafico3 = new Array([[18, 50, 51], "2019"], [[20, 76, 64], "2020"], [[15, 81, 73], "2021"], [[25, 86, 54], "2022"]);
+            $("#grafico3").jqBarGraph({
+              data: DadosGrafico3,
+              width: 600,
+              height: 300,
+              barSpace: 15,
+              speed: 1,
+              colors: ["#00429d", "#669bc6", "#91d4df"],
+              legend:true,
+              legends:['Operação','Produção','Distrib.'],
+              type:"multi"
+            });
+          });
+          &lt;/script&gt;
+        </pre>
+      </div>
+
+
+      <hr />
+      <div style="padding: 50px">
+        <p>Código completo disponível no GitHub:</p>
+        <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
+      </div>
+    </main>
+
+    <script src="external/jquery/jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="jqBarGraph/js/jqBarGraph.1.1.min.js"></script>
+
+    <script>
+      $(function () {
+        var DadosGrafico1 = new Array([10, "Jan", "#00429d"], [15, "Fev", "#3965ad"], [12, "Mar", "#5889bd"], [13, "Abr", "#74aece"], [9, "Mai", "#91d4df"], [15, "Jun", "#c3f7f6"]);
+        $("#grafico1").jqBarGraph({
+          data: DadosGrafico1,
+          width: 600,
+          height: 300,
+          barSpace: 5,
+          speed: 1,
+          //sort:"asc",
+          //sort:"desc",
+          prefix: "EUR ",
+          postfix: ",00",
+          position: "bottom", //default
+          //position:"top",
+        });
+      });
+    </script>
+
+    <script>
+      $(function () {
+        var DadosGrafico2 = new Array([[18, 50, 51], "2019"], [[20, 76, 64], "2020"], [[15, 81, 73], "2021"], [[25, 86, 54], "2022"]);
+        $("#grafico2").jqBarGraph({
+          data: DadosGrafico2,
+          width: 600,
+          height: 300,
+          barSpace: 5,
+          speed: 1,
+          colors: ["#00429d", "#669bc6", "#91d4df"],
+          legend:true,
+          legends:['Operação','Produção','Distrib.']
+        });
+      });
+    </script>
+
+<script>
+  $(function () {
+    var DadosGrafico3 = new Array([[18, 50, 51], "2019"], [[20, 76, 64], "2020"], [[15, 81, 73], "2021"], [[25, 86, 54], "2022"]);
+    $("#grafico3").jqBarGraph({
+      data: DadosGrafico3,
+      width: 600,
+      height: 300,
+      barSpace: 15,
+      speed: 1,
+      colors: ["#00429d", "#669bc6", "#91d4df"],
+      legend:true,
+      legends:['Operação','Produção','Distrib.'],
+      type:"multi"
+    });
+  });
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,307 @@
+<!--
+***
+Credits:
+https://rendro.github.io/easy-pie-chart/
+***
+-->
+
+<!DOCTYPE html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>JQuery Tutorials : Gráficos de Pizza (Pie Charts)</title>
+    <link rel="stylesheet" type="text/css" href="../css/SiteHeader.css" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  </head>
+  <body style="font-family: 'Nunito', 'Times New Roman', Times, serif">
+    <link href="xzoom/css/xzoom.min.css" rel="stylesheet" />
+
+    <style>
+      #area_grafico {
+        padding: 0;
+        margin: 0;
+        -webkit-font-smoothing: antialiased;
+        text-align: center;
+        font: 18px / 1.4 "Helvetica", "Arial", sans-serif;
+      }
+      .chart {
+        position: relative;
+        display: inline-block;
+        width: 110px;
+        height: 110px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        text-align: center;
+      }
+      .chart canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .percent {
+        display: inline-block;
+        line-height: 110px;
+        z-index: 2;
+      }
+      .percent:after {
+        content: "%";
+        margin-left: 0.1em;
+        font-size: 0.8em;
+      }
+    </style>
+
+    <main>
+      <Siteheader>
+        <a style="padding: 70px 20px 20px 20px" href="../index.html#jquery_08_pie">
+          <div class="DivLink">Return to Web Tutorials</div>
+        </a>
+      </Siteheader>
+
+      <style>
+        .artigo p {
+          padding-top: 10px;
+        }
+      </style>
+
+      <h1 style="margin-top: 10px">JQuery Tutorials : Gráficos de Pizza (Pie Charts)</h1>
+      <p>
+        Nesta página é usado o plugin jQuery <b><a href="https://rendro.github.io/easy-pie-chart/">"easy-pie-chart"</a></b>
+      </p>
+      <p>Lightweight jQuery plugin to render and animate nice pie charts with the HTML5 canvas element</p>
+
+      <p>Necessário fazer download do "easy-pie-chart". Para o código seguinte funcionar foi necessário: criar as sub-directorias easy-pie-chart\js (para onde foi copiado jquery.easypiechart.min.js do directório "dist" do download)</p>
+
+      <style>
+        ul {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          margin: 0;
+          padding: 0;
+          height: 60px;
+          background-color: lightgray;
+          color: black;
+          font-size: 0;
+          line-height: 0;
+          letter-spacing: -0.3em;
+        }
+        li {
+          position: relative;
+          display: inline-block;
+          vertical-align: top;
+          width: 25%;
+          text-align: center;
+          font-size: 12px;
+          line-height: 60px;
+          letter-spacing: normal;
+        }
+
+        #scroll_value:before {
+          content: "V-Scroll Position: ";
+        }
+        #MousePosY:before {
+          content: "V-Mouse Position: ";
+        }
+        #window_height:before {
+          content: "Window Height: ";
+        }
+      </style>
+      <ul>
+        <li id="scroll_value">0</li>
+        <li id="MousePosY"></li>
+        <li id="window_height"></li>
+      </ul>
+
+      <div style="width: 100%; height: 500px; background-color: gray"><p style="padding: 200px">O gráfico só vai começar a animação inicial quando o scroll-vertical da página chegar ao gráfico, assim foi criada uma área apenas para que o gráfico não apareça quando se abre a página.</p></div>
+
+      <h3>Pie Chart</h3>
+      <div id="area_grafico">
+        <div class="chart" id="grafico1" data-percent="40">
+          <div class="percent"></div>
+        </div>
+      </div>
+      <div id="mensagens">
+        <label></label><br />
+        <label></label>
+      </div>
+
+<div class="code">
+  <div>CSS</div>
+  <pre>
+    &lt;style&gt;
+    #area_grafico {
+      padding: 0;
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+      text-align: center;
+      font: 18px / 1.4 "Helvetica", "Arial", sans-serif;
+    }
+    .chart {
+      position: relative;
+      display: inline-block;
+      width: 110px;
+      height: 110px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+    .chart canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .percent {
+      display: inline-block;
+      line-height: 110px;
+      z-index: 2;
+    }
+    .percent:after {
+      content: "%";
+      margin-left: 0.1em;
+      font-size: 0.8em;
+    }
+    &lt;/style&gt;
+  </pre>
+</div>
+
+<div class="code">
+  <div>HTML</div>
+  <pre>
+    &lt;div id="area_grafico"&gt;
+      &lt;div class="chart" id="grafico1" data-percent="40"&gt;
+        &lt;div class="percent"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id="mensagens"&gt;
+      &lt;label&gt;&lt;/label&gt;&lt;br /&gt;
+      &lt;label&gt;&lt;/label&gt;
+    &lt;/div&gt;
+  </pre>
+</div>
+
+<div class="code">
+  <div>JAVASCRIPT</div>
+  <pre>
+    &lt;script src="external/jquery/jquery.js"&gt;&lt;/script&gt;
+    &lt;script src="jquery-ui.js"&gt;&lt;/script&gt;
+    &lt;script src="easy-pie-chart/js/jquery.easypiechart.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+    function reportWindowSize() {
+      $("#window_height").text($(window).innerHeight());
+    }
+
+    window.onresize = reportWindowSize;
+
+    //initial values
+    $("#window_height").text($(window).height());
+    $("#scroll_value").text($(this).scrollTop());
+
+    $(document).mousemove(function (event) {
+      $("#MousePosY").text(event.pageY);
+    });
+
+    $(window).scroll(function () {
+      $("#scroll_value").text(Math.round($(this).scrollTop()));
+
+      //window bottom
+      var v_pos_current = $(this).scrollTop() + $(window).height();
+
+      //bottom graph position
+      var v_pos_obj = 1040;
+
+      if (v_pos_current >= v_pos_obj) iniciarAnimacao();
+    });
+
+    function iniciarAnimacao() {
+      $("#grafico1").easyPieChart({
+        barColor: "orange",
+        trackColor: "lightgray",
+        scaleColor: false,
+        lineWidth: 10,
+        lineCap: "butt", //default: round, other values: square, butt
+        animate: 3000,
+        onStart: function () {
+          $("#mensagens label:nth-child(1)").text("Animation Started");
+        },
+        onStop: function () {
+          $("#mensagens label:nth-child(3)").text("Animation Finished");
+        },
+        onStep: function (from, to, percent) {
+          //elemento que chamou
+          $(this.el).find(".percent").text(Math.round(percent));
+        },
+      });
+      $(".percent").text($("#grafico1").attr("data-percent"));
+    }
+    &lt;/script&gt;
+  </pre>
+</div>
+
+      <hr />
+      <div style="padding: 50px">
+        <p>Código completo disponível no GitHub:</p>
+        <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">github.com : WebTutorials</a>
+      </div>
+    </main>
+
+    <script src="external/jquery/jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="easy-pie-chart/js/jquery.easypiechart.min.js"></script>
+
+    <script>
+      function reportWindowSize() {
+        $("#window_height").text($(window).innerHeight());
+      }
+
+      window.onresize = reportWindowSize;
+
+      //initial values
+      $("#window_height").text($(window).height());
+      $("#scroll_value").text($(this).scrollTop());
+
+      $(document).mousemove(function (event) {
+        $("#MousePosY").text(event.pageY);
+      });
+
+      $(window).scroll(function () {
+        $("#scroll_value").text(Math.round($(this).scrollTop()));
+
+        //window bottom
+        var v_pos_current = $(this).scrollTop() + $(window).height();
+
+        //bottom graph position
+        var v_pos_obj = 1040;
+
+        if (v_pos_current >= v_pos_obj) iniciarAnimacao();
+      });
+
+      function iniciarAnimacao() {
+        $("#grafico1").easyPieChart({
+          barColor: "orange",
+          trackColor: "lightgray",
+          scaleColor: false,
+          lineWidth: 10,
+          lineCap: "butt", //default: round, other values: square, butt
+          animate: 3000,
+          onStart: function () {
+            $("#mensagens label:nth-child(1)").text("Animation Started");
+          },
+          onStop: function () {
+            $("#mensagens label:nth-child(3)").text("Animation Finished");
+          },
+          onStep: function (from, to, percent) {
+            //elemento que chamou
+            $(this.el).find(".percent").text(Math.round(percent));
+          },
+        });
+        $(".percent").text($("#grafico1").attr("data-percent"));
+      }
+    </script>
+  </body>
+</html>

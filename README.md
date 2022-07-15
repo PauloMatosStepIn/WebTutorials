@@ -62,6 +62,8 @@ Código completo disponível no GitHub
 1. Select Box User Friendly [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/04_SelectBoxUserFriendly.html)
 2. Zoom on Image [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/05_zoom.html)
 3. Zoom fora do Objecto [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/06_xzoom.html)
+4. Gráficos de Barras [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/07_graficos.html)
+5. Gráficos de Pizza (Pie Charts) [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/JQuery/08_pie.html)
 
 ## GitHub Tutorials
 
@@ -82,3 +84,4 @@ Código completo disponível no GitHub
 7. jQuery Super Labels Plugin [&lt;site&gt;](https://github.com/remybach/jQuery.superLabels)
 8. jQuery Light-Zoom Plugin [&lt;site&gt;](https://github.com/JafarAkhondali/lightzoom)
 9. jQuery xZoom Plugin [&lt;site&gt;](https://payalord.github.io/xZoom/)
+10. jQuery easy-pie-chart Plugin [&lt;site&gt;](https://rendro.github.io/easy-pie-chart/)
