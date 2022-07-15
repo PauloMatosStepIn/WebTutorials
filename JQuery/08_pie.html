@@ -131,9 +131,9 @@ https://rendro.github.io/easy-pie-chart/
         <label></label>
       </div>
 
-<div class="code">
-  <div>CSS</div>
-  <pre>
+      <div class="code">
+        <div>CSS</div>
+        <pre>
     &lt;style&gt;
     #area_grafico {
       padding: 0;
@@ -167,12 +167,13 @@ https://rendro.github.io/easy-pie-chart/
       font-size: 0.8em;
     }
     &lt;/style&gt;
-  </pre>
-</div>
+  </pre
+        >
+      </div>
 
-<div class="code">
-  <div>HTML</div>
-  <pre>
+      <div class="code">
+        <div>HTML</div>
+        <pre>
     &lt;div id="area_grafico"&gt;
       &lt;div class="chart" id="grafico1" data-percent="40"&gt;
         &lt;div class="percent"&gt;&lt;/div&gt;
@@ -182,16 +183,20 @@ https://rendro.github.io/easy-pie-chart/
       &lt;label&gt;&lt;/label&gt;&lt;br /&gt;
       &lt;label&gt;&lt;/label&gt;
     &lt;/div&gt;
-  </pre>
-</div>
+  </pre
+        >
+      </div>
 
-<div class="code">
-  <div>JAVASCRIPT</div>
-  <pre>
+      <div class="code">
+        <div>JAVASCRIPT</div>
+        <pre>
     &lt;script src="external/jquery/jquery.js"&gt;&lt;/script&gt;
     &lt;script src="jquery-ui.js"&gt;&lt;/script&gt;
     &lt;script src="easy-pie-chart/js/jquery.easypiechart.min.js"&gt;&lt;/script&gt;
     &lt;script&gt;
+    //bottom graph position
+    var v_pos_obj = 1040;
+
     function reportWindowSize() {
       $("#window_height").text($(window).innerHeight());
     }
@@ -206,14 +211,15 @@ https://rendro.github.io/easy-pie-chart/
       $("#MousePosY").text(event.pageY);
     });
 
+    if ($(window).height() > v_pos_obj) {
+      iniciarAnimacao();
+    }
+
     $(window).scroll(function () {
       $("#scroll_value").text(Math.round($(this).scrollTop()));
 
       //window bottom
       var v_pos_current = $(this).scrollTop() + $(window).height();
-
-      //bottom graph position
-      var v_pos_obj = 1040;
 
       if (v_pos_current >= v_pos_obj) iniciarAnimacao();
     });
@@ -239,9 +245,10 @@ https://rendro.github.io/easy-pie-chart/
       });
       $(".percent").text($("#grafico1").attr("data-percent"));
     }
-    &lt;/script&gt;
-  </pre>
-</div>
+  &lt;/script&gt;
+  </pre
+        >
+      </div>
 
       <hr />
       <div style="padding: 50px">
@@ -255,6 +262,9 @@ https://rendro.github.io/easy-pie-chart/
     <script src="easy-pie-chart/js/jquery.easypiechart.min.js"></script>
 
     <script>
+      //bottom graph position
+      var v_pos_obj = 1040;
+
       function reportWindowSize() {
         $("#window_height").text($(window).innerHeight());
       }
@@ -269,14 +279,15 @@ https://rendro.github.io/easy-pie-chart/
         $("#MousePosY").text(event.pageY);
       });
 
+      if ($(window).height() > v_pos_obj) {
+        iniciarAnimacao();
+      }
+
       $(window).scroll(function () {
         $("#scroll_value").text(Math.round($(this).scrollTop()));
 
         //window bottom
         var v_pos_current = $(this).scrollTop() + $(window).height();
-
-        //bottom graph position
-        var v_pos_obj = 1040;
 
         if (v_pos_current >= v_pos_obj) iniciarAnimacao();
       });
