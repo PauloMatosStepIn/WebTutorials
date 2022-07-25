@@ -8,7 +8,6 @@
     <title>GitHub Tutorials : Repositório GitHub</title>
     <link rel="stylesheet" type="text/css" href="../css/styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
-
   </head>
   <body>
     <main>
@@ -17,22 +16,39 @@
       </a>
       <div class="artigo">
         <h2>GitHub Tutorials : Repositório GitHub</h2>
+        <h3>Para a criação dum Repositório GitHub:</h3>
         <p>
-          Para a criação dum Repositório GitHub:<br/>
-          - Abrir o gitHub no browser<br/>
-          - Fazer "Sign In" na sua conta, caso não tenha, efectuar primeiro "Sign Up"<br/>
-          - Ir para "Repositories", clicar em "NEW"<br/>
-          - Preencher "Repository name"<br/>
-          - Preencher "Description"<br/>
-          - Escolher "Public" (caso pretenda que fique visível publicamente) ou "Private" (caso pretenda manter o conteúdo apenas para si)<br/>
-          - Clicar em: "Create repository"<br/>
-          - Na página de "Quick Setup" escolher a opção SSh, e copiar a linha que começa com: "<i>git remote add origin git@github.com:</i>"<br/>
-          - Ir para o terminal do VsCode do Projecto criado localmente e executar a linha copiada.<br/>
-          - Excecutar: "git push origin master" (p/actualizar GitHub Repo com a versão local)<br/>
-          (Verificar conteúdo no GitHub)<br/>
+          - Abrir o gitHub no browser<br />
+          - Fazer "Sign In" na sua conta, caso não tenha, efectuar primeiro "Sign Up"<br />
+          - Ir para "Repositories", clicar em "NEW"<br />
+          - Preencher "Repository name"<br />
+          - Preencher "Description"<br />
+          - Escolher "Public" (caso pretenda que fique visível publicamente) ou "Private" (caso pretenda manter o conteúdo apenas para si)<br />
+          - Clicar em: "Create repository"<br />
+          <br />
+          - Na página de "Quick Setup" escolher a opção SSh, e copiar a linha que começa com: "<i>git remote add origin git@github.com:</i>"<br />
+          - Ir para o terminal do VsCode do Projecto criado localmente e executar a linha copiada.<br />
+          <br />
+          - Opcionalmente, na página do repositório Clicar na opção <b>Code</b>, escolher <b>SSH</b>,<br />
+          copiar o endereço que começa em: git@github.com e excutar no Terminal do VsCode o comando:<br />
+          <b>git remote add origin &lt;string copiada&gt;</b><br />
+          <br />
+          - Executar: "<b>git push origin master</b>" (p/actualizar GitHub Repo com a versão local)<br />
+          (Verificar conteúdo no GitHub)<br />
+          <br />
+          De forma a evitar ter de dar o comando:<br />
+          "git push origin master"<br />
+          Faça o Set up branch 'master' to track 'origin/master' executando o comando:<br />
+          - "<b>git push --set-upstream origin master</b>"<br />
+          <br />
+          Assim, pode passar a executar apenas o comando:<br />
+          "git push"<br />
+          <br />
+          <br />
+          <br />
+          <br /><i>Dica: para abrir o <b>Terminal</b> no VsCode pode usar a combinação de teclas: <b>Ctrl-Shift-Ç</b> (Num teclado Português)</i>
         </p>
       </div>
-
 
       <hr />
       <div style="padding: 50px">
