@@ -4,142 +4,184 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    
-    <link rel="stylesheet" href="../css/code.css">
-    <link rel="stylesheet" href="../css/SiteHeader.css">
-    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/code.css" />
+    <link rel="stylesheet" href="../css/SiteHeader.css" />
+    <link rel="stylesheet" href="../css/main.css" />
 
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
-  
 
-
-    <title>Web Tutorials - Bootstrap - Tabs</title>
+    <title>Web Tutorials - Bootstrap5 - Tabs</title>
   </head>
-  <body style="font-family: Nunito;">
+  <body style="font-family: Nunito">
     <div class="container">
       <SiteHeader>
-        <a style="padding-top: 20px;text-decoration: none;" href="../index.html#bootstrap_tabs">
+        <a style="padding-top: 20px; text-decoration: none" href="../index.html#bootstrap_tabs">
           <div class="DivLink">Return to Web Tutorials</div>
         </a>
       </SiteHeader>
 
-
-      <h1>Web Tutorials - Bootstrap</h1>
+      <h1>Web Tutorials - Bootstrap 5</h1>
       <h2>Bootstrap Tabs</h2>
-      <p>Bootstrap Tabs (nav-tabs) com a Tab Escolhida gravada no "local storage"
-      </p>
+      <p>Bootstrap Tabs (nav-tabs) com a Tab Escolhida gravada no "local storage"</p>
       <div>
         <!-- Nav tabs -->
-        <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-          <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-          <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-          <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home" data-bs-toggle="tab">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#profile" data-bs-toggle="tab">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#messages" data-bs-toggle="tab">Messages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#settings" data-bs-toggle="tab">Settings</a>
+          </li>
         </ul>
 
         <!-- Tab panes -->
         <div class="tab-content">
-          <div role="tabpanel" class="tab-pane active" id="home">Home Lorem ipsum dolor sit amet consectetur adipisicing elit. In deserunt laboriosam et voluptates provident sapiente? Eaque exercitationem ab repellendus, rerum soluta veniam, vel suscipit quisquam beatae, doloribus officiis laudantium laborum mollitia autem possimus quibusdam? Illo, ullam! Voluptatum illum nostrum inventore distinctio dolore nam dolores ducimus aut, maiores aspernatur doloribus blanditiis odit ullam, temporibus qui. Distinctio provident ut quas aliquam reprehenderit hic enim corrupti. Labore saepe voluptatum voluptates quia recusandae! Error pariatur voluptatum voluptate minima. Suscipit, illo at eos modi asperiores eum corporis quidem adipisci quos quae inventore maiores voluptas, dicta veniam hic vitae impedit voluptatibus, vero neque odio eaque iste?</div>
-          <div role="tabpanel" class="tab-pane" id="profile">Profile Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti tenetur excepturi voluptate deserunt exercitationem! Maiores consequatur adipisci labore, quis animi ipsa? In illo dolores officia et esse est facere asperiores quia sequi velit expedita iusto modi cupiditate harum quos perferendis sed deleniti, dolor aut quisquam, consequuntur omnis consectetur. Similique, ab modi? Et, laboriosam? Dolorem sequi voluptate inventore harum, nemo culpa vitae sint laborum, ipsum excepturi, eius nihil neque! Quidem pariatur veritatis fuga rem expedita cum praesentium accusantium voluptatem cumque, iure aliquam quod nam et modi impedit voluptatum doloremque voluptate ad architecto distinctio fugit. At temporibus adipisci, deserunt laboriosam accusantium iure eos possimus facilis nemo non eligendi quaerat repellat harum illum modi. Repudiandae, sequi ad. Aspernatur in dignissimos accusamus, doloremque aut vel, eum possimus sed sapiente blanditiis numquam? Deserunt temporibus in harum eveniet ad accusamus maiores sed dolores iure ipsam alias ea doloribus, aperiam ratione natus aliquid veritatis tempore cupiditate dicta eos autem saepe expedita inventore! Reprehenderit, labore temporibus. Corrupti exercitationem amet veniam iure eaque delectus? Sit, quo, aspernatur, quae fuga soluta vel nemo architecto nihil eveniet sapiente impedit consectetur culpa doloribus nam quidem officiis odio earum alias. Soluta, labore debitis saepe reiciendis id inventore magni hic exercitationem voluptate quod! Rerum.</div>
-          <div role="tabpanel" class="tab-pane" id="messages">Message Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia unde incidunt deserunt iure minima eveniet perspiciatis reprehenderit necessitatibus, ut molestiae? Molestiae facere, voluptate fugit rem laboriosam tenetur asperiores nisi ea eum ducimus nostrum accusantium quasi. Cupiditate fugit dicta, quis nam, quidem impedit sed, eaque illum officiis nostrum voluptates quaerat porro.</div>
-          <div role="tabpanel" class="tab-pane" id="settings">Settings Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam maxime voluptatem itaque necessitatibus assumenda fugit dolorum distinctio error! Magnam, aperiam!</div>
+          <div class="tab-pane fade show active" id="home">Home Lorem ipsum dolor sit amet consectetur adipisicing elit. In deserunt laboriosam et voluptates provident sapiente? Eaque exercitationem ab repellendus, rerum soluta veniam, vel suscipit quisquam beatae, doloribus officiis laudantium laborum mollitia autem possimus quibusdam? Illo, ullam! Voluptatum illum nostrum inventore distinctio dolore nam dolores ducimus aut, maiores aspernatur doloribus blanditiis odit ullam, temporibus qui. Distinctio provident ut quas aliquam reprehenderit hic enim corrupti. Labore saepe voluptatum voluptates quia recusandae! Error pariatur voluptatum voluptate minima. Suscipit, illo at eos modi asperiores eum corporis quidem adipisci quos quae inventore maiores voluptas, dicta veniam hic vitae impedit voluptatibus, vero neque odio eaque iste?</div>
+          <div class="tab-pane fade" id="profile">Profile Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti tenetur excepturi voluptate deserunt exercitationem! Maiores consequatur adipisci labore, quis animi ipsa? In illo dolores officia et esse est facere asperiores quia sequi velit expedita iusto modi cupiditate harum quos perferendis sed deleniti, dolor aut quisquam, consequuntur omnis consectetur. Similique, ab modi? Et, laboriosam? Dolorem sequi voluptate inventore harum, nemo culpa vitae sint laborum, ipsum excepturi, eius nihil neque! Quidem pariatur veritatis fuga rem expedita cum praesentium accusantium voluptatem cumque, iure aliquam quod nam et modi impedit voluptatum doloremque voluptate ad architecto distinctio fugit. At temporibus adipisci, deserunt laboriosam accusantium iure eos possimus facilis nemo non eligendi quaerat repellat harum illum modi. Repudiandae, sequi ad. Aspernatur in dignissimos accusamus, doloremque aut vel, eum possimus sed sapiente blanditiis numquam? Deserunt temporibus in harum eveniet ad accusamus maiores sed dolores iure ipsam alias ea doloribus, aperiam ratione natus aliquid veritatis tempore cupiditate dicta eos autem saepe expedita inventore! Reprehenderit, labore temporibus. Corrupti exercitationem amet veniam iure eaque delectus? Sit, quo, aspernatur, quae fuga soluta vel nemo architecto nihil eveniet sapiente impedit consectetur culpa doloribus nam quidem officiis odio earum alias. Soluta, labore debitis saepe reiciendis id inventore magni hic exercitationem voluptate quod! Rerum.</div>
+          <div class="tab-pane fade" id="messages">Message Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia unde incidunt deserunt iure minima eveniet perspiciatis reprehenderit necessitatibus, ut molestiae? Molestiae facere, voluptate fugit rem laboriosam tenetur asperiores nisi ea eum ducimus nostrum accusantium quasi. Cupiditate fugit dicta, quis nam, quidem impedit sed, eaque illum officiis nostrum voluptates quaerat porro.</div>
+          <div class="tab-pane fade" id="settings">Settings Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam maxime voluptatem itaque necessitatibus assumenda fugit dolorum distinctio error! Magnam, aperiam!</div>
         </div>
 
-        <p style="margin-top: 40px;">Basta substituir a class <b><i>nav-tabs</i></b> pela class <b><i>nav-pills</i></b> para ficar com aspecto de botão<br/>
-        acrescentando a class <b><i>nav-justified</i></b> permite estender a toda a largura. <br/>
-        Também existe a opção <b><i>nav-stacked</i></b> para apresentação em Pilha.
+        <p style="margin-top: 40px">
+          Basta substituir a class <b><i>nav-tabs</i></b> pela class <b><i>nav-pills</i></b> para ficar com aspecto de botão<br />
+          acrescentando a class <b><i>nav-justified</i></b> permite estender a toda a largura. <br />
+          Também existe a opção <b><i>nav-stacked</i></b> para apresentação em Pilha.
         </p>
-        
-        <!-- Nav pills -->
-        <ul class="nav nav-pills nav-justified" role="tablist">
-          <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-          <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-          <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-          <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
-        </ul>
 
-        
+        <!-- Nav pills -->
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home" data-bs-toggle="tab">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#profile" data-bs-toggle="tab">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#messages" data-bs-toggle="tab">Messages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#settings" data-bs-toggle="tab">Settings</a>
+          </li>
+        </ul>
       </div>
 
-<div class="code">
-  <div>HEADERS</div>
-  <pre>
-    &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" /&gt;
-    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;/script&gt;
-    &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"&gt;</script&gt;
-  </pre>
-</div>
+      <div class="code">
+        <div>HEADERS</div>
+        <pre>
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" /&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"&gt;&lt;/script&gt;
+  </pre
+        >
+      </div>
 
       <div class="code">
         <div>HTML</div>
         <pre>
-  &lt;div&gt;
-    &lt;!-- Nav tabs --&gt;
-    &lt;ul class="nav nav-tabs" role="tablist"&gt;
-      &lt;li role="presentation" class="active"&gt;&lt;a href="#home" aria-controls="home" role="tab" data-toggle="tab"&gt;Home&lt;/a&gt;&lt;/li&gt;
-      &lt;li role="presentation"&gt;&lt;a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"&gt;Profile&lt;/a&gt;&lt;/li&gt;
-      &lt;li role="presentation"&gt;&lt;a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"&gt;Messages&lt;/a&gt;&lt;/li&gt;
-      &lt;li role="presentation"&gt;&lt;a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"&gt;Settings&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;!-- Tab panes --&gt;
-    &lt;div class="tab-content"&gt;
-      &lt;div role="tabpanel" class="tab-pane active" id="home"&gt;Home...&lt;/div&gt;
-      &lt;div role="tabpanel" class="tab-pane" id="profile"&gt;Profile...&lt;/div&gt;
-      &lt;div role="tabpanel" class="tab-pane" id="messages"&gt;Message...&lt;/div&gt;
-      &lt;div role="tabpanel" class="tab-pane" id="settings"&gt;Settings...&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-        </pre>
+          &lt;ul class="nav nav-tabs"&gt;
+            &lt;li class="nav-item"&gt;
+              &lt;a class="nav-link active" href="#home" data-bs-toggle="tab"&gt;Home&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="nav-item"&gt;
+              &lt;a class="nav-link" href="#profile" data-bs-toggle="tab"&gt;Profile&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="nav-item"&gt;
+              &lt;a class="nav-link" href="#messages" data-bs-toggle="tab"&gt;Messages&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="nav-item"&gt;
+              &lt;a class="nav-link" href="#settings" data-bs-toggle="tab"&gt;Settings&lt;/a&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+  
+          &lt;!-- Tab panes --&gt;
+          &lt;div class="tab-content"&gt;
+            &lt;div class="tab-pane fade show active" id="home"&gt;Home Lorem ipsum dolor sit amet consectetur adipisicing elit. In deserunt laboriosam et voluptates provident sapiente? Eaque exercitationem ab repellendus, rerum soluta veniam, vel suscipit quisquam beatae, doloribus officiis laudantium laborum mollitia autem possimus quibusdam? Illo, ullam! Voluptatum illum nostrum inventore distinctio dolore nam dolores ducimus aut, maiores aspernatur doloribus blanditiis odit ullam, temporibus qui. Distinctio provident ut quas aliquam reprehenderit hic enim corrupti. Labore saepe voluptatum voluptates quia recusandae! Error pariatur voluptatum voluptate minima. Suscipit, illo at eos modi asperiores eum corporis quidem adipisci quos quae inventore maiores voluptas, dicta veniam hic vitae impedit voluptatibus, vero neque odio eaque iste?&lt;/div&gt;
+            &lt;div class="tab-pane fade" id="profile"&gt;Profile Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti tenetur excepturi voluptate deserunt exercitationem! Maiores consequatur adipisci labore, quis animi ipsa? In illo dolores officia et esse est facere asperiores quia sequi velit expedita iusto modi cupiditate harum quos perferendis sed deleniti, dolor aut quisquam, consequuntur omnis consectetur. Similique, ab modi? Et, laboriosam? Dolorem sequi voluptate inventore harum, nemo culpa vitae sint laborum, ipsum excepturi, eius nihil neque! Quidem pariatur veritatis fuga rem expedita cum praesentium accusantium voluptatem cumque, iure aliquam quod nam et modi impedit voluptatum doloremque voluptate ad architecto distinctio fugit. At temporibus adipisci, deserunt laboriosam accusantium iure eos possimus facilis nemo non eligendi quaerat repellat harum illum modi. Repudiandae, sequi ad. Aspernatur in dignissimos accusamus, doloremque aut vel, eum possimus sed sapiente blanditiis numquam? Deserunt temporibus in harum eveniet ad accusamus maiores sed dolores iure ipsam alias ea doloribus, aperiam ratione natus aliquid veritatis tempore cupiditate dicta eos autem saepe expedita inventore! Reprehenderit, labore temporibus. Corrupti exercitationem amet veniam iure eaque delectus? Sit, quo, aspernatur, quae fuga soluta vel nemo architecto nihil eveniet sapiente impedit consectetur culpa doloribus nam quidem officiis odio earum alias. Soluta, labore debitis saepe reiciendis id inventore magni hic exercitationem voluptate quod! Rerum.&lt;/div&gt;
+            &lt;div class="tab-pane fade" id="messages"&gt;Message Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia unde incidunt deserunt iure minima eveniet perspiciatis reprehenderit necessitatibus, ut molestiae? Molestiae facere, voluptate fugit rem laboriosam tenetur asperiores nisi ea eum ducimus nostrum accusantium quasi. Cupiditate fugit dicta, quis nam, quidem impedit sed, eaque illum officiis nostrum voluptates quaerat porro.&lt;/div&gt;
+            &lt;div class="tab-pane fade" id="settings"&gt;Settings Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam maxime voluptatem itaque necessitatibus assumenda fugit dolorum distinctio error! Magnam, aperiam!&lt;/div&gt;
+          &lt;/div&gt;
+      </pre
+        >
       </div>
 
 <div class="code">
   <div>JAVASCRIPT</div>
   <pre>
-    &lt;script&gt;
-      $('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
-        // save current clicked tab in local storage
-        localStorage.setItem("lastActiveTab", $(this).attr("href"));
-      });
-      //get last active tab from local storage
-      var lastTab = localStorage.getItem("lastActiveTab");
-      console.log(lastTab + "tab was last active");
-      if (lastTab) {
-        $('[href="' + lastTab + '"]').tab("show");
-      }
-    &lt;/script&gt;
+  &lt;script&gt;
+    $('a[data-bs-toggle="tab"]').on("shown.bs.tab", function (e) {
+      // save current clicked tab in local storage
+      localStorage.setItem("lastActiveTab", $(this).attr("href"));
+
+      console.log($(this).attr("href"));
+    });
+    //get last active tab from local storage
+    var lastTab = localStorage.getItem("lastActiveTab");
+    console.log(lastTab + " tab was last active");
+
+    $(".nav-link").removeClass("active");
+    $(".nav-pane").removeClass("show").removeClass("active");
+
+    if (lastTab) {
+      $(`button[data-bs-target="${lastTab}"]`).addClass("active");
+      $('[href="' + lastTab + '"]')
+        .addClass("show")
+        .addClass("active");
+    } else {
+      //default option, if local storage empty
+      $('button[data-bs-target="#home"]').addClass("active");
+      $('[href="#home"]').addClass("show").addClass("active");
+    }
+  &lt;/script&gt;
   </pre>
-
 </div>
 
-  <hr />
-  <div style="padding: 50px">
-    <p>Código completo disponível no GitHub:</p>
-    <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">
-      github.com : WebTutorials
-    </a>
-  </div>
-
+<div style="margin: 10px">
+  <a href="https://getbootstrap.com/docs/5.0/components/navs-tabs/" class="ext">BootStrap5 Site Docs.</a>
 </div>
 
 
 
+      <hr />
+      <div style="padding: 50px">
+        <p>Código completo disponível no GitHub:</p>
+        <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext"> github.com : WebTutorials </a>
+      </div>
+    </div>
 
     <script>
-      $('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
+      $('a[data-bs-toggle="tab"]').on("shown.bs.tab", function (e) {
         // save current clicked tab in local storage
         localStorage.setItem("lastActiveTab", $(this).attr("href"));
+
+        console.log($(this).attr("href"));
       });
       //get last active tab from local storage
       var lastTab = localStorage.getItem("lastActiveTab");
-      console.log(lastTab + "tab was last active");
-      if (lastTab) {
-        $('[href="' + lastTab + '"]').tab("show");
-      }
+      console.log(lastTab + " tab was last active");
 
+      $(".nav-link").removeClass("active");
+      $(".nav-pane").removeClass("show").removeClass("active");
+
+      if (lastTab) {
+        $(`button[data-bs-target="${lastTab}"]`).addClass("active");
+        $('[href="' + lastTab + '"]')
+          .addClass("show")
+          .addClass("active");
+      } else {
+        //default option, if local storage empty
+        $('button[data-bs-target="#home"]').addClass("active");
+        $('[href="#home"]').addClass("show").addClass("active");
+      }
     </script>
   </body>
 </html>

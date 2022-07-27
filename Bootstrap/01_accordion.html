@@ -3,12 +3,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Tutorials - Bootstrap - Accordion</title>
+    <title>Web Tutorials - Bootstrap 5 - Accordion</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../css/code.css" />
     <link rel="stylesheet" href="../css/SiteHeader.css" />
@@ -40,34 +40,33 @@
         </a>
       </SiteHeader>
 
-      <h1>Web Tutorials - Bootstrap</h1>
+      <h1>Web Tutorials - Bootstrap 5</h1>
       <h2>Bootstrap - Accordion</h2>
       <p>Bootstrap Accordion com a Tab Aberta gravada no "local storage", se nenhuma Tab aberta o item do local storage é limpo.</p>
 
-      <div class="panel-group accordion" id="accordion">
-        <div class="card">
-          <div class="card-header" id="heading-1">
-            <h5 class="mb-0">
-              <a style="text-decoration: none" role="button" data-toggle="collapse" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1"> A A A </a>
-            </h5>
-          </div>
-          <div id="collapse-1" class="collapse" data-parent="#accordion" aria-labelledby="heading-1">
-            <div class="card-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis deserunt incidunt saepe aut mollitia aliquid sint eum sapiente numquam, est praesentium nemo quo excepturi libero. Debitis libero assumenda itaque molestias doloremque dolores harum officia a omnis earum? Vel corrupti harum recusandae sit maxime officia adipisci maiores, commodi tempora cumque suscipit quia ullam? Quia placeat inventore id voluptate tempora nam sint dolor? Doloribus facilis delectus dolore nesciunt, cupiditate accusamus repellendus aspernatur corporis a dolores sit animi minima ipsa vitae. Minima ducimus voluptates ipsam dolores? Quidem, ipsam. Expedita laborum consectetur illum mollitia, fugit atque? Nemo adipisci harum asperiores reiciendis eaque cum quia.</p>
-            </div>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Accordion Item #1</button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body"><strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.</div>
           </div>
         </div>
-
-        <div class="card">
-          <div class="card-header" id="heading-1">
-            <h5 class="mb-0">
-              <a class="test" style="text-decoration: none" role="button" data-toggle="collapse" href="#collapse-B" aria-expanded="false" aria-controls="collapse-B"> B B B </a>
-            </h5>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Accordion Item #2</button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body"><strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.</div>
           </div>
-          <div id="collapse-B" class="collapse" data-parent="#accordion" aria-labelledby="heading-B">
-            <div class="card-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat aperiam cumque non, libero recusandae earum, animi quam sunt, temporibus soluta pariatur consequuntur enim impedit molestiae excepturi porro repellendus esse quos quas cupiditate repudiandae dolores ipsa. Debitis molestiae similique voluptatum quos totam, ad commodi veritatis aperiam et neque nam, hic, quasi ea! Molestiae doloremque saepe ipsum repellendus soluta consectetur sunt ipsam explicabo debitis id labore ea perferendis non eum vel quaerat animi, quo ex perspiciatis ducimus reiciendis. Ut, dolorum non, officia tempore impedit cupiditate eius et, temporibus excepturi eaque error rem corrupti quam! Iusto distinctio excepturi quia delectus odio ab magni.</p>
-            </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Accordion Item #3</button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body"><strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.</div>
           </div>
         </div>
       </div>
@@ -75,79 +74,83 @@
       <div class="code">
         <div>HEADERS</div>
         <pre>
-    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" /&gt;
-    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" /&gt;
-    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;
-    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"&gt;&lt;/script&gt;
-  </pre
-        >
+          &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" /&gt;
+          &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;
+          &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" /&gt;
+          &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"&gt;&lt;/script&gt;
+        </pre>
       </div>
 
       <div class="code">
         <div>HTML</div>
         <pre>
-    &lt;div class="panel-group accordion" id="accordion"&gt;
-      &lt;div class="card"&gt;
-        &lt;div class="card-header" id="heading-1"&gt;
-          &lt;h5 class="mb-0"&gt;
-            &lt;a style="text-decoration:none ;" role="button" data-toggle="collapse" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1"&gt; A A A &lt;/a&gt;
-          &lt;/h5&gt;
-        &lt;/div&gt;
-        &lt;div id="collapse-1" class="collapse" data-parent="#accordion" aria-labelledby="heading-1"&gt;
-          &lt;div class="card-body"&gt;
-            &lt;p&gt;Lorem ipsum ...&lt;/p&gt;
+          &lt;div class="accordion" id="accordionExample"&gt;
+            &lt;div class="accordion-item"&gt;
+              &lt;h2 class="accordion-header" id="headingOne"&gt;
+                &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"&gt;Accordion Item #1&lt;/button&gt;
+              &lt;/h2&gt;
+              &lt;div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample"&gt;
+                &lt;div class="accordion-body"&gt;&lt;strong&gt;This is the first item's accordion body.&lt;/strong&gt; It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the &lt;code&gt;.accordion-body&lt;/code&gt;, though the transition does limit overflow.&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="accordion-item"&gt;
+              &lt;h2 class="accordion-header" id="headingTwo"&gt;
+                &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"&gt;Accordion Item #2&lt;/button&gt;
+              &lt;/h2&gt;
+              &lt;div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample"&gt;
+                &lt;div class="accordion-body"&gt;&lt;strong&gt;This is the second item's accordion body.&lt;/strong&gt; It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the &lt;code&gt;.accordion-body&lt;/code&gt;, though the transition does limit overflow.&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="accordion-item"&gt;
+              &lt;h2 class="accordion-header" id="headingThree"&gt;
+                &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"&gt;Accordion Item #3&lt;/button&gt;
+              &lt;/h2&gt;
+              &lt;div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample"&gt;
+                &lt;div class="accordion-body"&gt;&lt;strong&gt;This is the third item's accordion body.&lt;/strong&gt; It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the &lt;code&gt;.accordion-body&lt;/code&gt;, though the transition does limit overflow.&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
           &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-
-      &lt;div class="card"&gt;
-        &lt;div class="card-header" id="heading-1"&gt;
-          &lt;h5 class="mb-0"&gt;
-            &lt;a class="test" style="text-decoration:none ;" role="button" data-toggle="collapse" href="#collapse-B" aria-expanded="false" aria-controls="collapse-B"&gt; B B B &lt;/a&gt;
-          &lt;/h5&gt;
-        &lt;/div&gt;
-        &lt;div id="collapse-B" class="collapse" data-parent="#accordion" aria-labelledby="heading-B"&gt;
-          &lt;div class="card-body"&gt;
-            &lt;p&gt;Lorem ipsum ...&lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  </pre
-        >
+        </pre>
       </div>
 
       <div class="code">
         <div>JAVASCRIPT</div>
         <pre>
   &lt;script&gt;
-    $('a[data-toggle="collapse"]').on("click", function (e) {
-      // save current clicked tab in local storage
-      var tab = $(this).attr("href")
-      
-      console.log($(this).attr("href"))
-      if ($(tab).hasClass("show")){
-        console.log("removeItem")
-        localStorage.removeItem("lastActiveAccordionTab");
-      }else{
+    $("button.accordion-button").on("click", function (event) {
+      var tab = $(this).attr("data-bs-target");
+      if ($(this).attr("aria-expanded") === "true") {
+        console.log(tab + " expanded");
         localStorage.setItem("lastActiveAccordionTab", tab);
+      } else {
+        console.log(tab + " closed");
+        localStorage.removeItem("lastActiveAccordionTab");
       }
     });
 
     //get last active tab from local storage
     var lastTab = localStorage.getItem("lastActiveAccordionTab");
-    
+
     if (lastTab) {
       console.log(lastTab + " was last Accordion tab active");
       $(lastTab).addClass("show");
-    }else{
+      $(`button[data-bs-target="${lastTab}"]`).removeClass("collapsed");
+    } else {
       console.log("No Accordion tab active");
     }
   &lt;/script&gt;
   </pre
         >
       </div>
+
+      <div style="margin: 10px">
+        <a href="https://getbootstrap.com/docs/5.0/components/accordion/#how-it-works" class="ext">BootStrap5 Site Docs.</a>
+      </div>
+
+
+      
+
+
       <hr />
       <div style="padding: 50px">
         <p>Código completo disponível no GitHub:</p>
@@ -155,16 +158,14 @@
       </div>
     </div>
     <script>
-      $('a[data-toggle="collapse"]').on("click", function (e) {
-        // save current clicked tab in local storage
-        var tab = $(this).attr("href");
-
-        console.log($(this).attr("href"));
-        if ($(tab).hasClass("show")) {
-          console.log("removeItem");
-          localStorage.removeItem("lastActiveAccordionTab");
-        } else {
+      $("button.accordion-button").on("click", function (event) {
+        var tab = $(this).attr("data-bs-target");
+        if ($(this).attr("aria-expanded") === "true") {
+          console.log(tab + " expanded");
           localStorage.setItem("lastActiveAccordionTab", tab);
+        } else {
+          console.log(tab + " closed");
+          localStorage.removeItem("lastActiveAccordionTab");
         }
       });
 
@@ -174,6 +175,7 @@
       if (lastTab) {
         console.log(lastTab + " was last Accordion tab active");
         $(lastTab).addClass("show");
+        $(`button[data-bs-target="${lastTab}"]`).removeClass("collapsed");
       } else {
         console.log("No Accordion tab active");
       }
