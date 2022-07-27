@@ -77,9 +77,9 @@ Código completo disponível no GitHub
 1. Angular Sample Project [&lt;site&gt;](http://angular.stepinportugal.com/)
 
 ## Bootstrap 5
-1. Booststrap5 Tabs [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/bootstrap5/index.html)
-1. Booststrap5 Accordion [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/bootstrap5/01_accordion.html)
-1. Booststrap5 Window Modal [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/bootstrap5/02_modal.html)
+1. Booststrap 5 Tabs [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/bootstrap5/index.html)
+1. Booststrap 5 Accordion [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/bootstrap5/01_accordion.html)
+1. Booststrap 5 Window Modal [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/bootstrap5/02_modal.html)
 
 ## Recursos
 
