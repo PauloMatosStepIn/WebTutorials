@@ -1,12 +1,21 @@
 .code {
   border-radius: 5px;
-  margin-left: 5%;
+  margin: 20px;
   width: 95%;
   color: white;
   background-color: black;
   overflow-x: auto;
+  
 }
 
 div.code pre {
   padding-top: 10px;
+  color: white;
+  background-color: black;
+  border: none;
+}
+
+div.code div {
+  left: 0px;
+  padding: 5px;
 }

@@ -1,0 +1,187 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Tutorials - Bootstrap - Accordion</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../css/code.css">
+    <link rel="stylesheet" href="../css/SiteHeader.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  
+
+    <style>
+      .mb-0 > a {
+        display: block;
+        position: relative;
+      }
+      .mb-0 > a:after {
+        content: "\f078"; /* fa-chevron-down */
+        font-family: "FontAwesome";
+        position: absolute;
+        right: 0;
+      }
+      .mb-0 > a[aria-expanded="true"]:after {
+        content: "\f077"; /* fa-chevron-up */
+      }
+    </style>
+  </head>
+  <body style="font-family: Nunito;">
+<div class="container">
+
+  <SiteHeader>
+    <a style="padding-top: 20px;text-decoration: none;" href="../../index.html#bootstrap_accordion">
+      <div class="DivLink">Return to Web Tutorials</div>
+    </a>
+  </SiteHeader>
+
+  <h1>Web Tutorials - Bootstrap</h1>
+  <h2>Bootstrap - Accordion</h2>
+  <p>Bootstrap Accordion com a Tab Aberta gravada no "local storage", se nenhuma Tab aberta o item do local storage é limpo.</p>
+
+  <div class="panel-group accordion" id="accordion">
+      <div class="card">
+        <div class="card-header" id="heading-1">
+          <h5 class="mb-0">
+            <a style="text-decoration:none ;" role="button" data-toggle="collapse" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1"> A A A </a>
+          </h5>
+        </div>
+        <div id="collapse-1" class="collapse" data-parent="#accordion" aria-labelledby="heading-1">
+          <div class="card-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis deserunt incidunt saepe aut mollitia aliquid sint eum sapiente numquam, est praesentium nemo quo excepturi libero. Debitis libero assumenda itaque molestias doloremque dolores harum officia a omnis earum? Vel corrupti harum recusandae sit maxime officia adipisci maiores, commodi tempora cumque suscipit quia ullam? Quia placeat inventore id voluptate tempora nam sint dolor? Doloribus facilis delectus dolore nesciunt, cupiditate accusamus repellendus aspernatur corporis a dolores sit animi minima ipsa vitae. Minima ducimus voluptates ipsam dolores? Quidem, ipsam. Expedita laborum consectetur illum mollitia, fugit atque? Nemo adipisci harum asperiores reiciendis eaque cum quia.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="heading-1">
+          <h5 class="mb-0">
+            <a class="test" style="text-decoration:none ;" role="button" data-toggle="collapse" href="#collapse-B" aria-expanded="false" aria-controls="collapse-B"> B B B </a>
+          </h5>
+        </div>
+        <div id="collapse-B" class="collapse" data-parent="#accordion" aria-labelledby="heading-B">
+          <div class="card-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat aperiam cumque non, libero recusandae earum, animi quam sunt, temporibus soluta pariatur consequuntur enim impedit molestiae excepturi porro repellendus esse quos quas cupiditate repudiandae dolores ipsa. Debitis molestiae similique voluptatum quos totam, ad commodi veritatis aperiam et neque nam, hic, quasi ea! Molestiae doloremque saepe ipsum repellendus soluta consectetur sunt ipsam explicabo debitis id labore ea perferendis non eum vel quaerat animi, quo ex perspiciatis ducimus reiciendis. Ut, dolorum non, officia tempore impedit cupiditate eius et, temporibus excepturi eaque error rem corrupti quam! Iusto distinctio excepturi quia delectus odio ab magni.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<div class="code">
+  <div>HEADERS</div>
+  <pre>
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" /&gt;
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" /&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"&gt;&lt;/script&gt;
+  </pre>
+</div>
+
+<div class="code">
+  <div>HTML</div>
+  <pre>
+    &lt;div class="panel-group accordion" id="accordion"&gt;
+      &lt;div class="card"&gt;
+        &lt;div class="card-header" id="heading-1"&gt;
+          &lt;h5 class="mb-0"&gt;
+            &lt;a style="text-decoration:none ;" role="button" data-toggle="collapse" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1"&gt; A A A &lt;/a&gt;
+          &lt;/h5&gt;
+        &lt;/div&gt;
+        &lt;div id="collapse-1" class="collapse" data-parent="#accordion" aria-labelledby="heading-1"&gt;
+          &lt;div class="card-body"&gt;
+            &lt;p&gt;Lorem ipsum ...&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="card"&gt;
+        &lt;div class="card-header" id="heading-1"&gt;
+          &lt;h5 class="mb-0"&gt;
+            &lt;a class="test" style="text-decoration:none ;" role="button" data-toggle="collapse" href="#collapse-B" aria-expanded="false" aria-controls="collapse-B"&gt; B B B &lt;/a&gt;
+          &lt;/h5&gt;
+        &lt;/div&gt;
+        &lt;div id="collapse-B" class="collapse" data-parent="#accordion" aria-labelledby="heading-B"&gt;
+          &lt;div class="card-body"&gt;
+            &lt;p&gt;Lorem ipsum ...&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  </pre>
+</div>
+
+<div class="code">
+  <div>JAVASCRIPT</div>
+  <pre>
+  &lt;script&gt;
+    $('a[data-toggle="collapse"]').on("click", function (e) {
+      // save current clicked tab in local storage
+      var tab = $(this).attr("href")
+      
+      console.log($(this).attr("href"))
+      if ($(tab).hasClass("show")){
+        console.log("removeItem")
+        localStorage.removeItem("lastActiveAccordionTab");
+      }else{
+        localStorage.setItem("lastActiveAccordionTab", tab);
+      }
+    });
+
+    //get last active tab from local storage
+    var lastTab = localStorage.getItem("lastActiveAccordionTab");
+    
+    if (lastTab) {
+      console.log(lastTab + " was last Accordion tab active");
+      $(lastTab).addClass("show");
+    }else{
+      console.log("No Accordion tab active");
+    }
+  &lt;/script&gt;
+  </pre>
+</div>
+  <hr />
+  <div style="padding: 50px">
+    <p>Código completo disponível no GitHub:</p>
+    <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">
+      github.com : WebTutorials
+    </a>
+  </div>
+</div>
+  <script>
+
+    $('a[data-toggle="collapse"]').on("click", function (e) {
+      // save current clicked tab in local storage
+      var tab = $(this).attr("href")
+      
+      console.log($(this).attr("href"))
+      if ($(tab).hasClass("show")){
+        console.log("removeItem")
+        localStorage.removeItem("lastActiveAccordionTab");
+      }else{
+        localStorage.setItem("lastActiveAccordionTab", tab);
+      }
+    });
+
+    //get last active tab from local storage
+    var lastTab = localStorage.getItem("lastActiveAccordionTab");
+    
+    if (lastTab) {
+      console.log(lastTab + " was last Accordion tab active");
+      $(lastTab).addClass("show");
+    }else{
+      console.log("No Accordion tab active");
+    }
+
+  </script>
+
+  </body>
+</html>
