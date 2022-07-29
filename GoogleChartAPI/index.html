@@ -1,0 +1,509 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/code.css" />
+    <link rel="stylesheet" href="../css/SiteHeader.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+
+    <title>Web Tutorials - Google Chart API - Pie/Bar/Line Charts</title>
+
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script>
+      google.charts.load("current", { packages: ["corechart"] });
+
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        // Pie Chart
+        var dataPie = new google.visualization.DataTable();
+        dataPie.addColumn("string", "Element");
+        dataPie.addColumn("number", "Percentage");
+        dataPie.addRows([
+          ["Azoto", 0.78],
+          ["Oxigénio", 0.21],
+          ["Argon", 0.01],
+        ]);
+
+        var settingsPie3d = {
+          title: "Gases Atmosfera Terrestre (%)",
+          is3D: true,
+          slices: {
+            0: { offset: 0.2 },
+            2: { offset: 0.1 },
+          },
+          height: "300",
+          colors: ["#8F8FFF", "#4128D4", "#2CDBF6"],
+        };
+
+        var settingsPieHole = {
+          title: "Gases Atmosfera Terrestre (%)",
+          pieHole: 0.3,
+          pieStartAngle: 40,
+          legend: "none",
+          pieSliceText: "label",
+          height: "400",
+          backgroundColor: "lightgray",
+        };
+
+        var chartPie3d = new google.visualization.PieChart(document.getElementById("myPieChart3d"));
+        chartPie3d.draw(dataPie, settingsPie3d);
+
+        var chartPieHole = new google.visualization.PieChart(document.getElementById("myPieChartHole"));
+        chartPieHole.draw(dataPie, settingsPieHole);
+
+        //interactividade
+        google.visualization.events.addListener(chartPie3d, "select", () => {
+          var item = chartPie3d.getSelection()[0];
+          console.log(item);
+          if (item) {
+            var nome = dataPie.getValue(item.row, 0);
+            window.open(`https://pt.wikipedia.org/wiki/${nome}`);
+          }
+        });
+
+        //Bar Chart
+        var dataBar = google.visualization.arrayToDataTable([
+          ["Pizza", "Vendas", { role: "style" }],
+          ["Pizza 1", 78, "#b87333"],
+          ["Pizza 2", 21, "silver"],
+          ["Pizza 3", 44, "gold"],
+        ]);
+
+        var chartBar = new google.visualization.BarChart(document.getElementById("myBarChart"));
+
+        var settingsBar = {
+          title: "Vendas por tipo de Pizza",
+          legend: "none",
+          animation: {
+            startup: true,
+            duration: 2000,
+          },
+        };
+
+        chartBar.draw(dataBar, settingsBar);
+
+        //Line Chart
+
+        var dataLine = new google.visualization.DataTable();
+        dataLine.addColumn("string", "Mês");
+        dataLine.addColumn("number", "Vendas");
+        dataLine.addRows([
+          ["Jan", 18],
+          ["Fev", 21],
+          ["Mar", 44],
+          ["Abr", 50],
+          ["Mai", 21],
+          ["Jun", 74],
+          ["Jul", 150],
+          ["Ago", 281],
+          ["Set", 204],
+          ["Out", 38],
+          ["Nov", 21],
+          ["Dez", 44],
+        ]);
+
+        var chartLine = new google.visualization.LineChart(document.getElementById("myLineChart"));
+
+        var settingsLine = {
+          title: "Vendas 2021",
+          curveType: "function",
+        };
+
+        chartLine.draw(dataLine, settingsLine);
+      }
+
+      google.charts.load("current", { packages: ["line"] });
+      google.charts.setOnLoadCallback(drawLineChart);
+
+      function drawLineChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn("number", "Day");
+        data.addColumn("number", "Guardians of the Galaxy");
+        data.addColumn("number", "The Avengers");
+        data.addColumn("number", "Transformers: Age of Extinction");
+
+        data.addRows([
+          [1, 37.8, 80.8, 41.8],
+          [2, 30.9, 69.5, 32.4],
+          [3, 25.4, 57, 25.7],
+          [4, 11.7, 18.8, 10.5],
+          [5, 11.9, 17.6, 10.4],
+          [6, 8.8, 13.6, 7.7],
+          [7, 7.6, 12.3, 9.6],
+          [8, 12.3, 29.2, 10.6],
+          [9, 16.9, 42.9, 14.8],
+          [10, 12.8, 30.9, 11.6],
+          [11, 5.3, 7.9, 4.7],
+          [12, 6.6, 8.4, 5.2],
+          [13, 4.8, 6.3, 3.6],
+          [14, 4.2, 6.2, 3.4],
+        ]);
+
+        var options = {
+          chart: {
+            title: "Box Office Earnings in First Two Weeks of Opening",
+            subtitle: "in millions of dollars (USD)",
+          },
+          width: 900,
+          height: 500,
+        };
+
+        var chart = new google.charts.Line(document.getElementById("linechart_material"));
+
+        chart.draw(data, google.charts.Line.convertOptions(options));
+      }
+    </script>
+  </head>
+
+  <body style="font-family: Nunito">
+    <div class="container">
+      <SiteHeader>
+        <a style="padding-top: 20px; text-decoration: none" href="../index.html#GoogleChartAPI_pie">
+          <div class="DivLink">Return to Web Tutorials</div>
+        </a>
+      </SiteHeader>
+
+      <h1>Google Chart API</h1>
+
+      <div class="code">
+        <div>HEADERS</div>
+        <pre>
+        &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;
+        &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" /&gt;
+        &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"&gt;&lt;/script&gt;
+
+        &lt;script src="https://www.gstatic.com/charts/loader.js"&gt;&lt;/script&gt;
+      </pre
+        >
+      </div>
+
+      <div style="padding-top: 40px" class="row">
+        <div class="col-12">
+          <h2>PIE Chart (3D)</h2>
+          <p>
+            Fatias destacadas do gráfico com a utilização de opção "slices", cores customizadas.<br />
+            <a href="https://color.adobe.com/pt/create/color-wheel">color.adobe.com p/escolha de combinação de cores</a><br />
+            Com INTERACTIVIDADE : ao clicar na área de um gás abre uma página relativa a esse gás na Wikipedia.
+          </p>
+          <div id="myPieChart3d" />
+        </div>
+      </div>
+      <div class="code">
+        <div>JAVASCRIPT</div>
+        <pre>
+        &lt;script&gt;
+          google.charts.load("current", { packages: ["corechart"] });
+
+          google.charts.setOnLoadCallback(drawChart);
+    
+          function drawChart() {
+            // Pie Chart
+            var dataPie = new google.visualization.DataTable();
+            dataPie.addColumn("string", "Element");
+            dataPie.addColumn("number", "Percentage");
+            dataPie.addRows([
+              ["Nitrogenio", 0.78],
+              ["Oxigenio", 0.21],
+              ["Argon", 0.01],
+            ]);
+    
+            var settingsPie3d = {
+              title: "Gases Atmosfera Terrestre (%)",
+              is3D: true,
+              slices: {
+                0: { offset: 0.2 },
+                2: { offset: 0.1 },
+              },
+              height: "300",
+              colors: ["#8F8FFF", "#4128D4", "#2CDBF6"],
+            };
+    
+            var chartPie3d = new google.visualization.PieChart(document.getElementById("myPieChart3d"));
+            chartPie3d.draw(dataPie, settingsPie3d);
+
+            //interactividade
+            google.visualization.events.addListener(chartPie3d, "select", () => {
+              var item = chartPie3d.getSelection()[0];
+              console.log(item);
+              if (item) {
+                var nome = dataPie.getValue(item.row, 0);
+                window.open(`https://pt.wikipedia.org/wiki/${nome}`);
+              }
+            });
+
+          }    
+        &lt;/script&gt;
+        </pre>
+      </div>
+
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+          &lt;div class="row"&gt;
+            &lt;div class="col-12"&gt;
+              &lt;div id="myPieChart3d" /&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        </pre>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <h2>PIE Chart (Tipo Donut)</h2>
+          <p>Com rotação de 40Graus, sem legenda, Fatias c/Label.</p>
+          <div id="myPieChartHole" />
+        </div>
+      </div>
+
+      <div class="code">
+        <div>JAVASCRIPT</div>
+        <pre>
+        &lt;script&gt;
+          google.charts.load("current", { packages: ["corechart"] });
+
+          google.charts.setOnLoadCallback(drawChart);
+    
+          function drawChart() {
+            // Pie Chart
+            var dataPie = new google.visualization.DataTable();
+            dataPie.addColumn("string", "Element");
+            dataPie.addColumn("number", "Percentage");
+            dataPie.addRows([
+              ["Nitrogenio", 0.78],
+              ["Oxigenio", 0.21],
+              ["Argon", 0.01],
+            ]);
+    
+            var settingsPieHole = {
+              title: "Gases Atmosfera Terrestre (%)",
+              pieHole: 0.3,
+              pieStartAngle: 40,
+              legend: "none",
+              pieSliceText: "label",
+              height: "400",
+              backgroundColor: "lightgray",
+            };
+    
+            var chartPieHole = new google.visualization.PieChart(document.getElementById("myPieChartHole"));
+            chartPieHole.draw(dataPie, settingsPieHole);
+          }    
+        &lt;/script&gt;
+        </pre>
+      </div>
+
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+          &lt;div class="row"&gt;
+            &lt;div class="col-12"&gt;
+              &lt;div id="myPieChartHole" /&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        </pre>
+      </div>
+
+      <a href="https://developers.google.com/chart/interactive/docs/gallery/piechart">Google Chart Pie Docs.</a>
+
+      <div style="padding-top: 40px" class="row">
+        <div class="col-12">
+          <h2>BAR Chart</h2>
+          <div id="myBarChart" />
+        </div>
+      </div>
+
+      <div class="code">
+        <div>JAVASCRIPT</div>
+        <pre>
+        &lt;script&gt;
+          google.charts.load("current", { packages: ["corechart"] });
+
+          google.charts.setOnLoadCallback(drawChart);
+    
+          function drawChart() {
+    
+            //Bar Chart
+            var dataBar = google.visualization.arrayToDataTable([
+              ["Pizza", "Vendas", { role: "style" }],
+              ["Pizza 1", 78, "#b87333"],
+              ["Pizza 2", 21, "silver"],
+              ["Pizza 3", 44, "gold"],
+            ]);
+    
+            var chartBar = new google.visualization.BarChart(document.getElementById("myBarChart"));
+    
+            var settingsBar = {
+              title: "Vendas por tipo de Pizza",
+              legend: "none",
+              animation: {
+                startup: true,
+                duration: 2000,
+              },
+            };
+    
+            chartBar.draw(dataBar, settingsBar);
+          }    
+        &lt;/script&gt;
+        </pre>
+      </div>
+
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+          &lt;div class="row"&gt;
+            &lt;div class="col-12"&gt;
+              &lt;div id="myBarChart" /&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        </pre>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <h2>Line Chart</h2>
+          <div id="myLineChart" />
+        </div>
+      </div>
+
+      <div class="code">
+        <div>JAVASCRIPT</div>
+        <pre>
+        &lt;script&gt;
+          google.charts.load("current", { packages: ["corechart"] });
+
+          google.charts.setOnLoadCallback(drawChart);
+    
+          function drawChart() {
+   
+            //Line Chart
+    
+            var dataLine = new google.visualization.DataTable();
+            dataLine.addColumn("string", "Mês");
+            dataLine.addColumn("number", "Vendas");
+            dataLine.addRows([
+              ["Jan", 18],
+              ["Fev", 21],
+              ["Mar", 44],
+              ["Abr", 50],
+              ["Mai", 21],
+              ["Jun", 74],
+              ["Jul", 150],
+              ["Ago", 281],
+              ["Set", 204],
+              ["Out", 38],
+              ["Nov", 21],
+              ["Dez", 44],
+            ]);
+    
+            var chartLine = new google.visualization.LineChart(document.getElementById("myLineChart"));
+    
+            var settingsLine = {
+              title: "Vendas 2021",
+              curveType: "function",
+            };
+    
+            chartLine.draw(dataLine, settingsLine);
+          }
+    
+        &lt;/script&gt;
+        </pre>
+      </div>
+
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+          &lt;div class="row"&gt;
+            &lt;div class="col-12"&gt;
+              &lt;div id="myLineChart" /&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        </pre>
+      </div>
+
+      <div style="padding-top: 40px" class="row">
+        <div class="col-12">
+          <h2>Multiline Chart</h2>
+          <div id="linechart_material" />
+        </div>
+      </div>
+
+      <div class="code">
+        <div>JAVASCRIPT</div>
+        <pre>
+        &lt;script&gt;
+
+          google.charts.load("current", { packages: ["line"] });
+          google.charts.setOnLoadCallback(drawLineChart);
+    
+          function drawLineChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn("number", "Day");
+            data.addColumn("number", "Guardians of the Galaxy");
+            data.addColumn("number", "The Avengers");
+            data.addColumn("number", "Transformers: Age of Extinction");
+    
+            data.addRows([
+              [1, 37.8, 80.8, 41.8],
+              [2, 30.9, 69.5, 32.4],
+              [3, 25.4, 57, 25.7],
+              [4, 11.7, 18.8, 10.5],
+              [5, 11.9, 17.6, 10.4],
+              [6, 8.8, 13.6, 7.7],
+              [7, 7.6, 12.3, 9.6],
+              [8, 12.3, 29.2, 10.6],
+              [9, 16.9, 42.9, 14.8],
+              [10, 12.8, 30.9, 11.6],
+              [11, 5.3, 7.9, 4.7],
+              [12, 6.6, 8.4, 5.2],
+              [13, 4.8, 6.3, 3.6],
+              [14, 4.2, 6.2, 3.4],
+            ]);
+    
+            var options = {
+              chart: {
+                title: "Box Office Earnings in First Two Weeks of Opening",
+                subtitle: "in millions of dollars (USD)",
+              },
+              width: 900,
+              height: 500,
+            };
+    
+            var chart = new google.charts.Line(document.getElementById("linechart_material"));
+    
+            chart.draw(data, google.charts.Line.convertOptions(options));
+          }
+    
+        &lt;/script&gt;
+        </pre>
+      </div>
+
+      <div class="code">
+        <div>HTML</div>
+        <pre>
+          &lt;div class="row"&gt;
+            &lt;div class="col-12"&gt;
+              &lt;div id="linechart_material" /&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        </pre>
+      </div>
+
+      <a href="https://developers.google.com/chart/interactive/docs/gallery/linechart">Google Chart (Package: line) Docs.</a>
+
+      <hr />
+      <div style="padding: 50px">
+        <p>Código completo disponível no GitHub:</p>
+        <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext"> github.com : WebTutorials </a>
+      </div>
+    </div>
+  </body>
+</html>
