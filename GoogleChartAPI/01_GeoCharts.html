@@ -27,12 +27,12 @@
 
       function drawMarkersMap() {
         var data = google.visualization.arrayToDataTable([
-          ["cidade", 'clube'],
-          ["Lisboa Benfica", 'SLB'],
-          ["Lisboa Alvalade",'SCP'],
-          ["Porto", 'CFP'],
-          ["Paços de Ferreira", 'CAP'],
-          ["Felgueiras", 'FOCA'],
+          ["cidade", "clube"],
+          ["Lisboa Benfica", "SLB"],
+          ["Lisboa Alvalade", "SCP"],
+          ["Porto", "CFP"],
+          ["Paços de Ferreira", "CAP"],
+          ["Felgueiras", "FOCA"],
           ["Guimarães", "VSC"],
           ["Coimbra", "CNAC"],
           ["Cascais", "CWP"],
@@ -40,7 +40,7 @@
 
         var options = {
           region: "PT",
-          displayMode: "markers"
+          displayMode: "markers",
         };
 
         var chart = new google.visualization.GeoChart(document.getElementById("chart_div"));
@@ -52,41 +52,42 @@
           console.log(item);
           if (item) {
             var nome = data.getValue(item.row, 1);
-            switch (nome){
-              case 'SLB':
+            switch (nome) {
+              case "SLB":
                 window.open(`https://www.slbenfica.pt/pt-pt/modalidades/polo_aquatico/plantel-feminino`);
                 break;
-              case 'SCP':
+              case "SCP":
                 window.open(`https://www.sporting.pt/pt/tax_noticias/modalidades/polo-aquatico`);
                 break;
-              case 'CWP':
+              case "CWP":
                 window.open(`https://www.cascais.pt/contactos/cascais-water-polo-club`);
                 break;
-              case 'CFP':
+              case "CFP":
                 window.open(`https://fluvial.pt/modalidades/polo-aquatico/`);
                 break;
-              case 'CAP':
+              case "CAP":
                 window.open(`https://www.facebook.com/capacense`);
                 break;
-              case 'FOCA':
+              case "FOCA":
                 window.open(`https://www.facebook.com/focacnfpa/`);
                 break;
-              case 'VSC':
+              case "VSC":
                 window.open(`https://vitoriasc.pt/en/polo-aquatico/`);
                 break;
-              case 'CNAC':
+              case "CNAC":
                 window.open(`https://s4.cnaconline.com/`);
-                break;                
-              default:  
+                break;
+              default:
                 break;
             }
           }
         });
-
-        addEventListener('resize', (event) => {});
-        onresize = (event) => { drawMarkersMap() };
-
       }
+
+      addEventListener("resize", (event) => {});
+      onresize = (event) => {
+        drawMarkersMap();
+      };
     </script>
   </head>
   <body style="font-family: Nunito">
@@ -96,16 +97,16 @@
           <div class="DivLink">Return to Web Tutorials</div>
         </a>
       </SiteHeader>
-      
+
       <h1>Google Geo Chart API</h1>
       <p>Para que este código funcione no seu website tem de criar uma "Google Map Api Key" e utilizá-la como o valor do parâmetro "mapsApiKey" ao carregar o gráfico.</p>
       <h4>Clubes de Polo Aquático em Portugal</h4>
       <p>Clique para ir para o Site do Clube</p>
-      <div style="padding-top:0px;" id="chart_div" style="width: 600px; height: 600px;"></div>
-    
-    <div class="code">
-      <div>HEADERS</div>
-      <pre>
+      <div style="padding-top: 0px" id="chart_div" style="width: 600px; height: 600px"></div>
+
+      <div class="code">
+        <div>HEADERS</div>
+        <pre>
         &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;
         &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" /&gt;
         &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"&gt;&lt;/script&gt;
@@ -113,12 +114,13 @@
         &lt;script src="https://www.gstatic.com/charts/loader.js"&gt;&lt;
         &lt;
           &lt;/script&gt;
-      </pre>
-    </div>
+      </pre
+        >
+      </div>
 
-    <div class="code">
-      <div>JAVASCRIPT</div>
-      <pre>
+      <div class="code">
+        <div>JAVASCRIPT</div>
+        <pre>
       &lt;script&gt;
         google.charts.load("current", {
           packages: ["geochart"],
@@ -191,27 +193,26 @@
         onresize = (event) => { drawMarkersMap() };
       
       &lt;/script&gt;
-      </pre>
-    </div>
-    <div class="code">
-      <div>HTML</div>
-      <pre>
+      </pre
+        >
+      </div>
+      <div class="code">
+        <div>HTML</div>
+        <pre>
         &lt;div class="container"&gt;
           &lt;h4&gt;Clubes de Polo Aquático em Portugal&lt;/h4&gt;
           &lt;p&gt;Clique para ir para o Site do Clube&lt;/p&gt;
           &lt;div style="padding-top:0px;" id="chart_div" style="width: 600px; height: 600px;"&gt;&lt;/div&gt;
         &lt;/div&gt;
-      </pre>
-    </div>
+      </pre
+        >
+      </div>
 
-
-    <a href="https://developers.google.com/chart/interactive/docs/gallery/geochart">Google Geo Chart Docs.</a>
+      <a href="https://developers.google.com/chart/interactive/docs/gallery/geochart">Google Geo Chart Docs.</a>
       <hr />
       <div style="padding: 50px">
         <p>Código completo disponível no GitHub:</p>
-        <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext">
-          github.com : WebTutorials
-        </a>
+        <a href="https://github.com/PauloMatosStepIn/WebTutorials" class="ext"> github.com : WebTutorials </a>
       </div>
     </div>
   </body>
