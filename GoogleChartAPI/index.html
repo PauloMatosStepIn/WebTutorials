@@ -154,7 +154,7 @@
             title: "Box Office Earnings in First Two Weeks of Opening",
             subtitle: "in millions of dollars (USD)",
           },
-          width: 900,
+
           height: 500,
         };
 
@@ -162,6 +162,12 @@
 
         chart.draw(data, google.charts.Line.convertOptions(options));
       }
+
+      addEventListener("resize", (event) => {});
+      onresize = (event) => {
+        drawChart();
+        drawLineChart();
+      };
     </script>
   </head>
 
@@ -240,8 +246,11 @@
                 window.open(`https://pt.wikipedia.org/wiki/${nome}`);
               }
             });
+          } 
 
-          }    
+          addEventListener('resize', (event) => {});
+          onresize = (event) => { drawChart() };
+
         &lt;/script&gt;
         </pre>
       </div>
@@ -296,7 +305,11 @@
     
             var chartPieHole = new google.visualization.PieChart(document.getElementById("myPieChartHole"));
             chartPieHole.draw(dataPie, settingsPieHole);
-          }    
+          }
+
+          addEventListener('resize', (event) => {});
+          onresize = (event) => { drawChart() };
+             
         &lt;/script&gt;
         </pre>
       </div>
@@ -352,6 +365,10 @@
     
             chartBar.draw(dataBar, settingsBar);
           }    
+
+          addEventListener('resize', (event) => {});
+          onresize = (event) => { drawChart() };
+
         &lt;/script&gt;
         </pre>
       </div>
@@ -414,6 +431,9 @@
             chartLine.draw(dataLine, settingsLine);
           }
     
+          addEventListener('resize', (event) => {});
+          onresize = (event) => { drawLineChart() };
+
         &lt;/script&gt;
         </pre>
       </div>
@@ -481,6 +501,9 @@
     
             chart.draw(data, google.charts.Line.convertOptions(options));
           }
+
+          addEventListener('resize', (event) => {});
+          onresize = (event) => { drawChart() };
     
         &lt;/script&gt;
         </pre>

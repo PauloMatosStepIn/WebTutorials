@@ -82,6 +82,10 @@
             }
           }
         });
+
+        addEventListener('resize', (event) => {});
+        onresize = (event) => { drawMarkersMap() };
+
       }
     </script>
   </head>
@@ -182,6 +186,10 @@
             }
           });
         }
+
+        addEventListener('resize', (event) => {});
+        onresize = (event) => { drawMarkersMap() };
+      
       &lt;/script&gt;
       </pre>
     </div>
@@ -195,6 +203,7 @@
         &lt;/div&gt;
       </pre>
     </div>
+
 
     <a href="https://developers.google.com/chart/interactive/docs/gallery/geochart">Google Geo Chart Docs.</a>
       <hr />
