@@ -73,20 +73,18 @@ Código completo disponível no GitHub
 4. GitHub Secrets for Actions [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/github/04_secrets.html)
 5. CI/CD Deploy On Push [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/github/05_DeployOnPush.html)
 
-## Angular
-1. Angular Sample Project [&lt;site&gt;](http://angular.stepinportugal.com/)
+## Google Charts API
+1. Pie/Bar/Line/Multi-Line Charts [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/GoogleChartAPI/index.html)
+1. Geo Chart [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/GoogleChartAPI/01_GeoCharts.html)
 
 ## Bootstrap 5
-<<<<<<< HEAD
 1. Booststrap5 Tabs [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/bootstrap5/index.html)
 1. Booststrap5 Accordion [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/bootstrap5/01_accordion.html)
 1. Booststrap5 Window Modal [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/bootstrap5/02_modal.html)
 1. Booststrap5 Jumbotron & Thumbnails [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/bootstrap5/03_jumbo.html)
-=======
-1. Booststrap 5 Tabs [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/bootstrap5/index.html)
-1. Booststrap 5 Accordion [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/bootstrap5/01_accordion.html)
-1. Booststrap 5 Window Modal [&lt;site&gt;](http://paulomatos.stepinportugal.com/WebTutorials/bootstrap5/02_modal.html)
->>>>>>> b4610eaedd4693f114544eee3e50af1b4929c529
+
+## Angular
+1. Angular Sample Project [&lt;site&gt;](http://angular.stepinportugal.com/)
 
 ## Recursos
 
